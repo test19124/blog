@@ -2,14 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://test19124.github.io/blog</id>
     <title>test19124 - blog</title>
-    <updated>2020-02-23T06:52:24.910Z</updated>
+    <updated>2020-02-23T06:58:25.445Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://test19124.github.io/blog"/>
     <link rel="self" href="https://test19124.github.io/blog/atom.xml"/>
-    <subtitle>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&quot;/&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/gh/mysterious-Palace/jyb666@3.4/live2d-widget/autoload.js&quot;&gt;&lt;/script&gt;</subtitle>
     <logo>https://test19124.github.io/blog/images/avatar.png</logo>
     <icon>https://test19124.github.io/blog/favicon.ico</icon>
     <rights>All rights reserved 2020, test19124 - blog</rights>
+    <entry>
+        <title type="html"><![CDATA[论坛]]></title>
+        <id>https://test19124.github.io/blog/post/lun-tan/</id>
+        <link href="https://test19124.github.io/blog/post/lun-tan/">
+        </link>
+        <updated>2020-02-23T06:56:46.000Z</updated>
+    </entry>
 </feed>
