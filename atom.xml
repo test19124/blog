@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://test19124.github.io</id>
+    <id>https://test19124.github.io/blog/</id>
     <title>test19124 - blog</title>
-    <updated>2020-02-23T06:34:27.723Z</updated>
+    <updated>2020-02-23T06:41:19.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://test19124.github.io"/>
-    <link rel="self" href="https://test19124.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://test19124.github.io/images/avatar.png</logo>
-    <icon>https://test19124.github.io/favicon.ico</icon>
+    <link rel="alternate" href="https://test19124.github.io/blog/"/>
+    <link rel="self" href="https://test19124.github.io/blog/atom.xml"/>
+    <subtitle>暂无</subtitle>
+    <logo>https://test19124.github.io/blog/images/avatar.png</logo>
+    <icon>https://test19124.github.io/blog/favicon.ico</icon>
     <rights>All rights reserved 2020, test19124 - blog</rights>
     <entry>
         <title type="html"><![CDATA[1]]></title>
-        <id>https://test19124.github.io/post/1/</id>
-        <link href="https://test19124.github.io/post/1/">
+        <id>https://test19124.github.io/blog/post/1/</id>
+        <link href="https://test19124.github.io/blog/post/1/">
         </link>
         <updated>2020-02-23T06:31:40.000Z</updated>
-        <content type="html"><![CDATA[<p>1</p>
-]]></content>
     </entry>
 </feed>
