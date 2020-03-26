@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
 <title>test19124 - blog</title>
-<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1583848500980">
+<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1585220172218">
 <link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -146,6 +146,44 @@
         </span>
       </div>
     
+    <style>
+      .button {
+        font-family: "楷体";
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        width: 100%;
+      }
+      .file {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+      }
+      .file:hover {
+        background-color: #008CBA;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+    </style>
+    <script>
+      document.write("<input class=\"button file\" type=\"button\" value=\"点击按钮下载本文word\">");
+    </script>
+    <script>
+      $(function () {
+        $("input[type='button']").click(function (event) {
+          $("#word").wordExport('word文档');
+        });
+      })
+    </script>
   
   
 
