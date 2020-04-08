@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="theme-color" content="#000">
 <title>博客创建历史 | test19124 - blog</title>
-<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1586266053307">
+<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1586315625636">
 <link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -157,6 +157,7 @@
         </span>
       </div>
     
+    <div id="wordbutton"></div>
     <style>
       .button {
         font-family: "楷体";
@@ -185,16 +186,6 @@
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
       }
     </style>
-    <script>
-      document.write("<input class=\"button file\" type=\"button\" value=\"点击按钮下载本文word\">");
-    </script>
-    <script>
-      $(function () {
-        $("input[type='button']").click(function (event) {
-          $("#word").wordExport('word文档');
-        });
-      })
-    </script>
   
   
 
@@ -320,6 +311,8 @@
 </li>
 </ul>
 
+                  <br/>
+                  <hr/>
                 </div>
                 <div class="post-footer">
   <ul class="post-copyright">
@@ -349,6 +342,14 @@
   </div>
 </div>
               </div>
+              <script>
+                document.getElementById("wordbutton").innerHTML+="<input class=\"button file\" type=\"button\" value=\"点击按钮下载本文word\">";
+                $(function () {
+                  $("input[type='button']").click(function (event) {
+                    $("#word").wordExport('word文档');
+                  });
+                })
+              </script>
               
                 
                   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
