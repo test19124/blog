@@ -6,7 +6,7 @@
 <meta name="keywords" content="test19124,lizishuo,blog">
 <meta name="description" content="test19124的小博客，欢迎来玩鸭">
 <meta name="theme-color" content="#000">
-<title>关于这个博客 | test19124 - blog</title>
+<title>猎人笔记 | test19124 - blog</title>
 <link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1607754790065">
 <link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
 
@@ -25,7 +25,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="关于这个博客" />
+    <meta name="description" content="猎人笔记" />
     <meta name="keywords" content="" />
     <script src="https://cdn.jsdelivr.net/npm/jquery/jquery.min.js"></script>
     <script src="/media/js/FileSaver.js"></script>
@@ -105,9 +105,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body gemini" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://test19124.github.io/images/avatar.png"/>
@@ -178,6 +186,197 @@
 
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E9%9C%8D%E9%87%8C-%E9%9C%8D%E9%87%8C%E5%92%8C%E5%8D%A1%E5%88%A9%E5%86%85%E5%A5%87">霍里 ——《霍里和卡利内奇》</a></li>
+<li><a href="#%E5%8D%A1%E9%87%8C%E5%86%85%E5%A5%87-%E9%9C%8D%E9%87%8C%E5%92%8C%E5%8D%A1%E5%88%A9%E5%86%85%E5%A5%87">卡里内奇 ——《霍里和卡利内奇》</a></li>
+<li><a href="#%E5%87%A0%E4%B8%AA%E5%B0%8F%E9%9C%8D%E9%87%8C-%E9%9C%8D%E9%87%8C%E5%92%8C%E5%8D%A1%E5%88%A9%E5%86%85%E5%A5%87">几个小霍里 ——《霍里和卡利内奇》</a></li>
+<li><a href="#%E5%8D%A1%E8%A5%BF%E6%89%AC-%E7%BE%8E%E4%B8%BD%E7%9A%84%E6%A2%85%E6%81%B0%E6%B2%B3%E7%95%94%E7%9A%84%E5%8D%A1%E8%A5%BF%E6%89%AC">卡西扬 ——《美丽的梅恰河畔的卡西扬》</a></li>
+<li><a href="#%E9%9B%85%E5%8F%AF%E5%A4%AB-%E6%AD%8C%E6%89%8B">雅可夫 ——《歌手》</a></li>
+<li><a href="#%E9%A9%AC%E7%89%B9%E5%88%97%E5%A8%9C-%E5%BD%BC%E5%BD%BC%E5%8D%A1%E6%8B%89%E5%A1%94%E5%8F%B6%E5%A4%AB">马特列娜 ——《彼·彼·卡拉塔叶夫》</a></li>
+<li><a href="#%E9%98%BF%E5%BA%93%E4%B8%BD%E5%A8%9C-%E5%B9%BD%E4%BC%9A">阿库丽娜 ——《幽会》</a></li>
+<li><a href="#%E5%8D%A2%E5%85%8B%E4%B8%BD%E5%A8%85-%E6%9E%AF%E8%90%8E%E4%BA%86%E7%9A%84%E5%A5%B3%E4%BA%BA">卢克丽娅 ——《枯萎了的女人》</a></li>
+<li><a href="#%E4%BA%94%E4%B8%AA%E5%A4%A9%E7%9C%9F%E7%A8%9A%E6%B0%94%E7%9A%84%E5%86%9C%E5%AE%B6%E5%AD%A9%E5%AD%90-%E5%88%AB%E4%BB%BB%E8%8D%89%E5%9C%B0">五个天真稚气的农家孩子 ——《别任草地》</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -264,8 +463,8 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/">
-      关于这个博客
+    <a class="post-title-link" href="https://test19124.github.io/post/lie-ren-bi-ji/">
+      猎人笔记
     </a>
   </h1>
   <div class="post-meta">
@@ -273,24 +472,66 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-12-04</span>
+      <span>2020-12-12</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>5分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1<span class="pc-show">字数</span></span>
+      <span>1447<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
                 <div class="post-body next-md-body" id="post_body">
-                  <p>QwQ</p>
+                  <h4 id="霍里-霍里和卡利内奇">霍里 ——《霍里和卡利内奇》</h4>
+<blockquote>
+<p>为人<strong>精明</strong>、<strong>务实</strong>，有<strong>进取心和自信</strong>，他凭自己的<strong>勤劳和才智</strong>，为自己创建了较为独立富裕的生活。他<strong>思想开放，求知欲强</strong>，对国外的社会民生都感兴趣。他使人想起了彼得大帝，他也体现出俄罗斯人的精神特征：“<strong>相信自己的力量和刚强</strong>”，“<strong>勇敢地面对未来</strong>”。</p>
+<p>评价：聪慧能干、有精明的头脑、是个实用主义的人物</p>
+</blockquote>
+<h4 id="卡里内奇-霍里和卡利内奇">卡里内奇 ——《霍里和卡利内奇》</h4>
+<blockquote>
+<p>这是个颇具<strong>天赋和丰富内心世界</strong>的农民。他不像霍里那样务实，不善于安排个人生活。他是个<strong>理想派、浪漫派</strong>一类的人，<strong>热情而好幻想</strong>，<strong>爱好大自然</strong>。他有多种特长：养蜂、治病、念咒语、识天时，又能弹会唱，还识得字。</p>
+<p>评价：为人忠诚、心里非常的善良，有自由主义，也非常的浪漫</p>
+</blockquote>
+<h4 id="几个小霍里-霍里和卡利内奇">几个小霍里 ——《霍里和卡利内奇》</h4>
+<blockquote>
+<p>他们看起来是那样<strong>健康、开朗、富于幽默感</strong>。</p>
+<p>这些小霍里将比老霍里更强，他们<strong>更有能力去开拓自己的未来</strong>。</p>
+</blockquote>
+<h4 id="卡西扬-美丽的梅恰河畔的卡西扬">卡西扬 ——《美丽的梅恰河畔的卡西扬》</h4>
+<blockquote>
+<p>他身体矮小瘦弱，不善于干活，可他<strong>充满着生命的活力</strong>。他在大自然的怀抱中显得那么<strong>灵活、自在、惬意</strong>，他能与各种鸟儿对歌、争鸣，能利用野草为人治病。他<strong>头脑聪明，善于思考</strong>，平常沉默寡言，但一旦打开话匣子，便滔滔不绝，活像个哲学家，说出一套套绝非一般农民所能说得出的哲理。他爱大自然中的一切生灵，认为一切飞禽走兽都有权享受自己的生命，有权活尽自己的天年。射猎它们是罪过的。他认为人类有自己吃喝的东西，那就是上帝所恩赐的粮食和水，还有祖宗传下来的家禽家畜。</p>
+<p>他自己却喜欢去捕捉夜莺，但他不是为了杀害它、食用它，而是让它为人们开心快乐。他说鱼是可以捕食的，因为鱼的血“是冷的，不是活的”。他认为做人“<strong>必须正直，这是最要紧的</strong>”。他感到“<strong>人间无公道</strong>”，他打算去“寻找真理”！</p>
+<p>作者赞叹农民的<strong>纯真和善良</strong>，赞叹他们的<strong>道德力量</strong>。</p>
+</blockquote>
+<h4 id="雅可夫-歌手">雅可夫 ——《歌手》</h4>
+<blockquote>
+<p>直接地赞美山沟里的农民歌手雅可夫的<strong>艺术天赋</strong>，同时也间接地赞美歌手身边那群农人的<strong>音乐鉴赏力</strong>。作家借猎人之口说，这位农民的歌声“<strong>蕴有真挚深沉的情感、青春的气息、力量、甜美</strong>，以及一种<strong>淡淡的哀愁</strong>”，说那歌声里跳跃着“<strong>一颗俄罗斯正义的炽热灵魂</strong>”，它紧紧地“<strong>抓住人们的心，直接扣动俄罗斯人的心弦</strong>”。</p>
+<p>接着作家描写了在场听众的反应作为印证。你看，猎人的心弦被“扣动”了，“涌上了热泪”，酒馆老板娘禁不住“发出低沉的、压抑的哭声”，老成持重的老板感动得“垂下了头”，眨巴眼压制着内心的激动而“扭过头去”，笨瓜“深深动情了，笨相地张着嘴巴，呆呆地站着”，穿破长袍的庄稼人“在角落里低声抽泣”，那沉着冷静的“怪老爷”也“涌出大颗的泪珠”，连雅可夫的竞赛对手包工头都听得“发愣”了。</p>
+<p>作家似乎在告诉人们：<strong>在俄罗斯农民中不仅有艺术天才，更有广大的能够欣赏艺术美的群众</strong>。可是作家又在后面描写了一幅令人“很不愉快的”画面，表现了这群农人醉酒后使人懊丧的丑态。这无疑是要发人深思：<strong>农奴制下的现实生活无情地扭曲了这些具有才华和美好心灵的农人，他们理应有一种文明的、适合于他们美好心灵的生活</strong>！</p>
+</blockquote>
+<h4 id="马特列娜-彼彼卡拉塔叶夫">马特列娜 ——《彼·彼·卡拉塔叶夫》</h4>
+<blockquote>
+<p><strong>聪明美丽的渴求爱情</strong>和<strong>自由</strong>而又<strong>勇于作自我牺牲</strong></p>
+</blockquote>
+<h4 id="阿库丽娜-幽会">阿库丽娜 ——《幽会》</h4>
+<blockquote>
+<p><strong>纯真、温柔而又痴情</strong></p>
+</blockquote>
+<h4 id="卢克丽娅-枯萎了的女人">卢克丽娅 ——《枯萎了的女人》</h4>
+<blockquote>
+<p>卢克丽娅原先是一个<strong>能歌善舞、笑声朗朗的美丽姑娘</strong>，曾是众多小伙子爱慕的对象。可是她后来不幸地从高台阶上重重摔了下来，由于没有得到适当的治疗而瘫痪，枯萎了，成了一具“活尸首”，虽然她外形的美丧失了，可是她那<strong>心灵的美反显得更为动人</strong>：她是那样<strong>坚强地</strong>忍受着病痛的折磨，她竟能<strong>以女英雄贞德的精神鼓舞自己</strong>。在长期的僵卧状态中仍表现出她<strong>对生命、对大自然的热爱</strong>；她<strong>不去抱怨个人的不幸</strong>，很<strong>能体谅别人</strong>，还<strong>惦记着农民兄弟的贫苦</strong>。</p>
+</blockquote>
+<h4 id="五个天真稚气的农家孩子-别任草地">五个天真稚气的农家孩子 ——《别任草地》</h4>
+<blockquote>
+<p>作家把他们置于暮色笼罩下的草地的背景里，似乎是有意烘托他们的<strong>纯真和可爱</strong>。然而他们毕竟是些穷孩子，小小年纪便分担着生活的担子，显然他们是没有机会上学，接受科学的教育的，他们受到的是民间的神话传说的熏陶。他们讲的传说故事里都带有恐怖凄凉的色彩，这<strong>反映了现实生活的苦痛已在孩子们心灵上留下了阴影</strong>，作家对他们倾注了<strong>深深的同情</strong>。</p>
+</blockquote>
 
                   <br/>
                   <hr/>
@@ -303,7 +544,7 @@
     </li>
     <li class="post-copyright-link">
       <b>本文链接：</b>
-      <a href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/" title="关于这个博客">关于这个博客 (https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/)</a>
+      <a href="https://test19124.github.io/post/lie-ren-bi-ji/" title="猎人笔记">猎人笔记 (https://test19124.github.io/post/lie-ren-bi-ji/)</a>
     </li>
     <li class="post-copyright-license">
       <b>版权声明： </b>
@@ -316,12 +557,12 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="猎人笔记" href="https://test19124.github.io/post/lie-ren-bi-ji/">猎人笔记</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="猎人笔记" href="https://test19124.github.io/post/lie-ren-bi-ji/">上一篇</a>
-      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="关于这个博客" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/">关于这个博客</a>
+        <a class="nav-mobile-next" title="关于这个博客" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
@@ -331,7 +572,7 @@
                 document.getElementById("wordbutton").innerHTML+="<input class=\"button file\" type=\"button\" value=\"点击按钮下载本文word\">";
                 $(function () {
                   $("input[type='button']").click(function (event) {
-                    $("#word").wordExport('关于这个博客');
+                    $("#word").wordExport('猎人笔记');
                   });
                 })
               </script>
