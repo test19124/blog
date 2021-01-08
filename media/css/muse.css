@@ -170,6 +170,7 @@
 
 .muse .nav-item i {
   display: block;
+  margin: 0 auto;
 }
 
 .muse .blog-header {
@@ -300,7 +301,6 @@
 .muse .right-motion {
   opacity: 0;
 }
-
 .muse .sidebar-item-box + .sidebar-item-box {
   border-left: 1px solid #333;
 }
