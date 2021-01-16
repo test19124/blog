@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://test19124.github.io</id>
     <title>test19124 - blog</title>
-    <updated>2021-01-16T13:38:56.408Z</updated>
+    <updated>2021-01-16T16:21:36.411Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://test19124.github.io"/>
     <link rel="self" href="https://test19124.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://test19124.github.io/images/avatar.png</logo>
     <icon>https://test19124.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, test19124 - blog</rights>
+    <entry>
+        <title type="html"><![CDATA[可爱你的【道法】]]></title>
+        <id>https://test19124.github.io/post/dao-fa/</id>
+        <link href="https://test19124.github.io/post/dao-fa/">
+        </link>
+        <updated>2021-01-16T13:47:31.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[猎人笔记]]></title>
         <id>https://test19124.github.io/post/lie-ren-bi-ji/</id>

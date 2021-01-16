@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="test19124,lizishuo,blog">
+<meta name="description" content="test19124的小博客，欢迎来玩鸭">
+<meta name="theme-color" content="#000">
+<title>可爱你的【道法】 | test19124 - blog</title>
+<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1610814013426">
+<link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
+
+<link rel="stylesheet" href="/media/css/gemini.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/androidstudio.css" rel="stylesheet">  
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+<script src="/template/js/sweetalert2.js"></script>
+<link rel="stylesheet" href="/template/css/sweetalert2.css">
+
+    <meta name="description" content="可爱你的【道法】" />
+    <meta name="keywords" content="" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery/jquery.min.js"></script>
+    <script src="/media/js/FileSaver.js"></script>
+    <script src="/media/js/jquery.wordexport.js"></script>
+  </head>
+  <body oncopy="alert('对不起，禁止复制！');return false;">
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      
+<div class=" gemini">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>test19124 - blog</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">test19124的小窝</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            <li class="nav-item ">
+              
+                <a href="https://test19124.github.io/">
+                  <i class="fa fa-globe"></i> 首页
+                </a>
+              
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      
+      <div class="section-layout gemini ">
+        <div class="section-layout-wrapper">
+          
+
+<div class="sidebar">
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          <div class="post-side-meta" id="post_side_meta">
+            
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://test19124.github.io/images/avatar.png"/>
+    <p class="site-author-name">test19124 - blog</p>
+    <p class="site-description right-motion">test19124的小窝</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://test19124.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+    <div id="wordbutton"></div>
+    <style>
+      .button {
+        font-family: "楷体";
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        cursor: pointer;
+        width: 100%;
+      }
+      .file {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+      }
+      .file:hover {
+        background-color: #008CBA;
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+    </style>
+  
+  
+
+
+</div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%AD%E5%AD%A6%E5%BA%8F%E6%9B%B2">中学序曲</a>
+<ul>
+<li><a href="#%E4%B8%AD%E5%AD%A6%E6%97%B6%E4%BB%A3%E7%9A%84%E6%84%8F%E4%B9%89">中学时代的意义</a></li>
+<li><a href="#%E4%B8%AD%E5%AD%A6%E6%97%B6%E4%BB%A3%E7%9A%84%E6%88%90%E9%95%BF%E8%A1%A8%E7%8E%B0">中学时代的成长表现</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B0%91%E5%B9%B4%E6%9C%89%E6%A2%A6">少年有梦</a>
+<ul>
+<li><a href="#%E6%A2%A6%E6%83%B3%E7%9A%84%E4%BD%9C%E7%94%A8%E6%84%8F%E4%B9%89">梦想的作用/意义</a></li>
+<li><a href="#%E6%A0%91%E7%AB%8B%E6%A2%A6%E6%83%B3%E5%BA%94%E8%AF%A5%E6%B3%A8%E6%84%8F%E4%BB%80%E4%B9%88%E5%B0%91%E5%B9%B4%E6%A2%A6%E6%83%B3%E7%9A%84%E7%89%B9%E7%82%B9">树立梦想应该注意什么?/少年梦想的特点</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%A2%A6%E6%83%B3">如何实现梦想?</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AD%A6%E4%B9%A0%E4%BC%B4%E6%88%90%E9%95%BF">学习伴成长</a>
+<ul>
+<li><a href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E4%B8%AD%E5%AD%A6%E6%97%B6%E4%BB%A3%E7%9A%84%E6%88%90%E9%95%BF%E7%A4%BC%E7%89%A9">如何理解中学时代的成长礼物</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E8%AE%A4%E8%AF%86%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%89%B9%E7%82%B9">如何正确认识学习?/学习的特点</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%BB%88%E8%BA%AB%E5%AD%A6%E4%B9%A0%E9%95%BF%E5%A4%A7%E6%88%90%E4%BA%BA%E4%B9%8B%E5%90%8E%E8%BF%98%E9%9C%80%E8%A6%81%E5%AD%A6%E4%B9%A0%E5%90%97">如何理解终身学习?/长大成人之后还需要学习吗?</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%AB%E5%8F%97%E5%AD%A6%E4%B9%A0">享受学习</a>
+<ul>
+<li><a href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%AD%A6%E4%B9%A0%E6%98%AF%E8%8B%A6%E4%B9%90%E4%BA%A4%E7%BB%87%E7%9A%84">如何看待学习是苦乐交织的?</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%AD%A6%E4%BC%9A%E5%AD%A6%E4%B9%A0">如何学会学习</a></li>
+</ul>
+</li>
+<li><a href="#%E8%AE%A4%E8%AF%86%E8%87%AA%E5%B7%B1">认识自己</a>
+<ul>
+<li><a href="#%E6%AD%A3%E7%A1%AE%E8%AE%A4%E8%AF%86%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%8F%E4%B9%89">正确认识自己的意义?</a></li>
+<li><a href="#%E6%80%8E%E6%A0%B7%E8%AE%A4%E8%AF%86%E8%87%AA%E5%B7%B1%E8%AE%A4%E8%AF%86%E8%87%AA%E5%B7%B1%E7%9A%843%E4%B8%AA%E9%80%94%E5%BE%84">怎样认识自己?/认识自己的3个途径</a></li>
+<li><a href="#%E4%BB%96%E4%BA%BA%E8%AF%84%E4%BB%B7%E7%9A%84%E6%84%8F%E4%B9%89%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%AF%B9%E5%BE%85%E4%BB%96%E4%BA%BA%E8%AF%84%E4%BB%B7">他人评价的意义+如何正确对待他人评价</a></li>
+</ul>
+</li>
+<li><a href="#%E5%81%9A%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%87%AA%E5%B7%B1">做更好的自己</a>
+<ul>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%8E%A5%E7%BA%B3%E8%87%AA%E5%B7%B1">为什么要接纳自己?</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%82%A6%E7%BA%B3%E8%87%AA%E5%B7%B1-%E6%8E%A5%E7%BA%B3%E6%AC%A3%E8%B5%8F">如何悦纳自己? (接纳+欣赏)</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%81%9A%E6%9B%B4%E5%A5%BD%E7%9A%84%E8%87%AA%E5%B7%B1">如何做更好的自己?</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%8B%E8%B0%8A">友谊</a>
+<ul>
+<li><a href="#%E5%8F%8B%E8%B0%8A%E7%9A%84%E5%8A%9B%E9%87%8F%E6%9C%8B%E5%8F%8B%E7%9A%84%E5%BD%B1%E5%93%8D">友谊的力量(朋友的影响)</a></li>
+<li><a href="#%E5%8F%8B%E8%B0%8A%E7%9A%84%E7%89%B9%E8%B4%A8">友谊的特质</a></li>
+<li><a href="#%E5%8F%8B%E8%B0%8A%E7%9A%84%E6%BE%84%E6%B8%85">友谊的澄清</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%BB%BA%E7%AB%8B%E5%8F%8B%E8%B0%8A">如何建立友谊?</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%91%B5%E6%8A%A4%E5%8F%8B%E8%B0%8A">如何呵护友谊?</a></li>
+<li><a href="#%E7%BD%91%E4%B8%8A%E4%BA%A4%E5%8F%8B%E5%BA%94%E8%AF%A5%E6%B3%A8%E6%84%8F%E4%BB%80%E4%B9%88">网上交友应该注意什么?</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%88%E7%94%9F%E5%85%B3%E7%B3%BB">师生关系</a>
+<ul>
+<li><a href="#%E6%95%99%E5%B8%88%E7%9A%84%E8%81%8C%E4%B8%9A%E7%89%B9%E5%BE%81">教师的职业特征</a></li>
+<li><a href="#%E6%96%B0%E6%97%B6%E4%BB%A3%E5%9B%9B%E6%9C%89%E5%A5%BD%E6%95%99%E5%B8%88%E8%A6%81%E6%B1%82">新时代“四有”好教师要求</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%92%8C%E9%A3%8E%E6%A0%BC%E4%B8%8D%E5%90%8C%E7%9A%84%E8%80%81%E5%B8%88%E7%9B%B8%E5%A4%84">如何和风格不同的老师相处?</a></li>
+<li><a href="#%E6%95%99%E5%AD%A6%E7%9B%B8%E9%95%BF%E7%9A%84%E8%A6%81%E6%B1%82%E6%80%8E%E4%B9%88%E5%81%9A">教学相长的要求(怎么做)</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%AF%B9%E5%BE%85%E8%80%81%E5%B8%88%E7%9A%84%E8%A1%A8%E6%89%AC%E5%92%8C%E6%89%B9%E8%AF%84">如何正确对待老师的表扬和批评</a></li>
+<li><a href="#%E8%89%AF%E5%A5%BD%E7%9A%84%E5%B8%88%E7%94%9F%E5%85%B3%E7%B3%BB%E6%98%AF%E6%80%8E%E6%A0%B7%E5%BB%BA%E7%AB%8B%E8%89%AF%E5%A5%BD%E7%9A%84%E5%B8%88%E7%94%9F%E5%85%B3%E7%B3%BB">良好的师生关系是?/怎样建立良好的师生关系?</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%B2%E5%AD%90%E5%85%B3%E7%B3%BB">亲子关系</a>
+<ul>
+<li><a href="#%E5%AE%B6%E6%9C%89%E4%BB%80%E4%B9%88%E9%87%8D%E8%A6%81%E4%BD%9C%E7%94%A8">家有什么重要作用?</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%9D%E4%BA%B2%E6%95%AC%E9%95%BF">为什么孝亲敬长?</a></li>
+<li><a href="#%E6%80%8E%E4%B9%88%E6%A0%B7%E5%AD%9D%E4%BA%B2%E6%95%AC%E9%95%BF">怎么样孝亲敬长?</a></li>
+<li><a href="#%E4%BA%B2%E5%AD%90%E5%86%B2%E7%AA%81%E7%9A%84%E5%8E%9F%E5%9B%A0">亲子冲突的原因</a></li>
+<li><a href="#%E6%80%8E%E6%A0%B7%E5%BA%94%E5%AF%B9%E4%BA%B2%E5%AD%90%E5%86%B2%E7%AA%81">怎样应对亲子冲突</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%90%E5%AE%B6%E5%BA%AD">如何创建和谐家庭</a></li>
+</ul>
+</li>
+<li><a href="#%E7%94%9F%E5%91%BD%E7%9A%84%E6%80%9D%E8%80%83">生命的思考</a>
+<ul>
+<li><a href="#%E7%94%9F%E5%91%BD%E7%9A%84%E7%89%B9%E7%82%B9">生命的特点?</a></li>
+<li><a href="#%E6%80%8E%E6%A0%B7%E9%9D%A2%E5%AF%B9%E6%AD%BB%E4%BA%A1%E6%80%8E%E6%A0%B7%E5%AF%B9%E5%BE%85%E7%94%9F%E5%91%BD">怎样面对死亡?/怎样对待生命?</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%94%9F%E5%91%BD%E7%9A%84%E6%8E%A5%E7%BB%AD">如何理解“生命的接续”?</a></li>
+<li><a href="#%E6%95%AC%E7%95%8F%E7%94%9F%E5%91%BD%E7%94%9F%E5%91%BD%E8%87%B3%E4%B8%8A%E7%9A%84%E8%AE%A4%E8%AF%86">敬畏生命(生命至上)的认识</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%95%AC%E7%95%8F%E7%94%9F%E5%91%BD%E4%BC%91%E6%88%9A%E4%B8%8E%E5%85%B1">如何敬畏生命(休戚与共)</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%AE%88%E6%8A%A4%E7%94%9F%E5%91%BD%E8%BA%AB%E4%BD%93%E7%B2%BE%E7%A5%9E">如何守护生命?(身体+精神)</a></li>
+<li><a href="#%E9%9D%A2%E5%AF%B9%E6%8C%AB%E6%8A%98%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%81%E5%BA%A6">面对挫折的正确态度</a></li>
+<li><a href="#%E9%9D%A2%E5%AF%B9%E6%8C%AB%E6%8A%98%E5%A6%82%E4%BD%95%E5%8F%91%E6%8E%98%E7%94%9F%E5%91%BD%E7%9A%84%E5%8A%9B%E9%87%8F">面对挫折,如何发掘生命的力量</a></li>
+<li><a href="#%E6%80%8E%E6%A0%B7%E7%9A%84%E4%B8%80%E7%94%9F%E6%98%AF%E5%80%BC%E5%BE%97%E4%B8%AA%E4%BA%BA%E4%BB%96%E4%BA%BA%E7%A4%BE%E4%BC%9A">怎样的一生是值得?(个人+他人+社会)</a></li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%8E%A2%E7%B4%A2%E7%94%9F%E5%91%BD%E7%9A%84%E6%84%8F%E4%B9%89">为什么要探索生命的意义</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%B4%BB%E5%87%BA%E7%94%9F%E5%91%BD%E7%9A%84%E7%B2%BE%E5%BD%A9%E5%85%85%E7%9B%88%E5%85%B3%E5%88%87%E5%B9%B3%E5%87%A1%E4%B8%AD%E4%BC%9F%E5%A4%AA">如何活出生命的精彩?(充盈+关切+平凡中伟太)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
+        
+      </div>
+    </div>
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+
+  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+    let hasFix = false;
+    let scrollEl = document.querySelector('.main-continer');
+    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+    window.addEventListener('scroll', function(e) {
+    if (document.scrollingElement.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <div id="word" class="word">
+              <div class="article-box">
+    <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://test19124.github.io/post/dao-fa/">
+      可爱你的【道法】
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2021-01-16</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>12分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>3296<span class="pc-show">字数</span></span>
+    </span>
+  </div>
+</header>
+</div>
+                <div class="post-body next-md-body" id="post_body">
+                  <h2 id="中学序曲">中学序曲</h2>
+<h3 id="中学时代的意义">中学时代的意义</h3>
+<ol>
+<li>我们站在一个新的起点上</li>
+<li>中学时代是我们人生发展的新阶段</li>
+<li>中学时代见证着一个人从少年到青年的生命进阶</li>
+</ol>
+<h3 id="中学时代的成长表现">中学时代的成长表现</h3>
+<ol>
+<li>意味着新的机会和可能，也意味着新的目标和挑战</li>
+<li>激发着我们的潜能，激励我们不断实现自我超越</li>
+<li>改变别人心目中不完美的形象，重新塑造一个自我</li>
+<li>珍视当下，把握机遇，为美好的明天付出不懈的努力</li>
+</ol>
+<h2 id="少年有梦">少年有梦</h2>
+<h3 id="梦想的作用意义">梦想的作用/意义</h3>
+<ol>
+<li>激发我们生命的热情和勇气，让生活更有色彩</li>
+<li>使我们不断进步和发展</li>
+</ol>
+<h3 id="树立梦想应该注意什么少年梦想的特点">树立梦想应该注意什么?/少年梦想的特点</h3>
+<ol>
+<li>是人类天真无邪，美丽可爱的愿望</li>
+<li>与人生目标紧密相连</li>
+<li>与时代脉搏紧密相连，与中国梦密不可分</li>
+</ol>
+<h3 id="如何实现梦想">如何实现梦想?</h3>
+<ol>
+<li>不应止于心动，更要付诸行动</li>
+<li>努力，是梦想与现实之间的桥梁</li>
+<li>努力需要立志，需要坚持，需要有方法</li>
+</ol>
+<h2 id="学习伴成长">学习伴成长</h2>
+<h3 id="如何理解中学时代的成长礼物">如何理解中学时代的成长礼物</h3>
+<ol>
+<li>知识的获取</li>
+<li>能力的培养</li>
+<li>如何做人</li>
+</ol>
+<h3 id="如何正确认识学习学习的特点">如何正确认识学习?/学习的特点</h3>
+<ol>
+<li>学习不仅仅局限在学校，生活中的一切都可以是学习</li>
+<li>学习需要自觉、主动的态度</li>
+<li>学习伴随我们成长</li>
+<li>学习没有终点，我们终生都要学习</li>
+</ol>
+<h3 id="如何理解终身学习长大成人之后还需要学习吗">如何理解终身学习?/长大成人之后还需要学习吗?</h3>
+<ol>
+<li>即使离开了学校，也要不断地学习，不断地充实自己</li>
+<li>学习不仅让我们能够生存，而且让我们能够拥有更充实的生活</li>
+<li>学习点亮我们心中的明灯，激发前进的动力</li>
+<li>分享生命经验，为幸福生活奠基</li>
+</ol>
+<h2 id="享受学习">享受学习</h2>
+<h3 id="如何看待学习是苦乐交织的">如何看待学习是苦乐交织的?</h3>
+<ol>
+<li>学习是多方面的，学习是一个过程，我们并不是每时每刻都能从中感到快乐</li>
+<li>学习中有快乐，对某方面的知识有强烈兴趣时、自己解决某个问题时、学习中找到志趣相投的同伴时、发现自己的潜能时......我们都可以体会到学习带来的快乐</li>
+<li>学习中也有辛苦，需要集中注意力，耗费精力，遇到困难和阻挠时需要调节不良情绪等，这些都需要我们凭借坚强的意志作出努力</li>
+<li>当我们经历了学习的辛苦，收获学习的成果时，那种发自内心的愉悦让我们体验到学习的美好，它是学习过程带给我们的美妙享受</li>
+</ol>
+<h3 id="如何学会学习">如何学会学习</h3>
+<ol>
+<li>发现并保持对学习的兴趣</li>
+<li>掌握科学的学习方法</li>
+<li>运用不同的学习方式</li>
+</ol>
+<h2 id="认识自己">认识自己</h2>
+<h3 id="正确认识自己的意义">正确认识自己的意义?</h3>
+<ol>
+<li>正确认识自己，可以促进自我发展</li>
+<li>正确认识自己，可以促进与他人的交往</li>
+</ol>
+<h3 id="怎样认识自己认识自己的3个途径">怎样认识自己?/认识自己的3个途径</h3>
+<ol>
+<li>我们可以从生理、心理、社会等方面来认识自己</li>
+<li>我们可以通过自我评价来认识自己</li>
+<li>他人评价是我们认识自己的一面镜子</li>
+</ol>
+<h3 id="他人评价的意义如何正确对待他人评价">他人评价的意义+如何正确对待他人评价</h3>
+<ol>
+<li>他人评价有助于我们形成对自己更为客观，完整，清晰的认识</li>
+<li>我们要重视他人的态度与评价，但也要客观冷静分析，既不能盲从也不能忽视</li>
+<li>用理性的心态面对他人评价是走向成熟的表现</li>
+</ol>
+<h2 id="做更好的自己">做更好的自己</h2>
+<h3 id="为什么要接纳自己">为什么要接纳自己?</h3>
+<ol>
+<li>如同世界上没有两片完全相同的树叶一样，世界上也没有完全相同的两个人</li>
+</ol>
+<h3 id="如何悦纳自己-接纳欣赏">如何悦纳自己? (接纳+欣赏)</h3>
+<ol>
+<li>接纳自己需要接纳自己的全部，寄接纳自己的优点，也接纳自己的不完美</li>
+<li>接纳自己需要乐观的心态，更需要勇气和智慧</li>
+<li>学会欣赏自己，欣赏自己的独特，欣赏自己的优点，欣赏自己的努力，欣赏自己为他人的奉献</li>
+<li>欣赏自己，不是骄傲自大，也不是目中无人，而是成长的道路上面对压力与挫折的自我鼓励与自我奋进</li>
+</ol>
+<h3 id="如何做更好的自己">如何做更好的自己?</h3>
+<ol>
+<li>扬长避短</li>
+<li>主动改正缺点</li>
+<li>不断激发自己的潜能</li>
+<li>为他人、为社会带来福祉</li>
+</ol>
+<h2 id="友谊">友谊</h2>
+<h3 id="友谊的力量朋友的影响">友谊的力量(朋友的影响)</h3>
+<ol>
+<li>朋友对一个人的影响很大。我们在言谈举止，兴趣爱好，甚至性格等都或多或少的受到朋友的影响</li>
+<li>朋友见证了我们一起走过的成长历程，我们需要真诚友善的朋友</li>
+<li>朋友丰富了我们的生活经验，友谊让我们更深刻的体悟生命的美好</li>
+</ol>
+<h3 id="友谊的特质">友谊的特质</h3>
+<ol>
+<li>友谊是一种亲密的关系</li>
+<li>友谊是平等的，双向的</li>
+<li>友谊是一种心灵的相遇</li>
+</ol>
+<h3 id="友谊的澄清">友谊的澄清</h3>
+<ol>
+<li>友谊不是一成不变的</li>
+<li>竞争并不必然伤害友谊，关键是我们对待竞争的态度</li>
+<li>友谊不能没有原则，不能不加分辨地为朋友做任何事，当朋友误入歧途时，要给予规劝</li>
+</ol>
+<h3 id="如何建立友谊">如何建立友谊?</h3>
+<ol>
+<li>建立友谊，需要开放自己</li>
+<li>建立友谊，需要持续的行动</li>
+<li>建立友谊，需要合适的方法</li>
+</ol>
+<h3 id="如何呵护友谊">如何呵护友谊?</h3>
+<ol>
+<li>呵护友谊，需要用心去关怀对方</li>
+<li>呵护友谊，需要学会正确处理冲突</li>
+<li>呵护友谊，需要学会正确对待交友中带来的伤害</li>
+</ol>
+<h3 id="网上交友应该注意什么">网上交友应该注意什么?</h3>
+<ol>
+<li>学会理性辨别，慎重选择</li>
+<li>我们要有一定的自我保护意识</li>
+<li>将网上的朋友转化为现实中的朋友，需要慎重</li>
+<li>学会正确对待交友中带来的伤害</li>
+<li>我们要遵守法律、法规</li>
+<li>你们要学会在现实中与同伴交往</li>
+</ol>
+<h2 id="师生关系">师生关系</h2>
+<h3 id="教师的职业特征">教师的职业特征</h3>
+<ol>
+<li>传道授业解惑</li>
+<li>传承文明</li>
+<li>老师是我们学习的指导者，和成长的引路人</li>
+</ol>
+<h3 id="新时代四有好教师要求">新时代“四有”好教师要求</h3>
+<ol>
+<li>有理想信念</li>
+<li>有道德情操</li>
+<li>有扎实学识</li>
+<li>有仁爱之心</li>
+</ol>
+<h3 id="如何和风格不同的老师相处">如何和风格不同的老师相处?</h3>
+<ol>
+<li>承认老师的差别</li>
+<li>发现不同风格老师的优点</li>
+<li>了解老师教育行为的目的</li>
+<li>主动交往</li>
+<li>尊重，承认，接纳老师</li>
+</ol>
+<h3 id="教学相长的要求怎么做">教学相长的要求(怎么做)</h3>
+<ol>
+<li>主动参与，勤学好问的态度有助于我们与老师的相互交流</li>
+<li>真诚、恰当地向老师表达自己的观点和见解</li>
+</ol>
+<h3 id="如何正确对待老师的表扬和批评">如何正确对待老师的表扬和批评</h3>
+<ol>
+<li>学会正确对待老师的表扬和批评</li>
+<li>老师的表扬意味着肯定，鼓励和期待，激励我们更好的学习和发展</li>
+<li>老师的批评意味着关心，提醒和劝解，可以帮助我们反省自己，改进不足</li>
+<li>对待老师的批评，我们要把注意力放在老师批评的内容和用意上，理解老师的良苦用心</li>
+</ol>
+<h3 id="良好的师生关系是怎样建立良好的师生关系">良好的师生关系是?/怎样建立良好的师生关系?</h3>
+<ol>
+<li>师生彼此尊重，相互关心</li>
+<li>我们可以和老师成为朋友</li>
+<li>我们也应该主动关心老师，理解老师</li>
+</ol>
+<h2 id="亲子关系">亲子关系</h2>
+<h3 id="家有什么重要作用">家有什么重要作用?</h3>
+<ol>
+<li>家庭是由婚姻关系，血缘关系或收养关系结合成的亲属生活组织</li>
+<li>家是我们身心的寄居之所</li>
+<li>家是我们心灵的港湾</li>
+<li>家是代代传承，血脉相连的生活共同体是甜蜜，温暖，轻松的避风港</li>
+</ol>
+<h3 id="为什么孝亲敬长">为什么孝亲敬长?</h3>
+<ol>
+<li>在中国的家庭文化中，&quot;孝&quot;是重要的精神内涵</li>
+<li>孝亲敬长是中华民族的传统美德，也是每个中国公民的法定义务</li>
+</ol>
+<h3 id="怎么样孝亲敬长">怎么样孝亲敬长?</h3>
+<ol>
+<li>尽孝在当下，我们要用行动来表达孝敬之心</li>
+<li>尊重，倾听，感恩</li>
+</ol>
+<h3 id="亲子冲突的原因">亲子冲突的原因</h3>
+<ol>
+<li>独立意识的增强</li>
+<li>逆反心理</li>
+<li>代沟的存在</li>
+</ol>
+<h3 id="怎样应对亲子冲突">怎样应对亲子冲突</h3>
+<ol>
+<li>爱是需要呵护的，爱在沟通中加深，我们要选择不伤害父母感情和不影响亲子关系的做法</li>
+<li>试着去接纳父母的做法，理解父母行为中蕴含的爱，我可以尝试让父母了解我们的变化和需要</li>
+</ol>
+<h3 id="如何创建和谐家庭">如何创建和谐家庭</h3>
+<ol>
+<li>家庭成员之间相互信任，体谅和包容</li>
+<li>积极参加家务劳动，增强家庭责任意识</li>
+<li>以良好的心态面对家庭发展中的问题</li>
+<li>有效的交流和沟通</li>
+</ol>
+<h2 id="生命的思考">生命的思考</h2>
+<h3 id="生命的特点">生命的特点?</h3>
+<ol>
+<li>生命来之不易</li>
+<li>生命是独特的</li>
+<li>生命是不可逆的</li>
+<li>生命也是短暂的</li>
+</ol>
+<h3 id="怎样面对死亡怎样对待生命">怎样面对死亡?/怎样对待生命?</h3>
+<ol>
+<li>我们每个人都无法抗拒生命发展的自然规律，死亡是人生不可避免的归宿，它让我们感激生命的获得</li>
+<li>我们要从容面对生命的不可预知，更加热爱生命，热爱生活，把有限的生命投入到无限的奋斗和奉献之中</li>
+</ol>
+<h3 id="如何理解生命的接续">如何理解“生命的接续”?</h3>
+<ol>
+<li>个人生命虽然短暂，但正是一代又一代的个体生命实现了人类生命的接续</li>
+<li>人类生命不断发展，人类的精神文明也不断积累和丰富，我们要在精神上不断继承和创造人类的文明成果</li>
+<li>生命的接续使得每个人的生命不仅仅是&quot;我&quot;的生命，还是&quot;我们&quot;的生命，在人类生命的接续中，我们总能为自己的生命找到一个位置，担当一份使命</li>
+<li>我们要更好的认识和面对自己的生命</li>
+</ol>
+<h3 id="敬畏生命生命至上的认识">敬畏生命(生命至上)的认识</h3>
+<ol>
+<li>生命是脆弱的，艰难的；生命是坚强的，有力量的；生命是崇高的，神圣的</li>
+<li>当我们对生命怀有敬畏之心时，我们就会珍视它，生命价值高于一切</li>
+<li>我们也必须承认别人的生命同样重要，与我们的生命休戚与共，自觉珍爱、尊重自己和他人生命</li>
+</ol>
+<h3 id="如何敬畏生命休戚与共">如何敬畏生命(休戚与共)</h3>
+<ol>
+<li>我们每个人都需要与他人共同生活</li>
+<li>不漠视他人的生命，谨慎地对待生命关系、处理生命问题，才会尊重、关注、关怀和善待身边的每一个人</li>
+<li>我们对生命的敬畏并不是谁的命令，而是内心的自愿选择</li>
+</ol>
+<h3 id="如何守护生命身体精神">如何守护生命?(身体+精神)</h3>
+<ol>
+<li>关心身体的状况，养成健康的生活方式</li>
+<li>关注自己的内心，爱惜自己的身体</li>
+<li>掌握一些基本的自救自护方法</li>
+<li>精神风貌反映着我们的生命状态，守护生命需要关注并养护我们的精神</li>
+<li>我们的精神发育，需要物质的支持，但不完全是物质条件和外部环境的制约，守住真善美，弘扬民族文化</li>
+</ol>
+<h3 id="面对挫折的正确态度">面对挫折的正确态度</h3>
+<ol>
+<li>挫折是我们生命成长的一部分</li>
+<li>我们需要及时调整自己，正确对待挫折</li>
+</ol>
+<h3 id="面对挫折如何发掘生命的力量">面对挫折,如何发掘生命的力量</h3>
+<ol>
+<li>我们需要发现发掘自己的生命力量</li>
+<li>我们每个人的生命都蕴含一定的承受力，自我调节和自我修复能力</li>
+<li>培养自己面对困难的勇气和坚强的意志</li>
+<li>发掘自身的力量并不排斥借助外力</li>
+<li>掌握增强生命韧性的方法</li>
+</ol>
+<h3 id="怎样的一生是值得个人他人社会">怎样的一生是值得?(个人+他人+社会)</h3>
+<ol>
+<li>为了让生命有意义，活出自己的人生，实现自我价值</li>
+<li>当别人需要帮助时付出自己的爱心，不论大小，自愿承担责任</li>
+<li>能够将个人理想与国家发展，民族复兴和人类命运结合起来</li>
+</ol>
+<h3 id="为什么要探索生命的意义">为什么要探索生命的意义</h3>
+<ol>
+<li>探索生命意义是人类人生命的源动力之一</li>
+<li>生命意义是独特的，生命意义是具体的</li>
+<li>生命的意义需要自己发现和创造</li>
+</ol>
+<h3 id="如何活出生命的精彩充盈关切平凡中伟太">如何活出生命的精彩?(充盈+关切+平凡中伟太)</h3>
+<ol>
+<li>彼此关切，拒绝冷漠</li>
+<li>关注自身的发展并关切他人的生命，善待他人，用真诚、热情营造一个互信、友善、和谐的社会</li>
+<li>伟大在于创造和贡献，创造出不平凡的社会价值</li>
+<li>为家庭的美好和社会的发展贡献自己的力量，书写自己的生命价值</li>
+<li>当我们将个体生命和国家的甚至人类的命运联系在一起时，生命便会从平凡中闪耀出伟大</li>
+</ol>
+
+                  <br/>
+                  <hr/>
+                </div>
+                <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <b>本文作者：</b>
+      test19124 - blog
+    </li>
+    <li class="post-copyright-link">
+      <b>本文链接：</b>
+      <a href="https://test19124.github.io/post/dao-fa/" title="可爱你的【道法】">可爱你的【道法】 (https://test19124.github.io/post/dao-fa/)</a>
+    </li>
+    <li class="post-copyright-license">
+      <b>版权声明： </b>
+      本博客所有文章除特别声明外，转载请注明出处！<br/>
+      <img src="https://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=H|0&chl=https://test19124.github.io/post/dao-fa/">
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="猎人笔记" href="https://test19124.github.io/post/lie-ren-bi-ji/">猎人笔记</a>
+        <a class="nav-mobile-next" title="猎人笔记" href="https://test19124.github.io/post/lie-ren-bi-ji/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              </div>
+              <script>
+                document.getElementById("wordbutton").innerHTML+="<input class=\"button file\" type=\"button\" value=\"点击按钮下载本文word\">";
+                $(function () {
+                  $("input[type='button']").click(function (event) {
+                    $("#word").wordExport('可爱你的【道法】');
+                  });
+                })
+              </script>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="poweredby">
+      © 2019-2020 版权所有 @test19124
+    </div>
+  </footer>
+  
+  
+  <div class="gemini back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+</script>
+    </div>
+  </body>
+  <script src="/media/js/motion.js"></script>
+</html>
