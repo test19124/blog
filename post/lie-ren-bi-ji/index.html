@@ -7,7 +7,7 @@
 <meta name="description" content="test19124的小博客，欢迎来玩鸭">
 <meta name="theme-color" content="#000">
 <title>猎人笔记 | test19124 - blog</title>
-<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1610815418351">
+<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1610846411977">
 <link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -24,6 +24,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
+<script type="text/javascript" src="//static.runoob.com/assets/qrcode/qrcode.min.js"></script>
 
 <script src="/template/js/sweetalert2.js"></script>
 <link rel="stylesheet" href="/template/css/sweetalert2.css">
@@ -642,7 +643,18 @@ window.addEventListener('load', function() {
     <li class="post-copyright-license">
       <b>版权声明： </b>
       本博客所有文章除特别声明外，转载请注明出处！<br/>
-      <img src="https://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=H|0&chl=https://test19124.github.io/post/lie-ren-bi-ji/">
+      <div id="qrcode"></div>
+      <script type="text/javascript">
+        new QRCode(document.getElementById("qrcode"), {
+          text: "https://test19124.github.io/post/lie-ren-bi-ji/",
+          width: 128,
+          height: 128,
+          colorDark : "#000000",
+	        colorLight : "#ffffff",
+          correctLevel : 3 // 二维码结构复杂性 0~3
+        });
+      </script>
+      <!--<img src="https://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=H|0&chl=https://test19124.github.io/post/lie-ren-bi-ji/">-->
     </li>
   </ul>
   <div class="tags">
