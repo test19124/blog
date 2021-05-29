@@ -7,7 +7,7 @@
 <meta name="description" content="test19124的小博客，欢迎来玩鸭">
 <meta name="theme-color" content="#000">
 <title>文天祥人物整理 | test19124 - blog</title>
-<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1622301561553">
+<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1622302472414">
 <link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -669,6 +669,29 @@ window.addEventListener('load', function() {
                   });
                 })
               </script>
+              
+                
+                  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '2ea7124dbdf246ea811f',
+    clientSecret: '90779536ec7ad0cda586604251048bc7124e1d08',
+    repo: 'gitalk',
+    owner: 'test19124',
+    admin: ['test19124'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    createIssueManually: true,
+    perPage: 10
+  })
+  gitalk.render('gitalk-container')
+</script>
+                
+                
               
             </div>
           </div>
