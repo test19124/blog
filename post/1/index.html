@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="test19124,lizishuo,blog">
 <meta name="description" content="test19124的小博客，欢迎来玩鸭">
 <meta name="theme-color" content="#000">
-<title>test19124 - blog</title>
+<title>“吃”素材积累 | test19124 - blog</title>
 <link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1622299253086">
 <link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
 
@@ -29,7 +29,13 @@
 <script src="/template/js/sweetalert2.js"></script>
 <link rel="stylesheet" href="/template/css/sweetalert2.css">
 
+    <meta name="description" content="“吃”素材积累" />
+    <meta name="keywords" content="" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery/jquery.min.js"></script>
+    <script src="/media/js/FileSaver.js"></script>
+    <script src="/media/js/jquery.wordexport.js"></script>
   </head>
+  <!--<body oncopy="alert('对不起，禁止复制！');return false;">-->
   <body>
     <div class="head-top-line"></div>
     <div class="header-box">
@@ -107,8 +113,14 @@
       
       <div class="section-layout gemini ">
         <div class="section-layout-wrapper">
-          <div class="sidebar">
-    
+          
+
+<div class="sidebar">
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://test19124.github.io/images/avatar.png"/>
@@ -192,13 +204,91 @@
 
 
 </div>
+        
+      </div>
+    </div>
 </div>
-          <div class="section-box gemini">
-            <section class="section  posts-expand slide-down-in">
-              
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+
+  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+    let hasFix = false;
+    let scrollEl = document.querySelector('.main-continer');
+    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+    window.addEventListener('scroll', function(e) {
+    if (document.scrollingElement.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <div id="word" class="word">
+              <div class="article-box">
+    <header class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="https://test19124.github.io/post/1/">
       “吃”素材积累
@@ -224,484 +314,69 @@
     </span>
   </div>
 </header>
-      <div class="post-body">
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/1/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/ben-lai-wo-ke-yi-su-cai-ji-lei/">
-      &#34;本来我可以＿＿&#34;素材积累
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2021-05-08</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
-              <span>学习资料</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>6分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1705<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-      <div class="post-body">
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/ben-lai-wo-ke-yi-su-cai-ji-lei/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/du-shu-zhuan-ti-zheng-li/">
-      “读书”专题整理
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2021-05-01</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
-              <span>学习资料</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>7分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1826<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-      <div class="post-body">
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/du-shu-zhuan-ti-zheng-li/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/">
-      文天祥人物整理
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2021-04-24</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
-              <span>学习资料</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>18分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>5293<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-      <div class="post-body">
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/yi-xie-wen-jian/">
-      一些文件
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2021-03-14</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>18<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-      <div class="post-body">
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/yi-xie-wen-jian/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/luo-tuo-xiang-zi/">
-      骆驼祥子
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2021-01-27</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
-              <span>学习资料</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>566<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-      <div class="post-body">
-        
-          <p>《骆驼祥子》讲述的是旧中国北平城里一个人力车夫祥子的悲剧故事。祥子来自农村，他老实善良、健壮、坚忍。来到北平后，选择拉车谋生。他最大的梦想就是拥有一辆自己的车。但是他的希望一次又一次的破灭，他与命运的抗争最终以失败告终。</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/luo-tuo-xiang-zi/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/dao-fa/">
-      可爱你的【道法】七上
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2021-01-16</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
-              <span>学习资料</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>12分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>3296<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-      <div class="post-body">
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/dao-fa/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/lie-ren-bi-ji/">
-      猎人笔记
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-12-12</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
-              <span>学习资料</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>17分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4985<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-      <div class="post-body">
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/lie-ren-bi-ji/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/">
-      关于这个博客
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-12-04</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://test19124.github.io/tag/wei-feng-lei/">
-              <span>未分类</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>8<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-      <div class="post-body">
-        
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-  
-              
-              
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-    
-      
-        <li class="pagination-li pagination-active">
-            <a href="/page/../">
-              1
-            </a>
-        </li>
-      
-    
-    
-  </ul>
 </div>
-            </section>
+                <div class="post-body next-md-body" id="post_body">
+                  <iframe src="/file/“吃”素材积累.pdf" width="100%" height>
+    This browser does not support PDFs. Please download the PDF to view it: 
+    <a href="/file/“吃”素材积累.pdf">Download PDF</a>
+</iframe>
+                  <br/>
+                  <hr/>
+                </div>
+                <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <b>本文作者：</b>
+      test19124 - blog
+    </li>
+    <li class="post-copyright-link">
+      <b>本文链接：</b>
+      <a href="https://test19124.github.io/post/1/" title="“吃”素材积累">“吃”素材积累 (https://test19124.github.io/post/1/)</a>
+    </li>
+    <li class="post-copyright-license">
+      <b>版权声明： </b>
+      本博客所有文章除特别声明外，转载请注明出处！<br/>
+      <div id="qrcode"></div>
+      <script type="text/javascript">
+        new QRCode(document.getElementById("qrcode"), {
+          text: "https://test19124.github.io/post/1/",
+          width: 128,
+          height: 128,
+          colorDark : "#000000",
+	        colorLight : "#ffffff",
+          correctLevel : 3 // 二维码结构复杂性 0~3
+        });
+      </script>
+      <!--<img src="https://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=H|0&chl=https://test19124.github.io/post/1/">-->
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="&#34;本来我可以＿＿&#34;素材积累" href="https://test19124.github.io/post/ben-lai-wo-ke-yi-su-cai-ji-lei/">&#34;本来我可以＿＿&#34;素材积累</a>
+        <a class="nav-mobile-next" title="&#34;本来我可以＿＿&#34;素材积累" href="https://test19124.github.io/post/ben-lai-wo-ke-yi-su-cai-ji-lei/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              </div>
+              <script>
+                document.getElementById("wordbutton").innerHTML+="<input class=\"button file\" type=\"button\" value=\"点击按钮下载本文word\">";
+                $(function () {
+                  $("input[type='button']").click(function (event) {
+                    $("#word").wordExport('“吃”素材积累');
+                  });
+                })
+              </script>
+              
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://test19124.github.io</id>
     <title>test19124 - blog</title>
-    <updated>2021-05-08T13:03:48.397Z</updated>
+    <updated>2021-05-29T14:41:33.152Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://test19124.github.io"/>
     <link rel="self" href="https://test19124.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://test19124.github.io/images/avatar.png</logo>
     <icon>https://test19124.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, test19124 - blog</rights>
+    <entry>
+        <title type="html"><![CDATA[“吃”素材积累]]></title>
+        <id>https://test19124.github.io/post/1/</id>
+        <link href="https://test19124.github.io/post/1/">
+        </link>
+        <updated>2021-05-29T14:27:08.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA["本来我可以＿＿"素材积累]]></title>
         <id>https://test19124.github.io/post/ben-lai-wo-ke-yi-su-cai-ji-lei/</id>
