@@ -401,10 +401,6 @@
   left: 0;
 }
 
-.mist .post {
-  margin: 40px 0;
-}
-
 .mist .post-button {
   text-align: left;
   padding: 0;
@@ -527,10 +523,6 @@
 
 @media (max-width: 767px) {
 
-  .mist .post {
-    margin: 0;
-  }
-  
   .main-continer {
     width: auto;
   }
