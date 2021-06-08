@@ -144,16 +144,6 @@ blockquote {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 991px) and (min-width: 768px) {
-  .bg-img {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .bg-img {
-    display: none;
-  }
-}
 .aplayer-title,
 .aplayer-list-title {
   color: #000;
@@ -234,6 +224,7 @@ p > code {
 }
 .header-box {
   position: relative;
+  margin-bottom: 1px;
 }
 .main-container {
   position: relative;
@@ -380,15 +371,14 @@ p > code {
 }
 .footer-box {
   position: relative;
-  margin-top: 80px;
+  padding: 15px 0;
+  margin-top: 100px;
 }
 .footer {
-  margin-top: 100px;
   min-height: 50px;
   text-align: center;
   font-size: 14px;
   color: #999;
-  margin: 20px;
 }
 .footer a {
   color: #555;
@@ -432,6 +422,9 @@ p > code {
   bottom: 30px;
 }
 @media (max-width: 767px) {
+  .footer-box {
+    margin-top: 0px;
+  }
   .back-to-top {
     right: 10px;
   }
@@ -522,9 +515,16 @@ p > code {
 .friends-note a:hover {
   color: #13d491;
 }
+@media (max-width: 767px) {
+  .section-box,
+  section {
+    min-height: auto !important;
+  }
+}
 .page {
   border-top: 1px solid #eee;
   background-color: #fff;
+  opacity: 0;
 }
 .page a {
   border: none;
@@ -1225,7 +1225,7 @@ p > code {
   font-weight: normal;
 }
 .result {
-  overflow: scroll;
+  overflow-y: auto;
   padding: 10px 30px;
   flex: 1;
 }
@@ -2051,95 +2051,22 @@ p > code {
     margin-bottom: 10px;
   }
 }
-body {
-      background-color: #eee;
-    }.header {
-        width: 960px;
-        margin: 0 auto;
-      }
 
-      .main-continer {
-        width: 960px;
-        margin: 0 auto;
+    @media (max-width: 767px) {
+      .bg-img img {
+        display: none;
       }
-    body {
-      color: #555;
-    }
-    .next-md-body {
-      color: #555;
-    }
-    .next-md-body h1, .next-md-body h2 {
-      border-bottom-color: #555;
-    }
-    .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #eeeeeefe;
-    }h1, h2, h3, h4, h5, h6 {
-      color: #555;
-    }
-    
-    .archive-timeline-title::before {
-      background-color: #555;
-    }
-    
-    .post-title-link::before {
-      background-color: #555;
-    }
-    
-    .node-title::before {
-      background-color: #555;
-    }a {
-      color: #555;
-    }
-    
-    .next-md-body a, .friends-box a  {
-      color: #555;
-      border-bottom: 1px solid #555;
-    }a:hover {
-      color: #222;
-    }
-    
-    .archive-timeline-box .tag-node:hover::before {
-      background-color: #222;
-    }
-    
-    .markdownIt-TOC a:hover {
-      color: #222;
-      border-bottom-color: #222;
-    }
-
-    .next-md-body a:hover, .friends-box a:hover {
-      color: #222;
-      border-bottom-color: #222;
+    }body {
+      background-color: #fffffffe !important;
     }
     .nav-toggle .line {
-      background-color:  !important;
-    }
-      .nav-item a {
-        color:  #555;
-      }.nav-item a:hover {
-        color: #222;
-      }.nav-item-active {
-      background: #f9f9f9fe;
-    }
-
-    .nav-item:hover {
-      background: #f9f9f9fe;
-      color: rgba(0, 0, 0, 0.98);
-    }.site-author-image {
-      border-radius: 50%;
-    }
-    .site-author-image:hover {
-      transform: rotate(666turn);
-      transition-delay: 1s;
-      transition-property: all;
-      transition-duration: 59s;
-      transition-timing-function: cubic-bezier(.34,0,.84,1);
+      background-color: undefined !important;
     }.markdownIt-TOC a {
-      color: #343a40;
-      border-bottom-color: #343a40;
+      color: #000;
+      border-bottom-color: #000;
     }.markdownIt-TOC a:hover {
-      color: #3bc9db;
-      border-bottom-color: #3bc9db;
+      color: #000;
+      border-bottom-color: #000;
     }.active-current > a {
       color: #fc6423 !important;
       border-bottom-color: #fc6423 !important;
@@ -2161,21 +2088,13 @@ body {
     }.bg-color {
       background-color: #fffffffe;
     }
-    .site-meta {
-      background: #000 !important;
-    }
     .head-top-line {
-      background: #000;
+      background: #222;
     }
     .brand {
-      background: #000000fe;
+      background: transparent;
     }
-    .main-title, .brand {
-      color: #FFF !important;
-    }
-    .mist .site-title i {
-      background: #FFFFFFfe;
-    }.box-shadow-wrapper {
+    .box-shadow-wrapper {
       box-shadow: none !important;
     }body {
       cursor: default;
