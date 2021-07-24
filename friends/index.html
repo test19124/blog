@@ -8,7 +8,7 @@
 <meta name="description" content="test19124的小博客，欢迎来玩鸭">
 <meta name="theme-color" content="#000">
 <title>test19124 - blog</title>
-<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1623162019677">
+<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1627118290591">
 <link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -63,8 +63,8 @@
           
             <li class="nav-item ">
               
-                <a href="https://test19124.github.io/">
-                  <i class="fa fa-globe"></i> 首页
+                <a href="https://test19124.github.io/tag/oi/">
+                  <i class="fa fa-globe"></i> 编程
                 </a>
               
             </li>
@@ -122,7 +122,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">11</span>
+        <span class="site-item-stat-count">12</span>
         <span class="site-item-stat-name">文章</span>
       </a>
     </div>
@@ -469,6 +469,214 @@ var apiKey = landlord.dataset.key;
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/mi-gong/"" data-c="
+          &lt;h1 id=&#34;迷宫-bfs&#34;&gt;迷宫 - BFS&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://517coding.com/contest/problem?id=498&amp;amp;pid=1#problem-anchor&#34;&gt;迷宫-第四课：广搜-【中级班】517编程普及组 &lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;做法1-在队列中记录层的分界线&#34;&gt;做法1 - 在队列中记录层的分界线&lt;/h2&gt;
+&lt;h3 id=&#34;思路&#34;&gt;思路&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;记录当前层的最后一个节点，如果被访问到的节点==&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 说明这一层的所有节点都被访问到&lt;/p&gt;
+&lt;p&gt;也就说明了这一层的所有节点的子节点（&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;k+1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.77777em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;层的所有节点）都已入队列，此时&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;应更新为队尾元素&lt;/p&gt;
+&lt;h3 id=&#34;易错点&#34;&gt;易错点&lt;/h3&gt;
+&lt;p&gt;如果&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;出现多次应该在最后一次出现时更新&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;即，在入栈的同时就标记被访问过（&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a_{i,j}=1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.716668em;vertical-align:-0.286108em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mpunct mtight&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;），不是访问到再标记！&lt;/p&gt;
+&lt;h3 id=&#34;代码&#34;&gt;代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int n,m;
+int a[1010][1010];
+int ans;
+int tx,ty;
+
+int X[4]={1,-1,0,0};
+int Y[4]={0,0,1,-1};
+
+struct zb {
+  int x;
+  int y;
+};
+queue&amp;lt;zb&amp;gt;b;
+
+bool operator==(const zb &amp;amp;a,const zb &amp;amp;b) {
+  if(a.x==b.x&amp;amp;&amp;amp;a.y==b.y) {
+    return true;
+  }
+  return false;
+}
+
+void outzb(zb b) {
+  cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;b.x&amp;lt;&amp;lt;&amp;quot; y=&amp;quot;&amp;lt;&amp;lt;b.y&amp;lt;&amp;lt;endl;
+  return;
+}
+
+void out(/*zb x*/) {
+  for(int i=1;i&amp;lt;=n;i++) {
+    for(int j=1;j&amp;lt;=m;j++) {
+      cout&amp;lt;&amp;lt;int(a[i][j]);
+    }
+    cout&amp;lt;&amp;lt;endl;
+  }
+  //cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;x.x&amp;lt;&amp;lt;&amp;quot; y=&amp;quot;&amp;lt;&amp;lt;x.y;
+  cout&amp;lt;&amp;lt;&amp;quot;ans=&amp;quot;&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;
+  cout&amp;lt;&amp;lt;endl;
+}
+
+bool bfs(int x,int y) {
+  zb l,k,h;
+  int xx,yy;
+  l.x=x;l.y=y;
+  b.push(l);
+  zb ru=l;
+  while(!b.empty()) {
+    k=b.front();
+    b.pop();
+    if(k.x==tx&amp;amp;&amp;amp;k.y==ty) {
+      return true;
+    }
+    //out(k);
+    for(int i=0;i&amp;lt;4;i++) {
+      h.x=xx=k.x+X[i];
+      h.y=yy=k.y+Y[i];
+      if(xx&amp;lt;=0||xx&amp;gt;n||yy&amp;lt;=0||yy&amp;gt;m||a[xx][yy]==1);
+      else {
+        b.push(h);
+        a[xx][yy]=1;
+      }
+    }
+    if(k==ru) {
+      ru=b.back();
+      ans++;
+    }
+    //out();
+  }
+  return false;
+}
+
+int main() {
+  char c;
+  int x,y;
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;
+  for(int i=1;i&amp;lt;=n;i++) {
+    for(int j=1;j&amp;lt;=m;j++) {
+      cin&amp;gt;&amp;gt;c;
+      if(c==&#39;S&#39;) {
+        x=i;
+        y=j;
+        a[i][j]=1;
+      } else if(c==&#39;T&#39;) {
+        tx=i;
+        ty=j;
+      } else if(c==&#39;#&#39;) {
+        a[i][j]=1;
+      }
+    }
+  }
+  if(bfs(x,y)) {
+    cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;
+  } else {
+    cout&amp;lt;&amp;lt;&amp;quot;-1&amp;quot;&amp;lt;&amp;lt;endl;
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;做法2-数组记录每个节点的层数&#34;&gt;做法2 - 数组记录每个节点的层数&lt;/h2&gt;
+&lt;h3 id=&#34;思路-2&#34;&gt;思路&lt;/h3&gt;
+&lt;p&gt;直接开数组 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a_{i,j}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.716668em;vertical-align:-0.286108em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mpunct mtight&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 来判断此时层数（墙记录 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a_{i,j}=-1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.716668em;vertical-align:-0.286108em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mpunct mtight&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.72777em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; )&lt;/p&gt;
+&lt;h3 id=&#34;代码-2&#34;&gt;代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int n,m;
+int a[1010][1010];
+int tx,ty;
+
+int X[4]={1,-1,0,0};
+int Y[4]={0,0,1,-1};
+
+struct zb {
+  int x;
+  int y;
+};
+queue&amp;lt;zb&amp;gt;b;
+
+bool operator==(const zb &amp;amp;a,const zb &amp;amp;b) {
+  if(a.x==b.x&amp;amp;&amp;amp;a.y==b.y) {
+    return true;
+  }
+  return false;
+}
+void outzb(zb b) {
+  cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;b.x&amp;lt;&amp;lt;&amp;quot; y=&amp;quot;&amp;lt;&amp;lt;b.y&amp;lt;&amp;lt;endl;
+  return;
+}
+
+void out(zb x) {
+  for(int i=1;i&amp;lt;=n;i++) {
+    for(int j=1;j&amp;lt;=m;j++) {
+      cout&amp;lt;&amp;lt;int(a[i][j]);
+    }
+    cout&amp;lt;&amp;lt;endl;
+  }
+  cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;x.x&amp;lt;&amp;lt;&amp;quot; y=&amp;quot;&amp;lt;&amp;lt;x.y&amp;lt;&amp;lt;endl;
+  cout&amp;lt;&amp;lt;endl;
+}
+
+bool bfs(int x,int y) {
+  zb l,k,h;
+  int xx,yy;
+  l.x=x;l.y=y;
+  b.push(l);
+  while(!b.empty()) {
+    k=b.front(); b.pop(); // 取出队首
+    if(k.x==tx&amp;amp;&amp;amp;k.y==ty) { // 找到终点
+      return true; //返回
+    }
+    //out(k);
+    for(int i=0;i&amp;lt;4;i++) { // 枚举上下左右
+      h.x=xx=k.x+X[i];
+      h.y=yy=k.y+Y[i];
+      if(xx&amp;lt;=0||xx&amp;gt;n||yy&amp;lt;=0||yy&amp;gt;m||a[xx][yy]!=0);
+      else {
+        b.push(h);
+        a[h.x][h.y]=a[k.x][k.y]+1;
+      }
+    }
+    //outzb(ru);
+    //cout&amp;lt;&amp;lt;endl;
+  }
+  return false;
+}
+
+int main() {
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;
+  char c;
+  int x,y;
+  for(int i=1;i&amp;lt;=n;i++) {
+    for(int j=1;j&amp;lt;=m;j++) {
+      cin&amp;gt;&amp;gt;c;
+      if(c==&#39;S&#39;) {
+        x=i;
+        y=j;
+      } else if(c==&#39;T&#39;) {
+        tx=i;
+        ty=j;
+      } else if(c==&#39;#&#39;) {
+        a[i][j]=-1;
+      }
+    }
+  }
+  if(bfs(x,y)) {
+    cout&amp;lt;&amp;lt;a[tx][ty]&amp;lt;&amp;lt;endl;
+  } else {
+    cout&amp;lt;&amp;lt;&amp;quot;-1&amp;quot;&amp;lt;&amp;lt;endl;
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">迷宫</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/liang-dan-yi-xing-su-cai-ji-lei/"" data-c="
@@ -1544,7 +1752,20 @@ var apiKey = landlord.dataset.key;
 
 
 
+<script src="/media/js/cool.js"></script>
 
+
+
+  <div class="snow-container"></div>
+  <script src="/media/js/bg/canvas-nest.js"></script>
+  <script>
+  const config = {
+    color: '255,0,0',
+    count: 88,
+  };
+  // Using config rendering effect at 'element'.
+  const cn = new CanvasNest(document.querySelector('.snow-container'), config);
+  </script>
 
 
 </html>
