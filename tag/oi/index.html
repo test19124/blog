@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8"/>
+      <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="test19124,lizishuo,blog">
 <meta name="description" content="test19124的小博客，欢迎来玩鸭">
 <meta name="theme-color" content="#000">
-<title>“吃”素材积累 | test19124 - blog</title>
+<title>test19124 - blog</title>
 <link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1627118380193">
 <link rel="stylesheet" href="https://test19124.github.io/styles/main.css">
 
@@ -29,13 +29,7 @@
 <script src="/template/js/sweetalert2.js"></script>
 <link rel="stylesheet" href="/template/css/sweetalert2.css">
 
-    <meta name="description" content="“吃”素材积累" />
-    <meta name="keywords" content="语文,学习资料" />
-    <script src="https://cdn.jsdelivr.net/npm/jquery/jquery.min.js"></script>
-    <script src="/media/js/FileSaver.js"></script>
-    <script src="/media/js/jquery.wordexport.js"></script>
   </head>
-  <body oncopy="alert('对不起，禁止复制！');return false;">
   <body>
     <div class="head-top-line"></div>
     <div class="header-box">
@@ -119,16 +113,10 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout gemini ">
+      <div class="section-layout  gemini">
         <div class="section-layout-wrapper">
-          
-
-<div class="sidebar">
-    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
-      
-      <div class="sidebar-body gemini" id="sidebar_body">
-        
-          
+          <div class="sidebar">
+    
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://test19124.github.io/images/avatar.png"/>
@@ -212,230 +200,106 @@
 
 
 </div>
-        
-      </div>
-    </div>
 </div>
-<script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar && tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar && metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
-      }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-  }
-
-  postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-
-  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
-    let hasFix = false;
-    let scrollEl = document.querySelector('.main-continer');
-    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-    window.addEventListener('scroll', function(e) {
-    if (document.scrollingElement.scrollTop >= limitTop) {
-      if (!hasFix) {
-        sidebar.classList.add('sidebar-fixed');
-        hasFix = true;
-      }
-    } else {
-      if (hasFix) {
-        sidebar.classList.remove('sidebar-fixed');
-        hasFix = false;
-      }
-    }
-  });
-  }
-  
-</script>
-          <div class="section-box box-shadow-wrapper">
-            <div class="section bg-color post post-page">
-              <div id="word" class="word">
-              <div class="article-box">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://test19124.github.io/post/chi-su-cai-ji-lei/">
-      “吃”素材积累
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2021-05-29</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
+            <div class="section-box tag-line">
+              <div class="box-shadow-wrapper">
+                <div class="bg-color">
+                  <section class="section posts-expand">
+                    <div class="padding-wrapper">
+  <div class="tag-timeline-box">
+    <div class="tag-timeline-wrapper">
+      <div class="tag-timeline-title">
+        <h2>
+          编程
+          <small>标签</small>
+        </h2>
+      </div>
+      
         
           
-            <a href="https://test19124.github.io/tag/yu-wen/">
-              <span>语文</span>
-            </a>、
-          
-        
-          
-            <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
-              <span>学习资料</span>
+            <a href="https://test19124.github.io/post/mi-gong/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    07-24
+                    <small>迷宫</small>
+                  </h1>
+                </div>  
+              </div>
             </a>
           
         
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>16<span class="pc-show">字数</span></span>
-    </span>
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+    </div>
   </div>
-</header>
 </div>
-                <div class="post-body next-md-body" id="post_body">
-                  <iframe src="/file/“吃”素材积累.pdf" width="100%" height="800px">
-    您的浏览器不支持预览PDF <a href="/file/“吃”素材积累.pdf">【点此下载PDF】</a>
-</iframe>
-                  <br/>
-                  <hr/>
+                  </section>
                 </div>
-                <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <b>本文作者：</b>
-      test19124 - blog
-    </li>
-    <li class="post-copyright-link">
-      <b>本文链接：</b>
-      <a href="https://test19124.github.io/post/chi-su-cai-ji-lei/" title="“吃”素材积累">“吃”素材积累 (https://test19124.github.io/post/chi-su-cai-ji-lei/)</a>
-    </li>
-    <li class="post-copyright-license">
-      <b>版权声明： </b>
-      本博客所有文章除特别声明外，转载请注明出处！<br/>
-      <div id="qrcode"></div>
-      <script type="text/javascript">
-        new QRCode(document.getElementById("qrcode"), {
-          text: "https://test19124.github.io/post/chi-su-cai-ji-lei/",
-          width: 128,
-          height: 128,
-          colorDark : "#000000",
-	        colorLight : "#ffffff",
-          correctLevel : 3 // 二维码结构复杂性 0~3
-        });
-      </script>
-      <!--<img src="https://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=H|0&chl=https://test19124.github.io/post/chi-su-cai-ji-lei/">-->
-    </li>
-  </ul>
-  <div class="tags">
-    
-      <a href="https://test19124.github.io/tag/yu-wen/">## 语文</a>
-    
-      <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">## 学习资料</a>
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="“建党百年，中国印记”素材积累" href="https://test19124.github.io/post/jian-dang-bai-nian-zhong-guo-yin-ji-su-cai-ji-lei/">“建党百年，中国印记”素材积累</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="“建党百年，中国印记”素材积累" href="https://test19124.github.io/post/jian-dang-bai-nian-zhong-guo-yin-ji-su-cai-ji-lei/">上一篇</a>
-      
-    </div>
-    <div class="nav-next">
-      
-        <a class="nav-pc-next" title="&#34;本来我可以＿＿&#34;素材积累" href="https://test19124.github.io/post/ben-lai-wo-ke-yi-su-cai-ji-lei/">&#34;本来我可以＿＿&#34;素材积累</a>
-        <a class="nav-mobile-next" title="&#34;本来我可以＿＿&#34;素材积累" href="https://test19124.github.io/post/ben-lai-wo-ke-yi-su-cai-ji-lei/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
-      
-    </div>
-  </div>
-</div>
               </div>
-              
-              <script>
-                document.getElementById("wordbutton").innerHTML+="<input class=\"button file\" type=\"button\" value=\"点击按钮下载本文word\">";
-                $(function () {
-                  $("input[type='button']").click(function (event) {
-                    $("#word").wordExport('“吃”素材积累');
-                  });
-                })
-              </script>
-              
-              
-                
-                  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-  var gitalk = new Gitalk({
-    clientID: '2ea7124dbdf246ea811f',
-    clientSecret: '90779536ec7ad0cda586604251048bc7124e1d08',
-    repo: 'gitalk',
-    owner: 'test19124',
-    admin: ['test19124'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false,  // Facebook-like distraction free mode
-    createIssueManually: true,
-    perPage: 10
-  })
-  gitalk.render('gitalk-container')
-</script>
-                
-                
-              
-            </div>
           </div>
         </div>
       </div>
