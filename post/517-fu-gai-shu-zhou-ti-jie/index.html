@@ -4,15 +4,21 @@
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="迷宫-第四课：广搜-【中级班】517编程普及组
-迷宫-第四课：广搜-【中级班】517编程普及组 
-做法1 - 在队列中记录层的分界线
-思路
-rururu记录当前层的最后一个节点，如果被访问到的节点==rururu 说明这一层的所有节点都被访..." />
+<meta name="description" content="覆盖数轴-第二课：贪心算法-【中级班】517编程普及组
+描述
+
+有一个长度为m的数轴，现在有n个区间，每个区间有一个左右端点，现在需要选择最少的区间，覆盖整个数轴。
+
+输入
+
+第一行两个整数n和m
+接下来n行，每行两个整数，表示区间。
+
+输..." />
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
 <link rel="preconnect dns-prefetch" href="https://cdn.jsdelivr.net/" crossorigin>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<title>517迷宫题解 | test19124 - blog</title>
+<title>517覆盖数轴题解 | test19124 - blog</title>
 
 
   
@@ -2205,43 +2211,61 @@ footer {
 
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<link rel="canonical" href="https://test19124.github.io/post/mi-gong/" />
+<link rel="canonical" href="https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/" />
 <link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1628318552252">
 
 <meta name="author" content="test19124">
 
-<meta itemprop="name" content="517迷宫题解 | test19124 - blog">
-<meta itemprop="description" content="迷宫-第四课：广搜-【中级班】517编程普及组
-迷宫-第四课：广搜-【中级班】517编程普及组 
-做法1 - 在队列中记录层的分界线
-思路
-rururu记录当前层的最后一个节点，如果被访问到的节点==rururu 说明这一层的所有节点都被访...">
+<meta itemprop="name" content="517覆盖数轴题解 | test19124 - blog">
+<meta itemprop="description" content="覆盖数轴-第二课：贪心算法-【中级班】517编程普及组
+描述
+
+有一个长度为m的数轴，现在有n个区间，每个区间有一个左右端点，现在需要选择最少的区间，覆盖整个数轴。
+
+输入
+
+第一行两个整数n和m
+接下来n行，每行两个整数，表示区间。
+
+输...">
 <meta itemprop="image" content="">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="517迷宫题解 | test19124 - blog">
-<meta name="twitter:description" content="迷宫-第四课：广搜-【中级班】517编程普及组
-迷宫-第四课：广搜-【中级班】517编程普及组 
-做法1 - 在队列中记录层的分界线
-思路
-rururu记录当前层的最后一个节点，如果被访问到的节点==rururu 说明这一层的所有节点都被访...">
+<meta name="twitter:title" content="517覆盖数轴题解 | test19124 - blog">
+<meta name="twitter:description" content="覆盖数轴-第二课：贪心算法-【中级班】517编程普及组
+描述
+
+有一个长度为m的数轴，现在有n个区间，每个区间有一个左右端点，现在需要选择最少的区间，覆盖整个数轴。
+
+输入
+
+第一行两个整数n和m
+接下来n行，每行两个整数，表示区间。
+
+输...">
 <meta name="twitter:image" content="" />
-<meta name="twitter:image:alt" content="517迷宫题解 | test19124 - blog" />
+<meta name="twitter:image:alt" content="517覆盖数轴题解 | test19124 - blog" />
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://test19124.github.io/post/mi-gong/">
-<meta property="og:title" content="517迷宫题解 | test19124 - blog">
-<meta property="og:description" content="迷宫-第四课：广搜-【中级班】517编程普及组
-迷宫-第四课：广搜-【中级班】517编程普及组 
-做法1 - 在队列中记录层的分界线
-思路
-rururu记录当前层的最后一个节点，如果被访问到的节点==rururu 说明这一层的所有节点都被访...">
+<meta property="og:url" content="https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/">
+<meta property="og:title" content="517覆盖数轴题解 | test19124 - blog">
+<meta property="og:description" content="覆盖数轴-第二课：贪心算法-【中级班】517编程普及组
+描述
+
+有一个长度为m的数轴，现在有n个区间，每个区间有一个左右端点，现在需要选择最少的区间，覆盖整个数轴。
+
+输入
+
+第一行两个整数n和m
+接下来n行，每行两个整数，表示区间。
+
+输...">
 <meta property="og:image" content="">
-<meta property="og:image:alt" content="517迷宫题解 | test19124 - blog" />
+<meta property="og:image:alt" content="517覆盖数轴题解 | test19124 - blog" />
 <meta property="og:site_name" content="test19124 - blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="tag" content="517迷宫题解 | test19124 - blog" />
+<meta property="tag" content="517覆盖数轴题解 | test19124 - blog" />
 
 
 <script type="application/ld+json">
@@ -2250,11 +2274,11 @@ rururu记录当前层的最后一个节点，如果被访问到的节点==rururu
 "@type": "BlogPosting",
 "mainEntityOfPage": {
   "@type": "WebPage",
-  "@id": "https://test19124.github.io/post/mi-gong/"
+  "@id": "https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/"
 },
-"headline": "517迷宫题解 | test19124 - blog",
-"datePublished": "Sat Jul 24 2021 17:15:46 GMT+0800",
-"dateModified": "Sat Jul 24 2021 17:15:46 GMT+0800",
+"headline": "517覆盖数轴题解 | test19124 - blog",
+"datePublished": "Sat Aug 07 2021 14:37:42 GMT+0800",
+"dateModified": "Sat Aug 07 2021 14:37:42 GMT+0800",
 "author": {
   "@type": "Person",
   "name": "test19124"
@@ -2270,11 +2294,17 @@ rururu记录当前层的最后一个节点，如果被访问到的节点==rururu
 "image": [
 ""
 ],
-"description": "迷宫-第四课：广搜-【中级班】517编程普及组
-迷宫-第四课：广搜-【中级班】517编程普及组 
-做法1 - 在队列中记录层的分界线
-思路
-rururu记录当前层的最后一个节点，如果被访问到的节点==rururu 说明这一层的所有节点都被访..."
+"description": "覆盖数轴-第二课：贪心算法-【中级班】517编程普及组
+描述
+
+有一个长度为m的数轴，现在有n个区间，每个区间有一个左右端点，现在需要选择最少的区间，覆盖整个数轴。
+
+输入
+
+第一行两个整数n和m
+接下来n行，每行两个整数，表示区间。
+
+输..."
  }
 
 </script>
@@ -2290,8 +2320,8 @@ rururu记录当前层的最后一个节点，如果被访问到的节点==rururu
     },{
       "@type": "ListItem", 
       "position": 2, 
-      "name": "517迷宫题解 | test19124 - blog",
-      "item": "https://test19124.github.io/post/mi-gong/"  
+      "name": "517覆盖数轴题解 | test19124 - blog",
+      "item": "https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/"  
     }]
   }
   </script>
@@ -2304,7 +2334,7 @@ rururu记录当前层的最后一个节点，如果被访问到的节点==rururu
   <PageMap>
     <DataObject type="action">
       <Attribute name="label" value="View"/>
-      <Attribute name="url" value="https://test19124.github.io/post/mi-gong/"/>
+      <Attribute name="url" value="https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/"/>
       <Attribute name="class" value="fullscreen"/>
     </DataObject>
   </PageMap>
@@ -2323,7 +2353,7 @@ rururu记录当前层的最后一个节点，如果被访问到的节点==rururu
 
 <script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>
 
-<link rel="alternate" type="application/atom+xml" title="517迷宫题解 | test19124 - blog - Atom Feed" href="https://test19124.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="517覆盖数轴题解 | test19124 - blog - Atom Feed" href="https://test19124.github.io/atom.xml">
 
   
   
@@ -2390,13 +2420,13 @@ rururu记录当前层的最后一个节点，如果被访问到的节点==rururu
             <a class="post-cate" href="https://test19124.github.io/tag/ti-jie/">题解</a></div>
           
         <h2 class="article-title">
-          <a href="https://test19124.github.io/post/mi-gong/">517迷宫题解</a>
+          <a href="https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/">517覆盖数轴题解</a>
         </h2>
         <div class="flex-box">
           <div class="flex-box post-meta-box">
             <a class="post-meta" href="https://test19124.github.io"><span
                 class="iconfont icon-mr-postmeta"></span>test19124</a>
-            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2021 年 07	月 24日</span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2021 年 08	月 7日</span>
             
 
 
@@ -2404,205 +2434,78 @@ rururu记录当前层的最后一个节点，如果被访问到的节点==rururu
         </div>
       </div>
       <div class="content">
-        <h1 id="迷宫-第四课广搜-中级班517编程普及组">迷宫-第四课：广搜-【中级班】517编程普及组</h1>
-<p><a href="https://517coding.com/contest/problem?id=498&amp;pid=1#problem-anchor">迷宫-第四课：广搜-【中级班】517编程普及组 </a></p>
-<h2 id="做法1-在队列中记录层的分界线">做法1 - 在队列中记录层的分界线</h2>
-<h3 id="思路">思路</h3>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">ru</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span></span></span></span>记录当前层的最后一个节点，如果被访问到的节点==<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">ru</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span></span></span></span> 说明这一层的所有节点都被访问到</p>
-<p>也就说明了这一层的所有节点的子节点（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>层的所有节点）都已入队列，此时<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">ru</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span></span></span></span>应更新为队尾元素</p>
-<h3 id="易错点">易错点</h3>
-<p>如果<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">ru</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span></span></span></span>出现多次应该在最后一次出现时更新<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">ru</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">u</span></span></span></span></p>
-<p>即，在入栈的同时就标记被访问过（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a_{i,j}=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>），不是访问到再标记！</p>
-<h3 id="代码">代码</h3>
-<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+        <h1 id="覆盖数轴-第二课贪心算法-中级班517编程普及组">覆盖数轴-第二课：贪心算法-【中级班】517编程普及组</h1>
+<h2 id="描述">描述</h2>
+<blockquote>
+<p>有一个长度为m的数轴，现在有n个区间，每个区间有一个左右端点，现在需要选择最少的区间，覆盖整个数轴。</p>
+</blockquote>
+<h2 id="输入">输入</h2>
+<blockquote>
+<p>第一行两个整数n和m<br>
+接下来n行，每行两个整数，表示区间。</p>
+</blockquote>
+<h2 id="输出">输出</h2>
+<blockquote>
+<p>输出最少的区间个数，覆盖整个数轴。如果无法覆盖，输出-1</p>
+</blockquote>
+<h2 id="样例">样例</h2>
+<h3 id="输入1">输入#1</h3>
+<pre><code class="language-txt">5 6
+1 3
+2 4
+3 5
+5 6
+1 4
+</code></pre>
+<h3 id="输出1">输出#1</h3>
+<pre><code class="language-txt">2
+</code></pre>
+<h2 id="思路">思路</h2>
+<p>贪心，先按右侧端点排序<br>
+之后再取 左侧端点&lt;=右侧端点+1 的所有线段中右侧端点最远的点<br>
+达到 m 结束</p>
+<h2 id="易错点">易错点</h2>
+<ol>
+<li>左侧端点&lt;=右侧端点**+1**</li>
+<li>取所有线段中右侧端点最远的点</li>
+</ol>
+<h2 id="代码">代码</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
 using namespace std;
-
 int n,m;
-int a[1010][1010];
-int ans;
-int tx,ty;
-
-int X[4]={1,-1,0,0};
-int Y[4]={0,0,1,-1};
-
-struct zb {
-  int x;
-  int y;
-};
-queue&lt;zb&gt;b;
-
-bool operator==(const zb &amp;a,const zb &amp;b) {
-  if(a.x==b.x&amp;&amp;a.y==b.y) {
-    return true;
+struct qj {
+  int s,t;
+} a[100010];
+bool cmp(qj a,qj b) {
+  if(a.s==b.s) {
+    return a.t&lt;b.t;
   }
-  return false;
+  return a.s&lt;b.s;
 }
-
-void outzb(zb b) {
-  cout&lt;&lt;&quot;x=&quot;&lt;&lt;b.x&lt;&lt;&quot; y=&quot;&lt;&lt;b.y&lt;&lt;endl;
-  return;
-}
-
-void out(/*zb x*/) {
-  for(int i=1;i&lt;=n;i++) {
-    for(int j=1;j&lt;=m;j++) {
-      cout&lt;&lt;int(a[i][j]);
-    }
-    cout&lt;&lt;endl;
-  }
-  //cout&lt;&lt;&quot;x=&quot;&lt;&lt;x.x&lt;&lt;&quot; y=&quot;&lt;&lt;x.y;
-  cout&lt;&lt;&quot;ans=&quot;&lt;&lt;ans&lt;&lt;endl;
-  cout&lt;&lt;endl;
-}
-
-bool bfs(int x,int y) {
-  zb l,k,h;
-  int xx,yy;
-  l.x=x;l.y=y;
-  b.push(l);
-  zb ru=l;
-  while(!b.empty()) {
-    k=b.front();
-    b.pop();
-    if(k.x==tx&amp;&amp;k.y==ty) {
-      return true;
-    }
-    //out(k);
-    for(int i=0;i&lt;4;i++) {
-      h.x=xx=k.x+X[i];
-      h.y=yy=k.y+Y[i];
-      if(xx&lt;=0||xx&gt;n||yy&lt;=0||yy&gt;m||a[xx][yy]==1);
-      else {
-        b.push(h);
-        a[xx][yy]=1;
-      }
-    }
-    if(k==ru) {
-      ru=b.back();
-      ans++;
-    }
-    //out();
-  }
-  return false;
-}
-
 int main() {
-  char c;
-  int x,y;
   cin&gt;&gt;n&gt;&gt;m;
   for(int i=1;i&lt;=n;i++) {
-    for(int j=1;j&lt;=m;j++) {
-      cin&gt;&gt;c;
-      if(c=='S') {
-        x=i;
-        y=j;
-        a[i][j]=1;
-      } else if(c=='T') {
-        tx=i;
-        ty=j;
-      } else if(c=='#') {
-        a[i][j]=1;
-      }
+    cin&gt;&gt;a[i].s&gt;&gt;a[i].t;
+  }
+  sort(a+1,a+n+1,cmp);
+  int t=0,ans=0,Max,x=1,flag=0;
+  for(int i=2;i&lt;=n;i++) {
+    Max=0;
+    while(a[x].s&lt;=(t+1)&amp;&amp;x&lt;=n) {
+      Max=max(Max,a[x].t);
+      x++;
+    }
+    t=Max;
+    ans++;
+    if(t&gt;=m) {
+      flag=1;
+      break;
     }
   }
-  if(bfs(x,y)) {
+  if(flag) {
     cout&lt;&lt;ans&lt;&lt;endl;
   } else {
-    cout&lt;&lt;&quot;-1&quot;&lt;&lt;endl;
-  }
-  return 0;
-}
-</code></pre>
-<h2 id="做法2-数组记录每个节点的层数">做法2 - 数组记录每个节点的层数</h2>
-<h3 id="思路-2">思路</h3>
-<p>直接开数组 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 来判断此时层数（墙记录 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a_{i,j}=-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span> )</p>
-<h3 id="代码-2">代码</h3>
-<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-
-int n,m;
-int a[1010][1010];
-int tx,ty;
-
-int X[4]={1,-1,0,0};
-int Y[4]={0,0,1,-1};
-
-struct zb {
-  int x;
-  int y;
-};
-queue&lt;zb&gt;b;
-
-bool operator==(const zb &amp;a,const zb &amp;b) {
-  if(a.x==b.x&amp;&amp;a.y==b.y) {
-    return true;
-  }
-  return false;
-}
-void outzb(zb b) {
-  cout&lt;&lt;&quot;x=&quot;&lt;&lt;b.x&lt;&lt;&quot; y=&quot;&lt;&lt;b.y&lt;&lt;endl;
-  return;
-}
-
-void out(zb x) {
-  for(int i=1;i&lt;=n;i++) {
-    for(int j=1;j&lt;=m;j++) {
-      cout&lt;&lt;int(a[i][j]);
-    }
-    cout&lt;&lt;endl;
-  }
-  cout&lt;&lt;&quot;x=&quot;&lt;&lt;x.x&lt;&lt;&quot; y=&quot;&lt;&lt;x.y&lt;&lt;endl;
-  cout&lt;&lt;endl;
-}
-
-bool bfs(int x,int y) {
-  zb l,k,h;
-  int xx,yy;
-  l.x=x;l.y=y;
-  b.push(l);
-  while(!b.empty()) {
-    k=b.front(); b.pop(); // 取出队首
-    if(k.x==tx&amp;&amp;k.y==ty) { // 找到终点
-      return true; //返回
-    }
-    //out(k);
-    for(int i=0;i&lt;4;i++) { // 枚举上下左右
-      h.x=xx=k.x+X[i];
-      h.y=yy=k.y+Y[i];
-      if(xx&lt;=0||xx&gt;n||yy&lt;=0||yy&gt;m||a[xx][yy]!=0);
-      else {
-        b.push(h);
-        a[h.x][h.y]=a[k.x][k.y]+1;
-      }
-    }
-    //outzb(ru);
-    //cout&lt;&lt;endl;
-  }
-  return false;
-}
-
-int main() {
-  cin&gt;&gt;n&gt;&gt;m;
-  char c;
-  int x,y;
-  for(int i=1;i&lt;=n;i++) {
-    for(int j=1;j&lt;=m;j++) {
-      cin&gt;&gt;c;
-      if(c=='S') {
-        x=i;
-        y=j;
-      } else if(c=='T') {
-        tx=i;
-        ty=j;
-      } else if(c=='#') {
-        a[i][j]=-1;
-      }
-    }
-  }
-  if(bfs(x,y)) {
-    cout&lt;&lt;a[tx][ty]&lt;&lt;endl;
-  } else {
-    cout&lt;&lt;&quot;-1&quot;&lt;&lt;endl;
+    cout&lt;&lt;-1&lt;&lt;endl;
   }
   return 0;
 }
@@ -2613,13 +2516,9 @@ int main() {
       
       <nav class="post-nav">
         
-        <div class="nav-previous">
-          <a class="post-nav-link-active" title="517倒酒题解" href="https://test19124.github.io/post/dao-jiu-ti-jie/">上一篇文章</a>
-        </div>
-        
         
         <div class="nav-next">
-          <a class="post-nav-link-active" title="“两弹一星”素材积累" href="https://test19124.github.io/post/liang-dan-yi-xing-su-cai-ji-lei/">下一篇文章</a>
+          <a class="post-nav-link-active" title="517有负环最短路径题解" href="https://test19124.github.io/post/517-you-fu-huan-zui-duan-lu-jing-ti-jie/">下一篇文章</a>
           
 
         </div>
@@ -2674,7 +2573,7 @@ int main() {
   <div id="respond" class="comment-respond">
     <amp-iframe width=600 height=200 layout="responsive"
       sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable
-      src="?id=https://test19124.github.io/post/mi-gong/">
+      src="?id=https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/">
       <div
       overflow
       tabindex=0
