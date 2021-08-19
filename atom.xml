@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://test19124.github.io</id>
     <title>test19124 - blog</title>
-    <updated>2021-08-07T06:53:19.849Z</updated>
+    <updated>2021-08-19T16:42:22.578Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://test19124.github.io"/>
     <link rel="self" href="https://test19124.github.io/atom.xml"/>
@@ -10,6 +10,76 @@
     <logo>https://test19124.github.io/images/avatar.png</logo>
     <icon>https://test19124.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, test19124 - blog</rights>
+    <entry>
+        <title type="html"><![CDATA[悬崖之上观后感]]></title>
+        <id>https://test19124.github.io/post/xuan-ya-zhi-shang-guan-hou-gan/</id>
+        <link href="https://test19124.github.io/post/xuan-ya-zhi-shang-guan-hou-gan/">
+        </link>
+        <updated>2021-08-19T16:36:24.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[昆虫记读后感]]></title>
+        <id>https://test19124.github.io/post/kun-chong-ji-du-hou-gan/</id>
+        <link href="https://test19124.github.io/post/kun-chong-ji-du-hou-gan/">
+        </link>
+        <updated>2021-08-19T16:34:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[打年糕]]></title>
+        <id>https://test19124.github.io/post/da-nian-gao/</id>
+        <link href="https://test19124.github.io/post/da-nian-gao/">
+        </link>
+        <updated>2021-08-19T16:34:07.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[517雷达题解]]></title>
+        <id>https://test19124.github.io/post/517-lei-da-ti-jie/</id>
+        <link href="https://test19124.github.io/post/517-lei-da-ti-jie/">
+        </link>
+        <updated>2021-08-10T13:43:33.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[517最大余数题解]]></title>
+        <id>https://test19124.github.io/post/517-zui-da-yu-shu-ti-jie/</id>
+        <link href="https://test19124.github.io/post/517-zui-da-yu-shu-ti-jie/">
+        </link>
+        <updated>2021-08-10T13:39:55.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[517最小字典序题解]]></title>
+        <id>https://test19124.github.io/post/517-zui-xiao-zi-dian-xu-ti-jie/</id>
+        <link href="https://test19124.github.io/post/517-zui-xiao-zi-dian-xu-ti-jie/">
+        </link>
+        <updated>2021-08-10T13:31:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[517异或和题解]]></title>
+        <id>https://test19124.github.io/post/517-yi-huo-he-ti-jie/</id>
+        <link href="https://test19124.github.io/post/517-yi-huo-he-ti-jie/">
+        </link>
+        <updated>2021-08-10T13:22:46.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[517最短连续子序列题解]]></title>
+        <id>https://test19124.github.io/post/517-zui-duan-lian-xu-zi-xu-lie-ti-jie/</id>
+        <link href="https://test19124.github.io/post/517-zui-duan-lian-xu-zi-xu-lie-ti-jie/">
+        </link>
+        <updated>2021-08-10T13:18:16.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[debug的方法及策略]]></title>
+        <id>https://test19124.github.io/post/debug-de-fang-fa-ji-ce-lue/</id>
+        <link href="https://test19124.github.io/post/debug-de-fang-fa-ji-ce-lue/">
+        </link>
+        <updated>2021-08-09T12:02:42.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[517按钮变色题解]]></title>
+        <id>https://test19124.github.io/post/517-an-niu-bian-se-ti-jie/</id>
+        <link href="https://test19124.github.io/post/517-an-niu-bian-se-ti-jie/">
+        </link>
+        <updated>2021-08-07T11:59:11.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[517覆盖数轴题解]]></title>
         <id>https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/</id>
