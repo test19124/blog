@@ -1,742 +1,3962 @@
-<!doctype html>
-<html amp lang="zh-Hans">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="description" content="test19124的博客" />
-<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-<link rel="preconnect dns-prefetch" href="https://cdn.jsdelivr.net/" crossorigin>
-<script async src="https://cdn.ampproject.org/v0.js"></script>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="test19124的小博客，欢迎来玩鸭">
+<meta name="theme-color" content="#000">
 <title>test19124 - blog</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1630824173513">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
 
-  
-    <style amp-custom>
-body{width:100vw;display:flex;flex-direction:column;font-family:'PT Serif',-apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif,serif;background:#fff}
-:focus{outline:0}
-@font-face{font-family:iconfont;src:url(https://cdn.jsdelivr.net/gh/jiansing/gridea-theme-inlineamp/inlineamp/assets/media/fonts/iconfont.eot?20200105#iefix) format('embedded-opentype'),url(https://cdn.jsdelivr.net/gh/jiansing/gridea-theme-inlineamp/inlineamp/assets/media/fonts/iconfont.woff2?20200105) format('woff2'),url(https://cdn.jsdelivr.net/gh/jiansing/gridea-theme-inlineamp/inlineamp/assets/media/fonts/iconfont.woff?20200105) format('woff'),url(https://cdn.jsdelivr.net/gh/jiansing/gridea-theme-inlineamp/inlineamp/assets/media/fonts/iconfont.ttf?20200105) format('truetype'),url(https://cdn.jsdelivr.net/gh/jiansing/gridea-theme-inlineamp/inlineamp/assets/media/fonts/iconfont.svg?20200105#iconfont) format('svg')}
-@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:local('PT Serif'),local('PTSerif-Regular'),url(https://cdn.jsdelivr.net/gh/jiansing/gridea-theme-inlineamp/inlineamp/assets/media/fonts/ptserif.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-.iconfont{font-family:iconfont;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-input[type=email],input[type=password],input[type=submit],input[type=text],input[type=url],textarea{-webkit-appearance:none;border-radius:0}
-header{width:100vw;background:#222;display:flex;justify-content:center}
-.top-container{width:71.4286vw;height:100%}
-.title-menus-area{display:flex;width:100%;height:5.8095vw;justify-content:space-between}
-.blog-title{display:flex;font-size:1.6667vw;font-weight:700;color:#fff;margin-top:1.2857vw;white-space:nowrap;text-decoration:none;line-height:1.6667vw}
-.tagline{display:flex;width:100%;flex-direction:column;align-items:center}
-.tagline-main{color:#fff;font-size:2.9286vw;margin-bottom:1.6667vw;line-height:2.9286vw;display:flex;flex-direction:column;align-items:center}
-.tagline-main:after{content:'';display:flex;background:#f6f8fa;width:4.7619vw;height:.2381vw;margin-top:1.6667vw}
-.tagline-sub{color:#8a8a8a;font-size:.9524vw;line-height:1.6667vw;margin-bottom:3.5119vw}
-.tagline-sub a{text-decoration:none;color:unset}
-.tagline-sub a:hover{color:#dbb302}
-.scrolltop-wrap{box-sizing:border-box;position:absolute;top:11.6667vw;right:-3.9048vw;bottom:0}
-.go-top{width:2.9762vw;height:2.9762vw;font-size:1.1905vw;text-decoration:none;background:#dbb302;border-radius:100%;color:#fff;justify-content:center;align-items:center;display:flex;cursor:pointer;position:fixed;position:-webkit-sticky;position:sticky;top:-5.9524vw;transform:translateY(100vh);overflow:hidden}
-@media only screen and (max-width:640px){.top-container{width:100%}
-.title-menus-area{padding-top:4.6667vw;height:auto;position:relative}
-.blog-title{margin-top:0;margin-left:5.3333vw;font-size:3.7333vw;line-height:3.7333vw}
-.tagline{margin:6vw auto 0 auto;width:89.3333vw}
-.tagline-main{font-size:5.0667vw;line-height:5.0667vw;margin-bottom:2vw}
-.tagline-main:after{width:8.8vw;height:.44vw;margin-top:3.0667vw}
-.tagline-sub{font-size:2.9333vw;line-height:5.1333vw}
-.scrolltop-wrap{display:none}
-}
-.top-menus{display:flex;padding-right:1.7619vw;padding-top:1.5833vw;height:.9524vw}
-.top-menus>nav>ul>li{display:flex;list-style:none;margin-left:2.393vw;margin-bottom:.2976vw;position:relative;height:1.9644vw}
-.top-menus>nav>ul>li>a{color:#fff;font-size:.9524vw;line-height:.9524vw;text-decoration:none}
-.top-menus .menu{display:flex;margin:0;padding:0;white-space:nowrap;list-style:none;justify-content:flex-end;flex-wrap:wrap}
-.top-menus>nav>ul>li.menu-item-has-children>a:after{font-family:iconfont;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:'\e62b';margin-left:.5952vw;font-size:.9524vw}
-.top-menus>nav>ul>li:hover a{color:#dbb302}
-.top-menus>nav>ul>li:hover>ul{opacity:1;visibility:visible;transition:.2s all ease}
-.top-menus>nav>ul>li>.sub-menu{position:absolute;left:50%;transform:translateX(-50%);margin-top:1.9345vw;display:flex;flex-direction:column;background:#2a2a2a;border:#4a4a4a .0595vw solid;padding-top:.4167vw;padding-bottom:.4167vw;padding-left:1.2501vw;padding-right:1.2501vw;z-index:1;overflow:hidden;opacity:0;visibility:hidden;transition:.2s all ease}
-.top-menus>nav>ul>li>.sub-menu>li{list-style:none;border-bottom:#4a4a4a .0595vw solid}
-.top-menus>nav>ul>li>.sub-menu>li:last-child{border-bottom:0}
-.top-menus ul>li>.sub-menu>li>a{font-size:.8333vw;line-height:.8333vw;color:#fff;text-decoration:none;width:100%;min-height:2.4405vw;display:flex;align-items:center}
-.top-menus>nav>ul>li>.sub-menu>li ul{padding-left:.893vw}
-.top-menus>nav>ul>li>.sub-menu>li>ul li{list-style:none}
-.top-menus>nav>ul>li>.sub-menu>li ul li a{color:rgba(255,255,255,.4);min-height:unset;margin-bottom:.6548vw}
-.top-menus>nav>ul>li>.sub-menu>li ul li a:before{content:'-';margin-right:.2976vw}
-.top-menus>nav>ul>li>.sub-menu>li a:hover{color:#dbb302}
-#header-menu-button{display:none}
-@media only screen and (max-width:640px){#header-menu-button+header .top-menus{display:flex;position:absolute;width:100%;padding:0;height:auto;top:0;z-index:1;pointer-events:none}
-#header-menu-button:checked+header .top-menus{pointer-events:auto}
-#header-menu-button:checked+header .top-menus nav>ul{padding-left:4vw;padding-right:4vw;opacity:1;visibility:visible;padding-bottom:16vw}
-#header-menu-button+header .top-menus nav>ul{min-height:100vh;position:fixed;top:0;bottom:0;overflow:scroll;flex-wrap:nowrap;opacity:0;transition:.6s all ease;visibility:hidden;display:flex;width:100%;flex-direction:column;background:#222;justify-content:start;padding-top:0;padding-bottom:4.1333vw;box-sizing:border-box}
-#header-menu-button+header .top-menus nav>ul>li{margin:0;height:auto;padding-left:1.3333vw;padding-right:1.3333vw;border-bottom:.1333vw #4a4a4a solid;flex-direction:column;padding-top:4.0667vw;padding-bottom:4.0667vw}
-#header-menu-button+header .top-menus nav>ul>li:first-child>a{padding-top:0}
-#header-menu-button+header .top-menus nav>ul>li:last-child{border-bottom:none}
-#header-menu-button+header .top-menus nav>ul>li>a{font-size:3.7333vw;line-height:3.7333vw}
-.top-menus>nav>ul>li.menu-item-has-children>a:after{display:none}
-ul#menu-top-menu li{display:inline-flex;white-space:normal}
-.top-menus>nav>ul>li>.sub-menu{display:flex;transform:none;position:relative;left:0;margin-top:0;margin-bottom:4vw;background:inherit;border:none;padding:0;padding-left:3vw;opacity:1;visibility:visible}
-.top-menus>nav>ul>li:hover a{color:#fff}
-.top-menus>nav>ul li a:hover{color:#dbb302}
-.top-menus>nav>ul>li>.sub-menu>li{border:none;margin-top:3.7067vw;flex-direction:column}
-.top-menus>nav>ul>li>.sub-menu>li>a:before{content:'-';margin-right:.8vw;color:rgba(255,255,255,.4)}
-.top-menus>nav>ul>li>.sub-menu>li ul{padding-left:3vw}
-.top-menus>nav>ul>li>.sub-menu>li ul li a{margin-bottom:0;margin-top:3.7067vw}
-.top-menus ul>li>.sub-menu>li>a{font-size:3.7333vw;line-height:3.7333vw;color:rgba(255,255,255,.4)}
-#header-menu-button{display:flex;margin:0;-webkit-appearance:none;appearance:none;line-height:3.7333vw;width:4vw;height:4vw;z-index:2;position:absolute;right:4vw;top:4vw;border:none;background:0 0}
-#header-menu-button:checked+header+main{animation:mainhide 2s ease;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;overflow:hidden}
-@keyframes mainhide{from{max-height:auto}
-to{overflow:hidden;max-height:0}
-}
-#header-menu-button:checked{position:fixed}
-#header-menu-button:checked:after{display:flex;content:'\e63c';transform:scale(.7)}
-#header-menu-button:after{content:'';color:#fff;font-family:iconfont;font-size:5.3333vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:'\e63e'}
-}
-main{width:71.4286vw;display:flex;margin:0 auto;justify-content:space-between;padding-top:2.9762vw;position:relative}
-.main-container{width:48.2143vw}
-.list-box{width:100%;display:flex;flex-direction:column;margin-bottom:2.9762vw}
-.title-img{width:48.2143vw;height:17.8571vw;position:relative}
-.title-img amp-img.contain img{object-fit:cover;object-position:top;transition:all .5s}
-a.title-img:hover amp-img.contain img{object-fit:cover;transform:scale(1.08);-webkit-transform:scale(1.08);-moz-transform:scale(1.08)}
-.post-info{position:relative;padding-left:1.7857vw;padding-top:1.5119vw;padding-right:1.7857vw;padding-bottom:1.7857vw;width:48.2143vw;border:.0595vw solid #e6e6e6;box-sizing:border-box;display:flex;flex-direction:column}
-.post-cate{font-size:.9524vw;line-height:1.5476vw;color:#dbb302;text-decoration:none;margin-right:.9644vw;display:flex;align-items:center}
-.sticky-tag{display:flex;align-items:center;color:#dbb302}
-.post-cate:before,.sticky-tag:before{display:flex;content:'';width:.0595vw;min-width:1px;height:.6548vw;background:#dbb302;margin-right:.9524vw}
-.post-cate:first-child:before{display:none}
-.sticky-tag .sticky-text{font-size:.9524vw;text-transform:uppercase}
-.sticky-tag .sticky-text:before{font-family:iconfont;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:'\e63f';font-size:.9524vw;margin-right:.4167vw}
-.post-title{font-size:1.3613vw;line-height:2.381vw;margin-top:.5952vw;margin-bottom:0;width:39.881vw;word-break:break-all}
-.post-title:after{display:flex;content:'';width:4.1667vw;height:.2976vw;background:#dbb302;margin-top:.7321vw}
-.post-title a{text-decoration:none;color:#000}
-.post-excerpt{margin-top:1.4286vw;margin-bottom:1.1905vw;font-size:.9524vw;line-height:1.6667vw;color:#8a8a8a;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;visibility:visible}
-.flex-box{display:flex;align-items:center}
-.meta-category{flex-wrap:wrap;padding-right:4.1667vw}
-.justify-between{justify-content:space-between}
-.read-more{display:flex;justify-content:center;align-items:center;font-size:.8333vw;line-height:.8333vw;text-decoration:none;min-width:9.1667vw;min-height:2.1429vw;box-sizing:border-box;padding-left:1.1905vw;padding-right:1.1905vw;padding-top:.7143vw;padding-bottom:.7143vw;color:#dbb302;border:.0595vw #dbb302 solid;transition:all .2s;text-transform:uppercase}
-.read-more:hover{background:#dbb302;color:#fff}
-.icon-ml-readmore{margin-left:.625vw;font-size:1.1905vw}
-.post-meta-box{margin-top:.7143vw;font-size:.8333vw}
-.post-meta{font-size:.8333vw;color:#1a1a1a;text-decoration:none;margin-left:1.4881vw;display:inline-flex;align-items:center}
-.icon-mr-postmeta{margin-right:.5952vw;font-size:1.4881vw}
-.post-meta .icon-like-sp{font-size:1.1905vw}
-.post-meta-box a.edit-link:after{content:'';display:flex;background:#979797;margin-left:1.4881vw;width:.0595vw;height:.6548vw}
-.post-publish-date{width:4.1667vw;height:4.7619vw;background:#f6f6f7;position:absolute;right:1.2501vw;top:-.8333vw;flex-direction:column;justify-content:center;align-items:center}
-.post-publish-date .post-date{color:#dbb302;font-size:1.3095vw;line-height:2.2916vw;font-weight:700}
-.post-publish-date .post-month{color:#000;font-size:.8333vw;line-height:1.4583vw;text-transform:uppercase}
-.list-box:last-child{margin-bottom:2.381vw}
-.pagination .screen-reader-text{display:none}
-.nav-links{margin-top:2.9762vw;margin-bottom:2.9762vw;display:flex;justify-content:center;flex-wrap:wrap}
-.nav-links .page-numbers,.nav-links .post-page-numbers{min-width:2.1429vw;height:2.1429vw;border:.0595vw #dbb302 solid;color:#dbb302;font-size:1.0714vw;line-height:1.0714vw;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;margin-left:.4762vw;margin-right:.4762vw;margin-bottom:.4762vw;box-sizing:border-box}
-.nav-links .current,.nav-links a.page-numbers:hover,.nav-links a.post-page-numbers:hover{background:#dbb302;color:#fff}
-.pagination>.nav-links>.dots{border:none;padding-bottom:.5714vw}
-@media only screen and (max-width:640px){main{width:100%;flex-direction:column;align-items:center;padding-top:6.6667vw}
-.main-container{width:92vw}
-.title-img{width:92vw;height:34.1333vw}
-.post-info{width:92vw;padding:3.4667vw;border:.2667vw solid #e6e6e6}
-.post-publish-date{width:10.6667vw;height:12.1333vw;top:-2vw;right:2.8vw}
-.post-publish-date .post-date{font-size:3.4667vw;line-height:6.0667vw}
-.post-publish-date .post-month{font-size:2.1333vw;line-height:3.7333vw}
-.post-cate{font-size:3.4667vw;line-height:4.8vw;margin-right:2.2133vw}
-.post-cate:before,.sticky-tag:before{width:.1333vw;height:1.8933vw;margin-right:2.2vw}
-.sticky-tag .sticky-text{font-size:2.9333vw;line-height:2.9333vw}
-.sticky-tag .sticky-text:before{font-size:2.8vw;margin-right:2vw}
-.post-title{margin-top:2.5333vw;margin-bottom:0;font-size:4.8vw;line-height:6.6667vw;width:74.4vw}
-.post-title:after{width:9.3333vw;height:.8vw;margin-top:2.2667vw}
-.post-excerpt{margin-top:3.3333vw;margin-bottom:3.3333vw;font-size:4vw;line-height:5.6vw}
-.read-more{font-size:2.4533vw;line-height:2.4533vw;min-width:26.4933vw;min-height:6.1333vw;padding-left:3.7333vw;padding-right:3.7333vw;padding-top:2vw;padding-bottom:2vw;border:.1333vw #dbb302 solid}
-.icon-ml-readmore{margin-left:1.3333vw;font-size:3.3333vw}
-.post-meta{font-size:2.1333vw;margin-left:3.2vw}
-.icon-mr-postmeta{margin-right:1.8667vw;font-size:3.4667vw}
-.post-meta-box a.edit-link:after{margin-left:3.2133vw;width:.1333vw;height:1.68vw}
-.post-meta .icon-like-sp{font-size:2.4vw}
-.list-box{margin-bottom:5.3333vw}
-.nav-links .page-numbers,.nav-links .post-page-numbers{min-width:8vw;height:8vw;border:.1333vw #dbb302 solid;font-size:4vw;line-height:4vw;margin-left:1.7733vw;margin-right:1.7733vw;margin-bottom:1.7733vw}
-.pagination>.nav-links>.dots{padding-bottom:2.6667vw}
-.list-box:last-child{margin-bottom:5.3333vw}
-.meta-category{flex-wrap:wrap;padding-right:10.6667vw}
-}
-.sidebar{width:19.6429vw;min-height:29.7619vw}
-.sidebar>aside:first-child{margin-top:0}
-.widget{width:100%}
-.widget-title{color:#000;font-size:1.0714vw;line-height:1.0714vw;margin-top:0;margin-bottom:1.6667vw;text-transform:uppercase}
-.widget-title:after{display:flex;margin-top:1.1131vw;content:'';width:3.7501vw;height:.119vw;min-height:1.5px;background:#dedede}
-.widget{border-bottom:.0595vw #ebebeb solid;padding-bottom:2.1429vw;margin-bottom:2.9762vw}
-.widget:last-child{margin-bottom:0;border-bottom:none}
-.widget>ul{overflow-wrap:break-word;margin:0;padding-left:0}
-.widget_categories>ul>li>ul.children>li.cat-item{color:#000;font-size:.9524vw;margin-top:1.1905vw}
-.widget_categories>ul>li>ul.children>li.cat-item ul.children li{color:#000;font-size:.9524vw;margin-top:.9524vw}
-.widget_categories>ul>li.cat-item:before{content:'\e641';font-family:iconfont;color:#dbb302;font-size:.9524vw;margin-right:.7143vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.widget_categories>ul>li>ul.children{padding-left:1.4286vw}
-.widget_categories>ul>li>ul.children>li>ul.children{padding-left:2.619vw}
-.widget_categories>ul>li>ul.children>li>ul.children>li ul{padding-left:1.3095vw}
-.widget_categories ul.children{padding-left:.2976vw;display:flex;flex-direction:column}
-.widget_categories>ul>li>ul.children>li:before{content:"\e642";display:inline-flex;font-family:iconfont;color:#dbb302;font-size:.9524vw;margin-right:.5952vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.widget_categories li.cat-item a{color:#000;text-decoration:none}
-.widget_categories ul{list-style:none}
-.widget_categories .screen-reader-text{display:none}
-.widget ul li{font-size:.9524vw;line-height:1.5476vw;margin-top:1.25vw;list-style:none;position:relative;padding-left:1.6667vw}
-.widget ul li:first-child{margin-top:0}
-.widget ul li a{color:#000;text-decoration:none}
-.widget ul li a:hover{color:#dbb302}
-.widget>ul>li:before{content:'\e62d';font-family:iconfont;color:#dbb302;font-size:.893vw;margin-right:.7143vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:absolute;left:0}
-.widget .screen-reader-text{display:none}
-.widget_search form{display:flex;position:relative;align-items:center}
-.widget_search{border-bottom:none;padding-bottom:0}
-.widget_search form input[type=text]{width:19.5833vw;height:2.6787vw;border:.0595vw #e6e6e6 solid;border-radius:.2381vw;padding-left:1.1905vw;padding-right:2.9762vw;font-size:.8333vw}
-.widget_search form input[type=text]::placeholder{font-size:.8333vw;color:#8a8a8a}
-.widget_search form button[type=submit]{position:absolute;right:0;padding:0;border:none;background:unset;z-index:1;cursor:pointer}
-.widget_search form button[type=submit]:before{content:'\e62c';font-family:iconfont;color:#b0b0b0;font-size:1.7857vw;margin-right:.7143vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.widget_profile{padding-bottom:0;border-bottom:0}
-.widget_profile .profile-box{width:19.6429vw;min-height:9.2262vw;border:.0595vw #e6e6e6 solid;display:flex;justify-content:center;position:relative;margin-top:2.6787vw}
-.widget_profile .profile-avatar{width:5.3571vw;height:5.3571vw;position:absolute;top:-2.6787vw}
-.widget_profile .profile-avatar img{border-radius:100%}
-.widget_profile .profile-content{font-size:.9524vw;padding:2.9762vw 1.6667vw 1.9048vw 1.6667vw;width:100%;box-sizing:border-box;word-break:break-word;line-height:1.8}
-.widget_profile .profile-content li{margin-top:.5952vw}
-.widget_profile ol,.widget_profile ul{padding-left:.9524vw;margin-top:.5952vw;margin-bottom:.5952vw}
-.widget_profile .profile-content p{margin-block-start:auto;margin-block-end:auto;margin-top:.5952vw}
-.widget_profile img{max-width:100%;height:auto}
-.widget_profile .wp-video,.widget_profile .wp-video video{max-width:100%;height:auto}
-.widget_profile a{font-size:.9524vw;color:#dbb302;text-decoration:none}
-.widget ul li a,.widget ul li span{color:#000}
-.widget ul li span.post-date{color:#888;font-style:italic}
-li.recentcomments{color:#888}
-@media only screen and (max-width:640px){.sidebar{width:92vw;margin-top:8vw}
-.widget_profile .profile-box{width:92vw;margin-top:12.5333vw;border:.2667vw #e6e6e6 solid}
-.widget_profile .profile-avatar{width:25.0667vw;height:25.0667vw;top:-12.5333vw}
-.widget_profile .profile-content{font-size:4vw;line-height:5.8667vw;padding:17.8667vw 8.0667vw 4.8267vw 8.0667vw}
-.widget_profile .profile-content li{font-size:4vw;line-height:5.8667vw;margin-top:1.3333vw;list-style:unset}
-.widget_profile ol,.widget_profile ul{padding-left:2.1333vw;margin-top:1.3333vw;margin-bottom:1.3333vw}
-.widget_profile .profile-content p{margin-block-start:auto;margin-block-end:auto;margin-top:1.3333vw}
-.widget_profile img{max-width:100%;height:auto}
-.widget_profile a{font-size:4vw;color:#dbb302;text-decoration:none}
-.widget_search{margin-top:8vw;margin-bottom:8vw}
-.widget_search form input[type=text]{width:92vw;height:10.6667vw;border:.2667vw #e6e6e6 solid;border-radius:.5333vw;padding-left:5.3333vw;padding-right:6.6667vw;font-size:4vw}
-.widget_search form input[type=text]::placeholder{font-size:4vw}
-.widget_search form button[type=submit]:before{font-size:6.4vw;margin-right:4.1333vw}
-.widget{border-bottom:.2667vw #ebebeb solid;padding-bottom:8.0667vw;margin-bottom:8.0667vw}
-.widget_profile,.widget_search{border-bottom:none;padding-bottom:0}
-.widget:last-child{margin-bottom:0;border-bottom:none}
-.widget-title{font-size:4.5333vw;line-height:4.5333vw;margin-bottom:7.4133vw}
-.widget-title:after{margin-top:4.5067vw;width:15.2133vw;height:.48vw}
-.widget_categories>ul>li.cat-item:before{font-size:3.6vw;margin-right:2.8933vw}
-.widget ul li{font-size:4vw;line-height:6.6667vw;margin-top:4vw;padding-left:6.6667vw}
-.widget_categories>ul>li>ul.children{padding-left:3.7333vw}
-.widget_categories>ul>li>ul.children>li:before{font-size:4vw;margin-right:1.3333vw}
-.widget_categories>ul>li>ul.children>li.cat-item{font-size:3.3333vw;margin-top:2.6667vw}
-.widget_categories>ul>li>ul.children>li>ul.children{padding-left:6.6667vw}
-.widget_categories>ul>li>ul.children>li.cat-item ul.children li{font-size:3.3333vw;margin-top:2.6667vw}
-.widget>ul>li:before{font-size:3.6vw;margin-right:2.5333vw}
-}
-footer{width:100vw;background:#222;display:flex;justify-content:center}
-.footer-container{width:71.4286vw;height:100%;display:flex;justify-content:center;flex-direction:column}
-.footer-container .footer-copyright{margin-bottom:1.1905vw;margin-top:2.893vw}
-.footer-container .footer-copyright,.footer-container .footer-copyright a{text-align:center;font-size:.8333vw;color:#8a8a8a;line-height:.5952vw;text-decoration:none}
-.footer-menus>nav{margin-top:2.893vw;margin-bottom:.875vw}
-.footer-menus>nav>ul{display:flex;margin-top:0;margin-bottom:0;display:flex;justify-content:center}
-.footer-menus>nav>ul>li{font-size:1.0714vw;line-height:1.0714vw;text-transform:uppercase;display:flex;flex-direction:column}
-.footer-menus>nav>ul>li>a:after{display:flex;content:'';margin-top:.7798vw;width:2.381vw;height:.119vw;background:#444}
-.footer-menus>nav>ul>li>a{color:#dbb302}
-.footer-menus>nav a{text-decoration:none;font-size:1.0714vw}
-.footer-menus>nav li,.footer-menus>nav ul{list-style:none;justify-content:space-around;justify-content:space-evenly;display:flex;padding-left:0}
-.footer-menus>nav>ul>li .sub-menu{display:flex;flex-direction:column;text-transform:none}
-.footer-menus>nav>ul>li ul li{margin-top:1.2143vw;line-height:.9524vw;display:flex;justify-content:start}
-.footer-container a:hover{color:#dbb302}
-.footer-menus>nav>ul>li ul li:first-child{margin-top:.893vw}
-.footer-menus>nav>ul>li ul li a{font-size:.9524vw;color:rgba(255,255,255,.6);display:flex}
-@media only screen and (max-width:640px){.footer-container{width:100%;padding-top:8.1333vw;padding-bottom:5.3333vw}
-.footer-menus>nav>ul>li{font-size:3.7333vw;line-height:3.7333vw;margin-bottom:13.3333vw;min-width:33.4667vw;margin-left:4vw;margin-right:4vw}
-.footer-menus>nav a{font-size:3.7333vw}
-.footer-menus>nav>ul>li>a:after{margin-top:2.8vw;width:8.5467vw;height:.4267vw}
-.footer-menus>nav>ul>li ul li:first-child{margin-top:3.1733vw}
-.footer-menus>nav>ul>li ul li{margin-top:4.3067vw;font-size:3.4667vw;line-height:3.4667vw}
-.footer-menus>nav>ul>li ul li a{font-size:3.4667vw}
-.footer-menus>nav>ul{flex-wrap:wrap;justify-content:space-between;box-sizing:border-box;padding:0 8.5334vw 0 8.5334vw}
-.footer-menus>nav{margin:0}
-.footer-container .footer-copyright,.footer-container .footer-copyright a{font-size:2.9333vw;line-height:2.9333vw}
-.footer-container .footer-copyright p{margin-top:0}
-.footer-container .footer-copyright{margin-top:0;margin-bottom:0}
-}
-:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-681d4ff{text-align:center;margin-top:.5vw}
-</style>
-    
-
-    
-
-
-<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<link rel="canonical" href="https://test19124.github.io" />
-<link rel="shortcut icon" href="https://test19124.github.io/favicon.ico?v=1629391123307">
-
-<meta name="author" content="test19124">
-
-<meta itemprop="name" content="test19124 - blog">
-<meta itemprop="description" content="test19124的博客">
-<meta itemprop="image" content="">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="test19124 - blog">
-<meta name="twitter:description" content="test19124的博客">
-<meta name="twitter:image" content="" />
-<meta name="twitter:image:alt" content="test19124 - blog" />
-
-
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://test19124.github.io">
-<meta property="og:title" content="test19124 - blog">
-<meta property="og:description" content="test19124的博客">
-<meta property="og:image" content="">
-<meta property="og:image:alt" content="test19124 - blog" />
-<meta property="og:site_name" content="test19124 - blog">
-<meta property="og:locale" content="zh_CN">
-<meta property="tag" content="test19124 - blog" />
-
-
-<script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":
-    [
-     {
-      "@type":"ListItem",
-      "position":1,
-      "name":"Home",
-      "item":"https://test19124.github.io"
-     }
-     ]
-    }
-
-</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
 
 
 
-<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-<script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-<script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
-<link rel="alternate" type="application/atom+xml" title="test19124 - blog - Atom Feed" href="https://test19124.github.io/atom.xml">
 
-      
-      
 
 
 </head>
 
-<body class="home blog">
-  <input type="checkbox" id="header-menu-button">
-  <header id="commonTop">
-  <div class="top-container">
-    <div class="title-menus-area">
-      <a class="blog-title" href="https://test19124.github.io">test19124 - blog</a>
-      <label for="header-menu-button" class="top-menus">
-        <nav class="menu-menu-1-container">
-          <ul id="menu-menu-1" class="menu">
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>test19124 - blog</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">精于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
             
             
-            <li>
-              <a href="https://test19124.github.io/" aria-current="page">主页</a></li>
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://test19124.github.io//" target="_self">
+                  <i class="fa fa-globe"></i> 主页
+                </a>
+              
+            </li>
+          
             
             
+              
             
-            <li>
-              <a href="https://test19124.github.io/tag/oi/" aria-current="page">编程</a></li>
-            
-            
-            
-            <li>
-              <a href="https://test19124.github.io/tag/ti-jie/" aria-current="page">题解</a></li>
-            
-            
-            
-            <li>
-              <a href="https://test19124.github.io/tag/xue-xi-zi-liao/" aria-current="page">学习资料</a></li>
+            <li class="nav-item ">
+              
+              
+                <a href="https://test19124.github.io/tag/oi//" target="_self">
+                  <i class="fa fa-globe"></i> 编程
+                </a>
+              
+            </li>
+          
             
             
-          </ul>
-        </nav>
-      </label>
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://test19124.github.io/tag/ti-jie//" target="_self">
+                  <i class="fa fa-globe"></i> 题解
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="https://test19124.github.io/tag/xue-xi-zi-liao//" target="_self">
+                  <i class="fa fa-globe"></i> 学习资料
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
     </div>
-    
-  </div>
-</header>
-
-  <main>
-    <div class="main-container">
-  <div class="post-list">
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-
-      <div class="post-info">
-        
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://test19124.github.io/tag/yu-wen/">语文</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/">文天祥人物整理</a>
-        </h2>
-        <div class="post-excerpt">
-          
-        </div>
-        <div class="flex-box justify-between">
-          <a href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-          <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-          </div>
-
-          <div class="flex-box post-publish-date">
-            <div class="post-date">
-              24
-            </div>
-            <div class="post-month">
-              4月                            
-            </div>  
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-
-      <div class="post-info">
-        
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://test19124.github.io/tag/yu-wen/">语文</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://test19124.github.io/post/luo-tuo-xiang-zi/">骆驼祥子</a>
-        </h2>
-        <div class="post-excerpt">
-          <p>《骆驼祥子》讲述的是旧中国北平城里一个人力车夫祥子的悲剧故事。祥子来自农村，他老实善良、健壮、坚忍。来到北平后，选择拉车谋生。他最大的梦想就是拥有一辆自己的车。但是他的希望一次又一次的破灭，他与命运的抗争最终以失败告终。</p>
-
-        </div>
-        <div class="flex-box justify-between">
-          <a href="https://test19124.github.io/post/luo-tuo-xiang-zi/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-          <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://test19124.github.io/post/luo-tuo-xiang-zi/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/luo-tuo-xiang-zi/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/luo-tuo-xiang-zi/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-          </div>
-
-          <div class="flex-box post-publish-date">
-            <div class="post-date">
-              27
-            </div>
-            <div class="post-month">
-              1月                            
-            </div>  
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-
-      <div class="post-info">
-        
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://test19124.github.io/tag/she-hui/">社会</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://test19124.github.io/post/dao-fa/">可爱你的【道法】七上</a>
-        </h2>
-        <div class="post-excerpt">
-          
-        </div>
-        <div class="flex-box justify-between">
-          <a href="https://test19124.github.io/post/dao-fa/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-          <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://test19124.github.io/post/dao-fa/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/dao-fa/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/dao-fa/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-          </div>
-
-          <div class="flex-box post-publish-date">
-            <div class="post-date">
-              16
-            </div>
-            <div class="post-month">
-              1月                            
-            </div>  
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-
-      <div class="post-info">
-        
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://test19124.github.io/tag/yu-wen/">语文</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://test19124.github.io/post/lie-ren-bi-ji/">猎人笔记</a>
-        </h2>
-        <div class="post-excerpt">
-          
-        </div>
-        <div class="flex-box justify-between">
-          <a href="https://test19124.github.io/post/lie-ren-bi-ji/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-          <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://test19124.github.io/post/lie-ren-bi-ji/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/lie-ren-bi-ji/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/lie-ren-bi-ji/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-          </div>
-
-          <div class="flex-box post-publish-date">
-            <div class="post-date">
-              12
-            </div>
-            <div class="post-month">
-              12月                            
-            </div>  
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-
-      <div class="post-info">
-        
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://test19124.github.io/tag/wei-feng-lei/">未分类</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/">关于这个博客</a>
-        </h2>
-        <div class="post-excerpt">
-          
-        </div>
-        <div class="flex-box justify-between">
-          <a href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-          <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-          </div>
-
-          <div class="flex-box post-publish-date">
-            <div class="post-date">
-              04
-            </div>
-            <div class="post-month">
-              12月                            
-            </div>  
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-    
-
-  </div>
-  <div>
-    <nav class="navigation pagination" role="navigation" aria-label="文章">
-      <h2 class="screen-reader-text">文章导航</h2>
-      <div class="nav-links">
-        
-        <a class="page-numbers" href="https://test19124.github.io/page/2/">&nbsp&nbsp上一页&nbsp&nbsp</a>
-        
-        
-      </div>
-    </nav>
-  </div>
+  </header>
 </div>
-    <div class="sidebar">
-  <aside id="profile-2" class="widget widget_profile">
-    <div class="profile-box">
-      <div class="profile-avatar">
-        <amp-img src="https://test19124.github.io/images/avatar.png?v=1629391123307" alt="avatar"
-          layout="fill"></amp-img>
-      </div>
-      <div class="profile-content">
-        <div class="amp-wp-681d4ff">
-          test19124的博客
-        </div>
 
-      </div>
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout pisces ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">test19124</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">26</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
     </div>
-  </aside>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
   
     
-      <aside id="search-10" class="widget widget_search">
-        <form target="_top" role="search" method=get class="search-form" action="https://www.baidu.com/baidu">
-          <input type=hidden name=domains value="https://test19124.github.io">
-          <input type=hidden name=sitesearch value="https://test19124.github.io">
-          <input name="hl" value="zh-CN" type="hidden">
-          <input required type="text" class="search-field" placeholder="搜索…" name="q">
-          <button type="submit"
-            class="search-submit"></button>
-        </form>
-      </aside>
-      
-
-    
-    <aside id="recent-posts-2" class="widget widget_recent_entries">
-      <h4 class="widget-title">近期文章</h4>
-       <ul>
-        
-          
-        <li>
-         <a href="https://test19124.github.io/post/xuan-ya-zhi-shang-guan-hou-gan/" aria-current="page">悬崖之上观后感</a>
-        </li>
-        
-        
-          
-        <li>
-         <a href="https://test19124.github.io/post/kun-chong-ji-du-hou-gan/" aria-current="page">昆虫记读后感</a>
-        </li>
-        
-        
-          
-        <li>
-         <a href="https://test19124.github.io/post/da-nian-gao/" aria-current="page">打年糕</a>
-        </li>
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-   </aside>
-   
-
-   
-    <aside id="categories-2" class="widget widget_categories">
-      <h4 class="widget-title">标签</h4>
-      <ul>
-          
-            <li class="cat-item"><a href="https://test19124.github.io/tag/yu-wen/">
-            语文
-          </a>
-          
-            <li class="cat-item"><a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
-            学习资料
-          </a>
-          
-            <li class="cat-item"><a href="https://test19124.github.io/tag/517-ti-gao-zu/">
-            517提高组
-          </a>
-          
-            <li class="cat-item"><a href="https://test19124.github.io/tag/ti-jie/">
-            题解
-          </a>
-          
-            <li class="cat-item"><a href="https://test19124.github.io/tag/oi/">
-            编程
-          </a>
-          
-            <li class="cat-item"><a href="https://test19124.github.io/tag/517-pu-ji-zu/">
-            517普及组
-          </a>
-          
-            <li class="cat-item"><a href="https://test19124.github.io/tag/she-hui/">
-            社会
-          </a>
-          
-            <li class="cat-item"><a href="https://test19124.github.io/tag/wei-feng-lei/">
-            未分类
-          </a>
-          
-        </li>
   
-      </ul>
-    </aside>
-    
+  
 
-  <aside id="linkcat-2" class="widget widget_links">
-  <h4 class="widget-title">友链</h4>
-  <ul class="xoxo blogroll">
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'pisces';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box pisces">
+          <section class="section bg-color posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://test19124.github.io/post/du-shu-zhuan-ti-zheng-li/">
+      “读书”专题整理
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-05-01 10:52:03">2021-05-01</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://test19124.github.io/tag/yu-wen/">
+        <span>语文</span>
+      </a>、
+      
+      
+      
+      <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
+        <span>学习资料</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>7<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1826<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h1 id="名人读书的故事">名人读书的故事</h1>
+<h2 id="黄侃误把墨汁当小菜">黄侃误把墨汁当小菜</h2>
+<p>1915年，著名学者黄侃在北大主讲国学。他住在北京白庙胡同大同公寓，终日潜心研究“国学”，有时吃饭也不出书房门，准备了馒头和辣椒、酱油等佐料，摆在书桌上，饿了便啃馒头，边吃边看书，吃吃停停。<br>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://test19124.github.io/post/du-shu-zhuan-ti-zheng-li/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/">
+      文天祥人物整理
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-04-24 13:07:48">2021-04-24</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://test19124.github.io/tag/yu-wen/">
+        <span>语文</span>
+      </a>、
+      
+      
+      
+      <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
+        <span>学习资料</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>18<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>5293<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><p><strong><a href="https://vd2.bdstatic.com/mda-jmi6eqfyx3ybprj5/v1-cae/sc/mda-jmi6eqfyx3ybprj5.mp4?v_from_s=nj_haokan_4469&amp;auth_key=1619244958-0-0-605ad624ad72279786d12838bc12bb2f&amp;bcevod_channel=searchbox_feed&amp;pd=1&amp;pt=3&amp;abtest=">文天祥</a></strong>（1236/6/6—1283/1/9/），初名云孙，字宋瑞，又字履善。自号浮休道人、文山。吉州庐陵（今江西省吉安市青原区富田镇）人，南宋末年<strong>政治家</strong>、<strong>文学家</strong>，<strong>抗元名臣</strong>，<strong>民族英雄</strong>，与陆秀夫、张世杰并称为“<strong>宋末三杰</strong>”。</p>
+<h1 id="人物生平">人物生平</h1>
+<h2 id="忠鲠不屈">忠鲠不屈</h2>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://test19124.github.io/post/luo-tuo-xiang-zi/">
+      骆驼祥子
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-01-27 08:44:54">2021-01-27</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://test19124.github.io/tag/yu-wen/">
+        <span>语文</span>
+      </a>、
+      
+      
+      
+      <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
+        <span>学习资料</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>566<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <p>《骆驼祥子》讲述的是旧中国北平城里一个人力车夫祥子的悲剧故事。祥子来自农村，他老实善良、健壮、坚忍。来到北平后，选择拉车谋生。他最大的梦想就是拥有一辆自己的车。但是他的希望一次又一次的破灭，他与命运的抗争最终以失败告终。</p>
+
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://test19124.github.io/post/luo-tuo-xiang-zi/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://test19124.github.io/post/dao-fa/">
+      可爱你的【道法】七上
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-01-16 21:47:31">2021-01-16</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://test19124.github.io/tag/she-hui/">
+        <span>社会</span>
+      </a>、
+      
+      
+      
+      <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
+        <span>学习资料</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>12<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>3296<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h2 id="中学序曲">中学序曲</h2>
+<h3 id="中学时代的意义">中学时代的意义</h3>
+<ol>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://test19124.github.io/post/dao-fa/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://test19124.github.io/post/lie-ren-bi-ji/">
+      猎人笔记
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-12-12 12:47:27">2020-12-12</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://test19124.github.io/tag/yu-wen/">
+        <span>语文</span>
+      </a>、
+      
+      
+      
+      <a href="https://test19124.github.io/tag/xue-xi-zi-liao/">
+        <span>学习资料</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>17<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>4985<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+            
+              <p><h2 id="创作背景">创作背景</h2>
+<p>《猎人笔记》是19世纪40年代末50年代初问世的。这时正是俄国解放运动从贵族革命向资产阶级民主主义革命过渡的时期，是俄国社会生活处在大转变的历史时期。这一时期，俄国专制制度腐朽的本质更加暴露出来了，农奴制度的危机更加加深了。</p>
+<p>从20年代起，俄国的农奴制度就进入了危机阶段，并且，这种危机在不断地加深着。资本主义在俄国逐渐地发展起来了。它猛烈地冲击着农奴制度，使农奴制度的经济逐渐解体了。应该说，农奴制经济的解体，是农奴制危机的根本原因。</p>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://test19124.github.io/post/lie-ren-bi-ji/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/">
+      关于这个博客
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-12-04 22:57:55">2020-12-04</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://test19124.github.io/tag/wei-feng-lei/">
+        <span>未分类</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>8<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+  </div>
+</section>
+      <div class="post-body">
+        
+        
+          
+            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+            
+              <p><p>QwQ , 这是test19124的小博客</p>
+<figure data-type="image" tabindex="1"><img src="https://img.paulzzh.tech/touhou/random" alt="" loading="lazy"></figure>
+
+                
+              <p>
+            
+          
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+        <footer class="post-footer">
+          <div class="post-eof"></div>
+        </footer>
+      
+    </div>
+  </article>
+  
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+      <li class="pagination-dir">
+        <a href="https://test19124.github.io/page/2/">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+    
     
       
-    <li><a href="https://github.com/test19124" target="_blank">test19124 - Github</a></li>
+        <li class="pagination-li ">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+        <li class="pagination-li ">
+            <a href="/page/2">
+              2
+            </a>
+        </li>
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/3">
+              3
+            </a>
+        </li>
+      
     
     
   </ul>
-</aside>
-
-
 </div>
-    <div class="scrolltop-wrap">
-  <span tabindex="0" role="button" class="go-top" on="tap:commonTop.scrollTo(duration=500, position=top)">
-    <span class="iconfont"></span>
-  </span>
-</div>
-
-    
-  </main>
-
-  <footer>
-  <div class="footer-container">
-    <div class="footer-menus">
+          </section>
+        </div>
+      </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-box">
+  <footer class="footer">
+    <span id="busuanzi_container_site_pv">浏览数 <span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span> 人</span>
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> ©2019 | Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
       © 2019-2021 版权所有 @test19124
-      
-      
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 5px;bottom: px;"
+    data-key="">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
 
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        
+      </div>
+    
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script>
+	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+	var norunFlag = false;
+
+	for (var i = 0; i < norunAI.length; i++) {
+		if (userAgent.indexOf(norunAI[i]) > -1) {
+			norunFlag = true;
+			break;
+		}
+	}
+
+	if (!window.WebGLRenderingContext) {
+		norunFlag = true;
+	}
+
+	if (!norunFlag) {
+		var hitFlag = false;
+		var AIFadeFlag = false;
+		var liveTlakTimer = null;
+		var sleepTimer_ = null;
+		var AITalkFlag = false;
+		var talkNum = 0;
+		(function () {
+			function renderTip(template, context) {
+				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+				return template.replace(tokenReg, function (word, slash1, token, slash2) {
+					if (slash1 || slash2) {
+						return word.replace('\\', '');
+					}
+					var variables = token.replace(/\s/g, '').split('.');
+					var currentObject = context;
+					var i, length, variable;
+					for (i = 0, length = variables.length; i < length; ++i) {
+						variable = variables[i];
+						currentObject = currentObject[variable];
+						if (currentObject === undefined || currentObject === null) return '';
+					}
+					return currentObject;
+				});
+			}
+
+			String.prototype.renderTip = function (context) {
+				return renderTip(this, context);
+			};
+
+			var re = /x/;
+			re.toString = function () {
+				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+				return '';
+			};
+
+			$(document).on('copy', function () {
+				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
+			});
+
+			function initTips() {
+				$.ajax({
+					cache: true,
+					url: message_Path + 'message.json',
+					dataType: "json",
+					success: function (result) {
+						$.each(result.mouseover, function (index, tips) {
+							$(tips.selector).mouseover(function () {
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+								talkValTimer();
+								clearInterval(liveTlakTimer);
+								liveTlakTimer = null;
+							});
+							$(tips.selector).mouseout(function () {
+								showHitokoto();
+								if (liveTlakTimer == null) {
+									liveTlakTimer = window.setInterval(function () {
+										showHitokoto();
+									}, 15000);
+								};
+							});
+						});
+						$.each(result.click, function (index, tips) {
+							$(tips.selector).click(function () {
+								if (hitFlag) {
+									return false
+								}
+								hitFlag = true;
+								setTimeout(function () {
+									hitFlag = false;
+								}, 8000);
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+							});
+							clearInterval(liveTlakTimer);
+							liveTlakTimer = null;
+							if (liveTlakTimer == null) {
+								liveTlakTimer = window.setInterval(function () {
+									showHitokoto();
+								}, 15000);
+							};
+						});
+					}
+				});
+			}
+			initTips();
+
+			var text;
+			if (document.referrer !== '') {
+				var referrer = document.createElement('a');
+				referrer.href = document.referrer;
+				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+				var domain = referrer.hostname.split('.')[1];
+				if (domain == 'baidu') {
+					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'so') {
+					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'google') {
+					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			} else {
+				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
+					var now = (new Date()).getHours();
+					if (now > 23 || now <= 5) {
+						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
+					} else if (now > 5 && now <= 7) {
+						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
+					} else if (now > 7 && now <= 11) {
+						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+					} else if (now > 11 && now <= 14) {
+						text = '中午了，工作了一个上午，现在是午餐时间！';
+					} else if (now > 14 && now <= 17) {
+						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+					} else if (now > 17 && now <= 19) {
+						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
+					} else if (now > 19 && now <= 21) {
+						text = '晚上好，今天过得怎么样？';
+					} else if (now > 21 && now <= 23) {
+						text = '已经这么晚了呀，早点休息吧，晚安~~';
+					} else {
+						text = '嗨~ 快来逗我玩吧！';
+					}
+				} else {
+					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			}
+			showMessage(text, 12000);
+		})();
+
+		liveTlakTimer = setInterval(function () {
+			showHitokoto();
+		}, 15000);
+
+		function showHitokoto() {
+			if (sessionStorage.getItem("Sleepy") !== "1") {
+				if (!AITalkFlag) {
+					$.getJSON('https://v1.hitokoto.cn/', function (result) {
+						talkValTimer();
+						showMessage(result.hitokoto, 0);
+					});
+				}
+			} else {
+				hideMessage(0);
+				if (sleepTimer_ == null) {
+					sleepTimer_ = setInterval(function () {
+						checkSleep();
+					}, 200);
+				}
+			}
+		}
+
+		function checkSleep() {
+			var sleepStatu = sessionStorage.getItem("Sleepy");
+			if (sleepStatu !== '1') {
+				talkValTimer();
+				showMessage('你回来啦~', 0);
+				clearInterval(sleepTimer_);
+				sleepTimer_ = null;
+			}
+		}
+
+		function showMessage(text, timeout) {
+			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
+			$('.message').stop();
+			$('.message').html(text);
+			$('.message').fadeTo(200, 1);
+			//if (timeout === null) timeout = 5000;
+			//hideMessage(timeout);
+		}
+		function talkValTimer() {
+			$('#live_talk').val('1');
+		}
+
+		function hideMessage(timeout) {
+			//$('.message').stop().css('opacity',1);
+			if (timeout === null) timeout = 5000;
+			$('.message').delay(timeout).fadeTo(200, 0);
+		}
+
+		function initLive2d() {
+			$('#hideButton').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "0");
+					$('#landlord').fadeOut(200);
+					$('#open_live2d').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#open_live2d').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "1");
+					$('#open_live2d').fadeOut(200);
+					$('#landlord').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#youduButton').on('click', function () {
+				if ($('#youduButton').hasClass('doudong')) {
+					var typeIs = $('#youduButton').attr('data-type');
+					$('#youduButton').removeClass('doudong');
+					$('body').removeClass(typeIs);
+					$('#youduButton').attr('data-type', '');
+				} else {
+					var duType = $('#duType').val();
+					var duArr = duType.split(",");
+					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+					$('#youduButton').addClass('doudong');
+					$('#youduButton').attr('data-type', dataType);
+					$('body').addClass(dataType);
+				}
+			});
+			if (apiKey) {
+				$('#showInfoBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "0") {
+						return
+					} else {
+						$('#live_statu_val').val("0");
+						$('.live_talk_input_body').fadeOut(500);
+						AITalkFlag = false;
+						showHitokoto();
+						$('#showTalkBtn').show();
+						$('#showInfoBtn').hide();
+					}
+				});
+				$('#showTalkBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "1") {
+						return
+					} else {
+						$('#live_statu_val').val("1");
+						$('.live_talk_input_body').fadeIn(500);
+						AITalkFlag = true;
+						$('#showTalkBtn').hide();
+						$('#showInfoBtn').show();
+
+					}
+				});
+				$('#talk_send').on('click', function () {
+					var info_ = $('#AIuserText').val();
+					var userid_ = $('#AIuserName').val();
+					if (info_ == "") {
+						showMessage('写点什么吧！', 0);
+						return;
+					}
+					if (userid_ == "") {
+						showMessage('聊之前请告诉我你的名字吧！', 0);
+						return;
+					}
+					showMessage('思考中~', 0);
+					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
+					$.ajax({
+						type: "get",
+						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+						dataType: "json",
+						success: function (res) {
+							talkValTimer();
+							showMessage(res.text, 0);
+							$('#AIuserText').val("");
+							sessionStorage.setItem("live2duser", userid_);
+						},
+						error: function (e) {
+							talkValTimer();
+							showMessage('似乎有什么错误，请和站长联系！', 0);
+						}
+					});
+				});
+			} else {
+				$('#showInfoBtn').hide();
+				$('#showTalkBtn').hide();
+			}
+			//获取音乐信息初始化
+			var bgmListInfo = $('input[name=live2dBGM]');
+			if (bgmListInfo.length == 0) {
+				$('#musicButton').hide();
+			} else {
+				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				var bgmPlayTime = 0;
+				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+				if (live2dBGM_Num) {
+					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
+						bgmPlayNow = parseInt(live2dBGM_Num);
+					}
+				}
+				if (live2dBGM_PlayTime) {
+					bgmPlayTime = parseInt(live2dBGM_PlayTime);
+				}
+				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
+				$('#live2d_bgm').attr('src', live2dBGMSrc);
+				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+				$('#live2d_bgm')[0].volume = 0.5;
+				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+				}
+				sessionStorage.setItem("live2dBGM_WindowClose", '1');
+				$('#musicButton').on('click', function () {
+					if ($('#musicButton').hasClass('play')) {
+						$('#live2d_bgm')[0].pause();
+						$('#musicButton').removeClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '1');
+					} else {
+						$('#live2d_bgm')[0].play();
+						$('#musicButton').addClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				});
+				window.onbeforeunload = function () {
+					sessionStorage.setItem("live2dBGM_WindowClose", '0');
+					if ($('#musicButton').hasClass('play')) {
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				}
+				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
+					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("ended", function () {
+					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+					listNow++;
+					if (listNow > $('input[name=live2dBGM]').length - 1) {
+						listNow = 0;
+					}
+					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+					sessionStorage.setItem("live2dBGM_Num", listNow);
+					$('#live2d_bgm').attr('src', listNewSrc);
+					$('#live2d_bgm')[0].play();
+					$('#live2d_bgm').attr('data-bgm', listNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("error", function () {
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					showMessage('音乐似乎加载不出来了呢！', 0);
+				});
+			}
+			//获取用户名
+			var live2dUser = sessionStorage.getItem("live2duser");
+			if (live2dUser !== null) {
+				$('#AIuserName').val(live2dUser);
+			}
+			//获取位置
+			var landL = sessionStorage.getItem("historywidth");
+			var landB = sessionStorage.getItem("historyheight");
+			if (landL == null || landB == null) {
+				landL = '5px'
+				landB = '0px'
+			}
+			$('#landlord').css('left', landL + 'px');
+			$('#landlord').css('bottom', landB + 'px');
+			//移动
+			function getEvent() {
+				return window.event || arguments.callee.caller.arguments[0];
+			}
+			var smcc = document.getElementById("landlord");
+			var moveX = 0;
+			var moveY = 0;
+			var moveBottom = 0;
+			var moveLeft = 0;
+			var moveable = false;
+			var docMouseMoveEvent = document.onmousemove;
+			var docMouseUpEvent = document.onmouseup;
+			smcc.onmousedown = function () {
+				var ent = getEvent();
+				moveable = true;
+				moveX = ent.clientX;
+				moveY = ent.clientY;
+				var obj = smcc;
+				moveBottom = parseInt(obj.style.bottom);
+				moveLeft = parseInt(obj.style.left);
+				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+					window.getSelection().removeAllRanges();
+				}
+				document.onmousemove = function () {
+					if (moveable) {
+						var ent = getEvent();
+						var x = moveLeft + ent.clientX - moveX;
+						var y = moveBottom + (moveY - ent.clientY);
+						obj.style.left = x + "px";
+						obj.style.bottom = y + "px";
+					}
+				};
+				document.onmouseup = function () {
+					if (moveable) {
+						var historywidth = obj.style.left;
+						var historyheight = obj.style.bottom;
+						historywidth = historywidth.replace('px', '');
+						historyheight = historyheight.replace('px', '');
+						sessionStorage.setItem("historywidth", historywidth);
+						sessionStorage.setItem("historyheight", historyheight);
+						document.onmousemove = docMouseMoveEvent;
+						document.onmouseup = docMouseUpEvent;
+						moveable = false;
+						moveX = 0;
+						moveY = 0;
+						moveBottom = 0;
+						moveLeft = 0;
+					}
+				};
+			};
+		}
+		$(document).ready(function () {
+			var AIimgSrc = [];
+			let chooseLive2d = 'aoba'
+			if (chooseLive2d === 'histoire') {
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
+			} else if (chooseLive2d === 'rem') {
+				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
+			} else if (chooseLive2d === 'aoba') {
+				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
+			} else if (chooseLive2d === 'hijiki') {
+				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
+			} else if (chooseLive2d === 'tororo') {
+				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
+			}
+			var images = [];
+			var imgLength = AIimgSrc.length;
+			var loadingNum = 0;
+			for (var i = 0; i < imgLength; i++) {
+				images[i] = new Image();
+				images[i].src = AIimgSrc[i];
+				images[i].onload = function () {
+					loadingNum++;
+					if (loadingNum === imgLength) {
+						var live2dhidden = localStorage.getItem("live2dhidden");
+						if (live2dhidden === "0") {
+							setTimeout(function () {
+								$('#open_live2d').fadeIn(200);
+							}, 1300);
+						} else {
+							setTimeout(function () {
+								$('#landlord').fadeIn(200);
+							}, 1300);
+						}
+						let model = '';
+						if (chooseLive2d === 'histoire') {
+							model = message_Path + "model/histoire/model.json";
+						} else if (chooseLive2d === 'rem') {
+							model = message_Path + "model/rem/model.json";
+						} else if (chooseLive2d === 'aoba') {
+							model = message_Path + "model/aoba/model.json";
+						} else if (chooseLive2d === 'hijiki') {
+							model = message_Path + "model/hijiki/hijiki.model.json";
+						} else if (chooseLive2d === 'tororo') {
+							model = message_Path + "model/tororo/tororo.model.json";
+						}
+						setTimeout(function () {
+							loadlive2d("live2d", model);
+						}, 1000);
+						initLive2d();
+						images = null;
+					}
+				}
+			}
+		});
+	}
+</script>
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.addEventListener('resize', function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, 'stop');
+      jQuery.Velocity(viewport, 'stop');
+      jQuery.Velocity(rightMotions, 'stop');
+      if (open) {
+        jQuery.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            jQuery.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        jQuery.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            jQuery.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'false'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch && faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll('.section img');
+  images.forEach(image => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'images';
+    aelem.dataset['rel'] = 'fancybox-button';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  })
+</script>
+
+  </div>
+</body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/lin-qing-xuan-you-mei-yu-ju/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;抬起头来，我看见案前的檀香炉，香烟袅袅，飘去不可知的远方，香气在室内盘绕不息。这烟气是不是也飘往极乐世界呢？可是如果没有香炉的承受，接受火炼，檀香的烟气也不可能飞到远方。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在时间上、在广大里、在黑暗中、在忧伤深处、在冷漠之际，我们若能时而真挚地对望一眼，知道石心里还有温暖的质地，也就够了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在汹涌的波涛与急速的漩涡中，顺流而下的人是不是偶尔抬起头来，发现自己原来只是水上的一个字呢？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;彼岸根本就是永无尽期，菠萝蜜多永在终极之乡。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生命也像是在走钢索或凌空飞跃，在危险中锻炼了勇气，在失败中确立了坚强。——林清玄&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;春天原来是无形的，可是借着树上的叶、枝上的芽，我们竟能触摸得如此真切!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你心柔软，却有力量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每天我走完了黄昏的散步，将归家的时候，我就怀着感恩的心情摸摸夕阳的头发，说一些赞美与感激的话。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;林清玄经典语录50句&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;生命中有三种层次的化妆，而生命的化妆才能算是最高等的化妆。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;记忆是不可靠的，遗忘也可能是美好的。文学家与科学家不同，文学家不去寻找增加记忆的魔药，而让记忆自然的留下，记在文字上，或刻在心版上，随时准备着偶然的相遇。与十年前的美相遇了，就有两次的美；与二十年前的善相遇了，就有加倍的善。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这泡茶的过程令我想起人生，青涩的年少，香醇的青春，沉重的中年，回香的壮年，以及愈走愈淡逐渐失去人生之味的老年。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;即使土地不平，风狂雨骤，都不应该是我们跌倒的借口，都应该检视的是我们的心，去承担错误与失败。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所有时间里的事物，都永远不会回来。你的昨天过去了，它就永远变成昨天，你不能再回到昨天。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在岁月，我们走过了许多春夏秋冬；在人生，我们走过了许多冷暖炎凉，我总相信，在更深更广处，我们一定要维持着美好的心、欣赏的心，就像是春天想到百合、秋天想到芒花，永远保持着预约的希望。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只要心中有山有水有象牙球也就够了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;面对人生难以管理的生老病死，我们能以起承转合去寻找心灵的故乡。人总是有限制的，但有梦总是最美的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们心中所存在的一些美好的想象，有时候禁不起真实的面对。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对生命的恒常有祝福之念，对生命的变化有宽容之心。——林清玄《可以预约的雪》&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;黄昏走到了尾端，光明正以一种难以想象的速度自大地撤离。——林清玄《情深，万象皆深》&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生命的历程就像是写在水上的字，顺流而下，想回头寻找的时候总是失去了痕迹。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“人生”是一个多么巨大的课题，“困境”又是如此无所不在。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在穿过林间的时候，我觉得麻雀的死亡给我一些启示，我们虽然在尘网中生活，但永远不要失去想飞的心，不要忘记飞翔的姿势。——林清玄《在云上》&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们不要对人生有那么多的计较，因为这个计较和分别，正好是阻碍我们开悟，或者认识人生真价值的东西，如果我们可以学习赤子、宁作傻瓜，那么我们就会生起单纯的心。——林清玄&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择比努力重要，态度比能力重要，立场比实力重要。有本事是一回事，能否成功是另外一回事，得看你选择什么样的环境，跟哪些人在一起，能否很好地应对周围的冲突，如何赢得足够的支持，要多和成功的人交友，借鉴他们的方法;懂得自我反省，保持积极心态!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;喝酒是有哲学的，准备许多下酒菜，喝得杯盘狼藉是下乘的喝法；几粒花生米和盘豆腐干，和三五好友天南地北是中乘的喝法；一个人独斟自酌，举杯邀明月，对影成三人，是上乘的喝法。关于上乘的喝法，春天的时候可以面对满园怒放的杜鹃细饮五加皮；夏天的时候，在满树狂花中痛饮啤酒；秋日薄暮，用菊花煮竹叶青，人与海棠俱醉；冬寒时节则面对篱笆间的忍冬花，用腊梅温一壶大曲。这种种，就到了无物不可下酒的境界。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最好看的电影，结局总是悲哀的，但那悲哀不是流泪或者嚎啕，只是无奈，加上一些些茫然。——林清玄《河的感觉》&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;身如流水，日夜不停的流去，使人在闪灭中老去。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;爱的开始是一个眼色，爱的最后是无尽的苍穹。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在生死轮转的海岸，我们惜别，但不能不别，这是人最大的困局，然而生命就是时间，两者都不能逆转，与其跌跤而怨恨石头，还不如从今天走路就看脚下，与其被昨日无可换回的爱别离所折磨，还不如回到现在。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我一向不愿穿戴昂贵的服饰，不愿拥有名牌，因为深感自己没有那样名贵；我一向不喜出入西装革履、衣香鬓影的场合，因为深感自己没有那样高级。我要谦虚卑微一如山上的一株野草，自在地生活于大地，但也有高贵的自尊，俯视这红尘大地。我不要人人都看见我，但我要有自己的尊严。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;林清玄经典语录50句&lt;/p&gt;
+&lt;ol start=&#34;33&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;“多情终古是无情，莫问醉耶醒?”多情与无情、醉与醒都只是一念之间，酒还是要喝，情还是要多，否则，我们当年的博大的胸怀岂不是大打折扣了?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虽然明天还会有新的太阳，但永远不会有今天的太阳了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;种兰不种艾，兰生艾也生。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我摸不清去爱的理由，只知道你一天不从长长的阶梯走来，一天不对我说一种美妙的微笑，一天不在厨房里为我烧菜，我就会在茫茫的黑暗里独坐一夜，让寂寞一口一口吞噬了我的生命。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;真正的生活品质，是回到自我，清楚衡量自己的能力与条件，在这有限的条件下追求最好的事物与生活。再进一步，生活品质是因长久培养了求好的精神，因而有自信、有丰富的心胸世界；在外，有敏感直觉找到生活中最好的东西；在内，则能居陋而依然能创造愉悦多元的心灵空间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果人能快乐的归去，死亡就不能杀人，反而是人杀掉了死亡。——林清玄《境明，千里皆明》&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;布履一双，清风自在，我有明珠一颗，照破山河万朵。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最好的表达是沉默，而不是语言。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;因缘固然能使我们相遇，也能使我们离散，只要我们足够明净，相遇时就能听见互相心海的消息，即使是离散了，海潮仍然涌动，偶尔也会记起，海面上的深夜，曾有过水母美丽的磷光，点缀着黑暗。在时间上，在广袤里，在黑暗中，在忧伤深处，在冷漠之际，我们若能时而真挚地对望一眼，知道石心里还有温暖的质地，也就够了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我似昔人，不是昔人。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;茶若相似，味不必如一。但凡茗茶，一泡苦涩，二泡甘香，三泡浓沉，四泡清洌，五泡清淡，此后，再好的茶也索然无味。诚似人生五种，年少青涩，青春芳醇，中年沉重，壮年回香，老年无味。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;天下人心，如流水中有草木，各自流行，不相顾望。前者不顾后，后者不顾前，草木流行，各自如故。人心亦如是，一念来，一念去，亦如草木前后不相顾望。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所有的比较都是一种执着。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个人的心，如果澄净了，就日日是好日，夜夜是清宵，处处是福地，法法是善法，那么，还有什么能迷惑，染着我们呢？——林清玄&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;身如流水，日夜不停流去，使人在闪灭中老去。心如流水，没有片刻静止，使人在散乱中活着。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;唯其柔软，我们才能敏感;唯其柔软，我们才能包容;唯其柔软，我们才能精致;也唯其柔软;我们才能超拔自我。要见山，柔软心要伟岸如山;要看海，柔软心要广大若海。因为柔软，所以能够包容一切含摄一切……&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们要轻轻的走路、用心的过活；我们要温和的呼吸、柔软的关怀；我们要深刻的思想、广大的慈悲：我们要爱惜一株青草、践地唯恐地痛。这些，都是修行。——林清玄《情深，万象皆深》&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;犹如人生苍凉历尽之后，中夜观心，看见，并且感觉，少年时沸腾的热血，仍在心口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+">林清玄优美语句</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/xuan-ya-zhi-shang-guan-hou-gan/"" data-c="
+          &lt;p&gt;《悬崖之上》这部电影说的是在上世纪30年代，四位经过严格训练的共产党特工小队，在执行“乌特拉”秘密行动时，因为叛徒的出卖，最后深陷险境，最后在敌网中与敌人周旋，宛如在悬崖边上，充满各种惊心动魄......&lt;br&gt;
+　　在电影的特辑中，演员也都表达了自己内心最真实的看法，致敬先烈，缅怀英雄。张译说他们是“每天都是活在悬崖之上的人，每时每刻、随时随地都在面临死亡”；于和伟说“为了信仰，他们可以牺牲自己”，英雄不朽，令人动容。&lt;br&gt;
+　　在电影中，周乙他清楚的知道谍工的宗旨就是：“活下来才能完成任务，牺牲小众才能谋利大众。”他多次看到同伴倒在自己面前却装得毫不在意，但是却两次为了假扮妻子的女儿差点暴露了自己。这体现出了周乙内心的矛盾，一种看似近乎冷血的人性，藏着不为人知的暖流。这是长久在任务中，长期不断麻痹自己而导致的心理。&lt;br&gt;
+　　有一段场景令人难以名状，也让人不忍“直视”，那段场景就是张宪臣被用上电刑被敌人拷问，在落入敌人圈套被捕入狱后，他一直坚守自己的信念，宁愿受刑，也不愿透露组织的任何情报信息。电刑的场面中的每一个细节都能让人感觉到他在忍受着莫大的痛苦，他“残破”的身躯仿佛在向我们述说着当年那位“先烈”所经历的故事，真实到让人害怕他下一秒就会“死去”。其实受尽磨难的“先烈”何止他一人，是无数个呀，革命先烈们都是为了祖国的富强、民族的尊严以及自身的理想，不惧牺牲，艰苦卓绝的战斗着。&lt;br&gt;
+　　世上哪有什么岁月静好,只是有人替你负重前行。在黑暗的角落中，正是有无数默默付出、保护我们的无名英雄，为我们的美好生活撑起一道光明的未来，我们应当去缅怀先烈，敬仰先烈，学习那无私的精神！&lt;/p&gt;
+">悬崖之上观后感</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/kun-chong-ji-du-hou-gan/"" data-c="
+          &lt;p&gt;“我开辟了荒石园来研究活生生的昆虫。在这里，我可以不必担心路人的打扰，可以与蜂交谈，也无需耗费时间去远行，无需急不可待的奔走，我可以编制进攻计划，设置埋伏陷阱，每天时时刻刻观察实验效果。这就是我的愿望，我一直苦苦追求的梦想。”没错，这就是法布尔的《昆虫记》。&lt;br&gt;
+　　《昆虫记》这本书是法布尔用尽毕生心血观察研究昆虫所写出的，其中详尽的讲述了昆虫的特征，本能、习性、劳动、婚姻、繁衍和死亡。这些朴实的文字让人如同身临其境一般，你可以在书中感受到湿润的泥土，高大的树木，广阔的天空。那些对昆虫的细节描写不得不让人佩服法布尔对大自然的热爱，才会如此细致入微地描写绚烂多姿的大自然，正是这份细致入微，造就了《昆虫记》的严谨、科学。&lt;br&gt;
+　　法布尔严谨的科学探索精神，使人不得不赞叹。比如说法布尔对昆虫倒挂姿势的描写：“如在金属笼子里，椎头螳螂的幼虫停在一个地方后姿势始终如一，毫不改变。它用四只后爪的爪尖钩住网子，后背朝下，纹丝不动，高高挂在笼顶，四个悬点承受着整个身体的重量。倒挂栖驻姿势是如此艰难，然而苍蝇的倒挂姿势却截然不同。苍蝇虽然也抓挂在天花板上，但是它总要抽出时间松弛一下，随便飞一飞，操起正常姿势走一走，肚皮贴地，肢体舒展开晒晒太阳。”这段话是描写得如此仔细、认真，令人赞叹。试问一下，谁会注意身边不起眼的苍蝇，去研究苍蝇倒挂的姿势呢？但是法布尔却注意到了，他凭借这种对生活的好奇心，对上千种昆虫进行了细致入微的描写，才诞生出这本在世界文学史上有着举足轻重这本书——《昆虫记》。&lt;br&gt;
+　　这本书读完，我不仅仅充满着对生命的敬畏之情，更被法布尔这种蕴涵着追求真理、探求真相的求真精神所启发。在生活中和学习中，我们要学习法布尔勇于探索世界、勇于追求真理的勇气和毅力，无论做什么事情都要像法布尔那样，要有一种严谨的科学精神，坚持“准确记述观察得到的事实，既不添加什么，也不忽略什么”。做任何事情都要坚持不懈，即使条件艰苦，也要为了理想而不断奋斗。&lt;/p&gt;
+">昆虫记读后感</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/da-nian-gao/"" data-c="
+          &lt;p&gt;年糕，是我们中华民族的传统食品，属于农历新年的应时食品，是一种不可多得的美味，现在我就把过程介绍给你听听吧！&lt;br&gt;
+　　打年糕首先要掺好米，就是把糯米与晚米按一定比例掺和起来，洗好后弄成粉状，最后把米粉蒸好后就要开始打糕了。&lt;br&gt;
+　　只见大人们捧着蒸桶砰地一声把煮熟的米粉倾倒到石臼中，顿时，腾腾蒸气冉冉上升，一阵阵糕香在风中飘荡，让人闻着闻着就口水直流三千尺。之后一个人举起打年糕用的大木杵用力砸石臼里的糯米粉，另一个人趁他提杵的时候把粉团翻一个身。他们就这样一个人翻，一个人砸，配合得真是默契。隐隐看去，有一种别样的美感。打完糕后，两个人满头大汗，别提有多累了。我看着，心想：“啊，打年糕还真不是一件容易的事情。”&lt;br&gt;
+　　打完糕，后面就轮到做年糕的人上阵了。只见做年糕的人熟练地把糕切成四条，用布包好两条保温置于一旁，另各人一条，先乘热做两头，用双手把糯米粉揉在一起，反复地揉按，挤压，拍打，慢慢地把原来松散的糯米粉揉成了软软的、韧韧的、很有弹性的一团。然后，他再把这一团揉好的糯米粉压扁，拉长，用模具印出不同的图案。年糕白白的，上面印上红红的色彩甚是好看。&lt;br&gt;
+　　一块块精美的年糕整齐的摆放在桌子上，我迫不及待地拿起一块年糕放进嘴里吃了起来，“啊，这年糕真好吃，软软的十分香甜，细细咀嚼，回味无穷，浓浓的过年味道。”&lt;br&gt;
+　　年糕，是我国的传统文化，是我国的民俗风俗，我们应当把这宝贵的文化传承下去！&lt;/p&gt;
+">打年糕</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-lei-da-ti-jie/"" data-c="
+          &lt;h1 id=&#34;雷达-第二课-贪心算法-区间覆盖字典序-2020最新版提高组初级课程&#34;&gt;雷达-第二课: 贪心算法-区间覆盖/字典序-2020最新版提高组初级课程&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://517coding.com/p/4000&#34;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+&lt;p&gt;用勾股定理求出区间&lt;/p&gt;
+&lt;p&gt;转化成区间覆盖问题&lt;/p&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+struct jgt
+{
+  int x,y;
+  double z;
+} a[100010];
+
+bool cmp(jgt a,jgt b) {
+  return a.z&amp;lt;b.z;
+}
+
+int n,d,ans=1;
+int main()
+{
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;d;
+  bool flag=false;
+  for(int i=1;i&amp;lt;=n;i++) {
+    cin&amp;gt;&amp;gt;a[i].x&amp;gt;&amp;gt;a[i].y;
+    //cout&amp;lt;&amp;lt;a[i].x&amp;lt;&amp;lt;&amp;quot; &amp;quot;&amp;lt;&amp;lt;a[i].y&amp;lt;&amp;lt;endl;
+    if(a[i].y&amp;gt;d||a[i].y&amp;lt;(-1*d)) {
+      flag=true;
+    }
+    a[i].z=a[i].x+sqrt(d*d-a[i].y*a[i].y);
+  }
+  if(flag) {
+    cout&amp;lt;&amp;lt;-1&amp;lt;&amp;lt;&amp;quot;\n&amp;quot;;
+    return 0;
+  }
+  sort(a+1,a+n+1,cmp);
+  double tmp=a[1].z;
+  for(int i=2;i&amp;lt;=n;i++) {
+    if((a[i].x-tmp)*(a[i].x-tmp)+a[i].y*a[i].y&amp;gt;d*d) { 
+      ans++;
+      tmp=a[i].z;
+    }
+  }
+  cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;&amp;quot;\n&amp;quot;;
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517雷达题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-zui-da-yu-shu-ti-jie/"" data-c="
+          &lt;h1 id=&#34;最大余数-第一课-枚举技巧-状压折半尺取法-2020最新版提高组初级课程&#34;&gt;最大余数-第一课: 枚举技巧-状压/折半/尺取法-2020最新版提高组初级课程&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://517coding.com/p/3980&#34;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+&lt;p&gt;折半 + 二进制枚举&lt;/p&gt;
+&lt;p&gt;注意b数组要排个序~&lt;/p&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int n,mod;
+int a[1000010];
+int b[1000010];
+int tot;
+
+int find(int x)
+{
+  int ans=-1;
+  int l=0,r=tot-1;
+  if(b[r]&amp;lt;=x) {
+    return b[r];
+  }
+  while(l&amp;lt;=r) {
+    int mid=(l+r)/2;
+    if(b[mid]&amp;lt;=x) {
+      ans=b[mid];
+      l=mid+1;
+    } else {
+      r=mid-1;
+    }
+  }
+  return ans;
+}
+
+
+int main() {
+  scanf(&amp;quot;%d%d&amp;quot;,&amp;amp;n,&amp;amp;mod);
+  for(int i=0;i&amp;lt;n;i++) {
+    scanf(&amp;quot;%d&amp;quot;,&amp;amp;a[i]);
+    a[i]%=mod;
+  }
+  int m=n/2;
+  for(int i=0;i&amp;lt;(1&amp;lt;&amp;lt;m);i++) {
+    int tmp=0;
+    for(int j=0;j&amp;lt;m;j++) {
+      if(i&amp;amp;(1&amp;lt;&amp;lt;j)) {
+        tmp=(tmp+a[j])%mod;
+      }
+    }
+    b[tot++]=tmp;
+  }
+  sort(b,b+tot);
+  m=n-(n/2);
+  int ans=0;
+  for(int i=0;i&amp;lt;(1&amp;lt;&amp;lt;m);i++) {
+    int tmp=0;
+    for(int j=0;j&amp;lt;m;j++) {
+      if(i&amp;amp;(1&amp;lt;&amp;lt;j)) {
+        int jj=j+n/2;
+        tmp=(tmp+a[jj])%mod;
+      }
+    }
+    int x=find(mod-tmp-1);
+    ans=max(ans,(x+tmp));
+    if(ans==mod-1) {
+      break;
+    }
+  }
+  cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;&amp;quot;\n&amp;quot;;
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517最大余数题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-zui-xiao-zi-dian-xu-ti-jie/"" data-c="
+          &lt;h1 id=&#34;最大余数-第二课-贪心算法-区间覆盖字典序-2020最新版提高组初级课程&#34;&gt;最大余数-第二课: 贪心算法-区间覆盖/字典序-2020最新版提高组初级课程&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://517coding.com/p/3980&#34;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+&lt;p&gt;两边取小的往内贪心&lt;/p&gt;
+&lt;p&gt;如果相同则比较下一层大小&lt;/p&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int n,tot;
+char a[2010];
+
+int main() {
+  scanf(&amp;quot;%d%s&amp;quot;,&amp;amp;n,&amp;amp;a);
+  int l=0,r=n-1;
+  while(l&amp;lt;=r) {
+    bool flag;
+    for(int i=0;i&amp;lt;=r-l;i++) {
+      if(a[l+i]!=a[r-i]) {
+        flag=a[l+i]&amp;lt;a[r-i];
+        break;
+      }
+    }
+    if(flag) {
+      printf(&amp;quot;%c&amp;quot;,a[l]);
+      l++;
+    } else {
+      printf(&amp;quot;%c&amp;quot;,a[r]);
+      r--;
+    }
+    tot++;
+    if(tot%80==0) {
+      printf(&amp;quot;\n&amp;quot;);
+    }
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517最小字典序题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-yi-huo-he-ti-jie/"" data-c="
+          &lt;h1 id=&#34;按钮变色-第一课-枚举技巧-状压折半尺取法-2020最新版提高组初级课程&#34;&gt;按钮变色-第一课: 枚举技巧-状压/折半/尺取法-2020最新版提高组初级课程&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://517coding.com/p/3970&#34;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+&lt;p&gt;尺取法加强，记得开long long&lt;/p&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int n,s;
+int a[1200000];
+long long suma[1200000];
+long long sumb[1200000];
+
+int main()
+{
+  scanf(&amp;quot;%d&amp;quot;,&amp;amp;n);
+  for(int i=1;i&amp;lt;=n;i++) {
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;a[i]);
+    suma[i]=suma[i-1]+a[i];
+    sumb[i]=sumb[i-1]^a[i];
+  }
+  long long ans=0;
+  int i=1;
+  for(int j=1;j&amp;lt;=n;j++) {
+    while(suma[j]-suma[i-1]!=(sumb[j]^sumb[i-1])) {
+      i++;
+    }
+    ans+=j-i+1;
+  }
+  printf(&amp;quot;%lld\n&amp;quot;, ans);
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517异或和题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-zui-duan-lian-xu-zi-xu-lie-ti-jie/"" data-c="
+          &lt;h1 id=&#34;最短连续子序列-第一课-枚举技巧-状压折半尺取法-2020最新版提高组初级课程&#34;&gt;最短连续子序列-第一课: 枚举技巧-状压/折半/尺取法-2020最新版提高组初级课程&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://517coding.com/p/3960&#34;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+&lt;p&gt;尺取法&lt;/p&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int n,s;
+int sum[1200000];
+int a[1200000];
+
+int main()
+{
+  scanf(&amp;quot;%d%d&amp;quot;,&amp;amp;n,&amp;amp;s);
+  for(int i=1;i&amp;lt;=n;i++) {
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;a[i]);
+    sum[i]=sum[i-1]+a[i];
+  }
+  int ans=998244353,i=1;
+  for(int j=1;j&amp;lt;=n;j++) {
+    if(sum[j]-sum[i-1]&amp;gt;=s) {
+      while(sum[j]-sum[i]&amp;gt;=s) {
+        i++;
+      }
+      ans=min(ans,j-i+1);
+    }
+  }
+  if(ans==998244353)
+    printf(&amp;quot;0\n&amp;quot;);
+  else
+    printf(&amp;quot;%d\n&amp;quot;, ans);
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517最短连续子序列题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/debug-de-fang-fa-ji-ce-lue/"" data-c="
+          &lt;p&gt;C++以及普及组选手多使用静态查错法与输出调试法&lt;/p&gt;
+&lt;p&gt;提高组选手可以适当使用对拍调试法&lt;/p&gt;
+&lt;p&gt;[https://www.bilibili.com/video/BV1sQ4y1K7T4/ 初级调试指南视频版]&lt;/p&gt;
+&lt;p&gt;[https://www.bilibili.com/video/BV1he411p74Y/ 高级调试指南视频版]&lt;/p&gt;
+&lt;p&gt;= 调试指南 =&lt;/p&gt;
+&lt;p&gt;1：在草稿纸上模拟程序的运行，写下一些关键变量的中间结果&lt;/p&gt;
+&lt;p&gt;2：利用打印调试法打印出这些中间变量的值&lt;/p&gt;
+&lt;p&gt;3：对比观察&lt;/p&gt;
+&lt;p&gt;下面介绍利用数据去查错的几种查错方法&lt;/p&gt;
+&lt;p&gt;== 静态查错法 ==&lt;/p&gt;
+&lt;p&gt;静态查错法的意思是说，写完程序，先整体浏览一遍代码，把一些肉眼可见的，明显发现是错的地方修改掉&lt;/p&gt;
+&lt;p&gt;根据以往的经验，我们发现，一个选手功力越深，静态查错的时候能发现的问题越多，往往大多数错误不需要下面的方法就已经查出来了。&lt;/p&gt;
+&lt;p&gt;== 输出调试法 ==&lt;/p&gt;
+&lt;p&gt;首先，我们运行了一组数据，发现结果不对，然后静态查错也没看出什么来，这个时候我们采用输出调试法。&lt;/p&gt;
+&lt;p&gt;1：先 分段  打印一些变量，观察变量的值跟预想的对不对，找到最先不对的地方，然后检查，这个时候下面的代码就不用看了&lt;/p&gt;
+&lt;p&gt;2：不停的重复1的行为，不断的缩小定位错误区域，直到所有的错误修复完毕&lt;/p&gt;
+&lt;p&gt;举个例子&lt;/p&gt;
+&lt;p&gt;比如下面这个程序, 题库链接：https://517coding.com/p/1100&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+int a[10010];
+int b[10010];
+int main(void){
+	int n,m;
+	int k=-1e9;
+	scanf(&amp;quot;%d%d&amp;quot;,&amp;amp;n,&amp;amp;m);
+	for(int i=1;i&amp;lt;=n;i++) scanf(&amp;quot;%d&amp;quot;,&amp;amp;a[i]);
+	for(int i=1;i&amp;lt;=m;i++) scanf(&amp;quot;%d&amp;quot;,&amp;amp;b[i]);
+	for(int i=1;i&amp;lt;=n;i++) {
+		for(int j=1;j&amp;lt;=n;j++) {
+		      
+			if(a[i]+b[j]&amp;gt;k) { 
+		//下面这行代码是用来打印调试的语句
+			     printf(&amp;quot;i=%d j=%d sum=%d\n&amp;quot;, i, j, a[i]+b[j]);
+			     k=a[i]+b[j];
+			}
+		}
+       }
+	printf(&amp;quot;%d&amp;quot;,k);
+	return 0;
+}
+
+/*
+错误数据：
+
+2 3
+1 2
+1 2 3
+*/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们可以在循环里面加一句printf语句打印关键信息，然后运行代码下方的错误数据，我们发现会输出如下信息&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;2 3
+1 2
+1 2 3
+i=1 j=1 sum=2
+i=1 j=2 sum=3
+i=2 j=2 sum=4
+4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以发现，答案明明是5，但是却输出了4，而且中间过程也并没有产生5，而答案5是来自于第一个数组中的2与第二个数组中的3相加得到的，此时我们通过调试信息的输出并没有发现这两个数被同时枚举到，于是我们检查两个for循环，这个时候发现了两个for循环枚举的都是1到n，而实际上，第二个循环应该枚举1到m，修改之后，这个程序就可以正常通过了&lt;/p&gt;
+&lt;p&gt;== 对拍调试法 ==&lt;/p&gt;
+&lt;p&gt;=== duipai.sh ===&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;#!/bin/bash
+t=0;
+while true; do
+    let &amp;quot;t = $t + 1&amp;quot;
+    printf $t
+    printf &amp;quot;:\n&amp;quot;
+    ./rand &amp;gt; rand.txt
+    ./AC &amp;lt; rand.txt &amp;gt; AC.out
+    ./WA &amp;lt; rand.txt &amp;gt; WA.out
+     
+    if diff AC.out WA.out; then
+        printf &amp;quot;\n&amp;quot;
+    else
+        printf &amp;quot;WA\n&amp;quot;
+        cat rand.txt
+        break
+    fi
+done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;=== run.bat ===&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bat&#34;&gt;:loop 
+    @echo off   
+    gen.exe &amp;gt; in.txt                       
+    my.exe &amp;lt; in.txt  &amp;gt; myout.txt       
+    std.exe &amp;lt; in.txt  &amp;gt; stdout.txt
+    fc myout.txt stdout.txt                
+if not errorlevel 1   goto loop           
+pause
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;=== std.cpp ===&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int main() {
+  int a, b;
+  cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;
+  cout &amp;lt;&amp;lt; a + b &amp;lt;&amp;lt; endl;
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;=== my.cpp ===&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+//这是一个错误程序
+int main() {
+  int a, b;
+  cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt;b;
+  if (a &amp;gt; 130 &amp;amp;&amp;amp; b &amp;gt; 130) {
+    cout &amp;lt;&amp;lt; a - b &amp;lt;&amp;lt; endl;
+  } else {
+    cout &amp;lt;&amp;lt; a + b &amp;lt;&amp;lt; endl;
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;=== gen.cpp ===&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+// 返回0到x-1之间的随机数
+// rand()函数返回 0-32767之间的一个随机数
+int get_rand(int x) {
+  return rand() * rand() % x + 1;
+}
+
+//返回L 到 R之间的整数
+int get_rand(int L, int R) {
+  return rand() * rand() % (R-L+1) + L;
+}
+
+int main() {
+  //初始化随机种子
+  srand(time(0));
+  int a, b;
+
+  //生成一组随机数据
+  a = get_rand(1, 200);
+  b = get_rand(1, 200);
+  cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &amp;quot; &amp;quot; &amp;lt;&amp;lt; b &amp;lt;&amp;lt;endl;
+  return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+">debug的方法及策略</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-an-niu-bian-se-ti-jie/"" data-c="
+          &lt;h1 id=&#34;按钮变色-第一课-枚举技巧-状压折半尺取法-2020最新版提高组初级课程&#34;&gt;按钮变色-第一课: 枚举技巧-状压/折半/尺取法-2020最新版提高组初级课程&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://517coding.com/p/3951&#34;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+&lt;p&gt;暴力dfs&lt;/p&gt;
+&lt;p&gt;易证：每个点最多会被翻转一次（2次不就翻回来了吗qwq）&lt;/p&gt;
+&lt;p&gt;dfs枚举每个点是否会被翻，查看当前是否全部同色&lt;/p&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+char a[10][10];
+int X[5]={0,0,0,1,-1};
+int Y[5]={0,1,-1,0,0};
+map&amp;lt;char,char&amp;gt;b;
+
+void change(int x,int y) {
+  int xx,yy;
+  for(int i=0;i&amp;lt;5;i++) {
+    xx=x+X[i];
+    yy=y+Y[i];
+    if(xx&amp;gt;=0&amp;amp;&amp;amp;xx&amp;lt;4&amp;amp;&amp;amp;yy&amp;gt;=0&amp;amp;&amp;amp;yy&amp;lt;4) {
+      a[xx][yy]=b[a[xx][yy]];
+    }
+  }
+}
+
+bool find() {
+  int x=0;
+  for(int i=0;i&amp;lt;4;i++) {
+    for(int j=0;j&amp;lt;4;j++) {
+      x+=(a[i][j]==&#39;w&#39;);
+    }
+  }
+  return (x==0||x==16);
+}
+
+int ans=998244353;
+
+void dfs(int x,int ansx) {
+  if(x==16) {
+    if(find()) {
+      if(ansx &amp;lt; ans) {
+        ans=ansx;
+      }
+    }
+    return;
+  }
+  dfs(x+1,ansx);
+  change(x/4,x%4);
+  dfs(x+1,ansx+1);
+  change(x/4,x%4);
+}
+
+int main() {
+  b[&#39;w&#39;]=&#39;b&#39;;
+  b[&#39;b&#39;]=&#39;w&#39;;
+  for(int i=0;i&amp;lt;4;i++) {
+    scanf(&amp;quot;%s&amp;quot;,a[i]);
+  }
+  dfs(0,0);
+  if(ans==998244353) {
+    printf(&amp;quot;Impossible&amp;quot;);
+  } else {
+    printf(&amp;quot;%d&amp;quot;,ans);
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517按钮变色题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-fu-gai-shu-zhou-ti-jie/"" data-c="
+          &lt;h1 id=&#34;覆盖数轴-第二课贪心算法-中级班517编程普及组&#34;&gt;覆盖数轴-第二课：贪心算法-【中级班】517编程普及组&lt;/h1&gt;
+&lt;h2 id=&#34;描述&#34;&gt;描述&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有一个长度为m的数轴，现在有n个区间，每个区间有一个左右端点，现在需要选择最少的区间，覆盖整个数轴。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;输入&#34;&gt;输入&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一行两个整数n和m&lt;br&gt;
+接下来n行，每行两个整数，表示区间。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;输出&#34;&gt;输出&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输出最少的区间个数，覆盖整个数轴。如果无法覆盖，输出-1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;样例&#34;&gt;样例&lt;/h2&gt;
+&lt;h3 id=&#34;输入1&#34;&gt;输入#1&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;5 6
+1 3
+2 4
+3 5
+5 6
+1 4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;输出1&#34;&gt;输出#1&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+&lt;p&gt;贪心，先按右侧端点排序&lt;br&gt;
+之后再取 左侧端点&amp;lt;=右侧端点+1 的所有线段中右侧端点最远的点&lt;br&gt;
+达到 m 结束&lt;/p&gt;
+&lt;h2 id=&#34;易错点&#34;&gt;易错点&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;左侧端点&amp;lt;=右侧端点 &lt;strong&gt;+1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;取所有线段中右侧端点最远的点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+int n,m;
+struct qj {
+  int s,t;
+} a[100010];
+bool cmp(qj a,qj b) {
+  if(a.s==b.s) {
+    return a.t&amp;lt;b.t;
+  }
+  return a.s&amp;lt;b.s;
+}
+int main() {
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;
+  for(int i=1;i&amp;lt;=n;i++) {
+    cin&amp;gt;&amp;gt;a[i].s&amp;gt;&amp;gt;a[i].t;
+  }
+  sort(a+1,a+n+1,cmp);
+  int t=0,ans=0,Max,x=1,flag=0;
+  for(int i=2;i&amp;lt;=n;i++) {
+    Max=0;
+    while(a[x].s&amp;lt;=(t+1)&amp;amp;&amp;amp;x&amp;lt;=n) {
+      Max=max(Max,a[x].t);
+      x++;
+    }
+    t=Max;
+    ans++;
+    if(t&amp;gt;=m) {
+      flag=1;
+      break;
+    }
+  }
+  if(flag) {
+    cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;
+  } else {
+    cout&amp;lt;&amp;lt;-1&amp;lt;&amp;lt;endl;
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517覆盖数轴题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-you-fu-huan-zui-duan-lu-jing-ti-jie/"" data-c="
+          &lt;h1 id=&#34;有负环最短路径-第十课最短路径-中级班517编程普及组&#34;&gt;有负环最短路径-第十课：最短路径-【中级班】517编程普及组&lt;/h1&gt;
+&lt;h2 id=&#34;描述&#34;&gt;描述&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;给定一个有向图，求1到n的最短路径。&lt;br&gt;
+可以判断图中是否有负环。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;输入&#34;&gt;输入&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一行两个整数n和m，表示点数和边数。&lt;br&gt;
+接下来m行，每行3个整数，表示一条有向边。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;输出&#34;&gt;输出&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果图中有负环，输出circle&lt;br&gt;
+如果没有负环，但是从1无法到达n，输出 can&#39;t arrive!&lt;br&gt;
+否则输出 1到n的最短距离&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;样例&#34;&gt;样例&lt;/h2&gt;
+&lt;h3 id=&#34;输入1&#34;&gt;输入#1&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;3 3
+1 3 3
+1 2 1
+2 3 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;输出1&#34;&gt;输出#1&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;输入2&#34;&gt;输入#2&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;3 3
+1 2 1
+2 1 -2
+2 3 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;输出2&#34;&gt;输出#2&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;circle
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;输入3&#34;&gt;输入#3&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;3 2
+1 2 1
+2 1 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;输出3&#34;&gt;输出#3&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;can&#39;t arrive!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;提示&#34;&gt;提示&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;n≤200&lt;br&gt;
+m≤2000&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路&lt;/h2&gt;
+&lt;p&gt;这题就是标准负环最短路&lt;/p&gt;
+&lt;h2 id=&#34;易错点&#34;&gt;易错点&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;中转边必须有边才能转移：&lt;code&gt;if(g[u][i]!=998244353&amp;amp;&amp;amp;g[i][v]!=998244353)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g[u][v]&lt;/code&gt; 可以等于 &lt;code&gt;998244353&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int g[210][210];
+
+int main() {
+  int n,m;
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;
+  for(int i=1; i&amp;lt;=n; i++) {
+    for(int j=1; j&amp;lt;=n; j++) {
+      if(i!=j) {
+        g[i][j]=998244353;
+      }
+    }
+  }
+  int u,v,w;
+  for(int i=1; i&amp;lt;=m; i++) {
+    cin&amp;gt;&amp;gt;u&amp;gt;&amp;gt;v&amp;gt;&amp;gt;w;
+    g[u][v]=min(w,g[u][v]);
+  }
+  for(int i=1; i&amp;lt;=n; i++) {
+    for(int u=1; u&amp;lt;=n; u++) {
+      for(int v=1; v&amp;lt;=n; v++) {
+        if(g[u][i]!=998244353&amp;amp;&amp;amp;g[i][v]!=998244353) {
+          if(g[u][i]+g[i][v]&amp;lt;g[u][v]) {
+            g[u][v]=g[u][i]+g[i][v];
+          }
+        }
+      }
+      if(g[u][u]&amp;lt;0) {
+        cout&amp;lt;&amp;lt;&amp;quot;circle&amp;quot;&amp;lt;&amp;lt;endl;
+        return 0;
+      }
+    }
+  }
+  if(g[1][n]==998244353) {
+    cout&amp;lt;&amp;lt;&amp;quot;can&#39;t arrive!\n&amp;quot;;
+  } else {
+    cout&amp;lt;&amp;lt;g[1][n]&amp;lt;&amp;lt;&amp;quot;\n&amp;quot;;
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517有负环最短路径题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/517-pin-tu-you-xi-ti-jie/"" data-c="
+          &lt;h1 id=&#34;拼图游戏-第四课广搜-中级班517编程普及组&#34;&gt;拼图游戏-第四课：广搜-【中级班】517编程普及组&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/07/25/4xMjbA9NZi2sHVD.png&#34; alt=&#34;拼图游戏-第四课：广搜-【中级班】517编程普及组&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int mod=1000007;
+int ji[1000010];
+int top;
+int me[1000010],to[1000010];
+
+int X[4]={0,1};
+int Y[4]={1,0};
+
+struct zb {
+  int a[5][5];
+  int ans;
+};
+queue&amp;lt;zb&amp;gt;q;
+
+void out(int a[5][5]) {
+  for(int i=1;i&amp;lt;=3;i++) {
+    for(int j=1;j&amp;lt;=3;j++) {
+      cout&amp;lt;&amp;lt;a[i][j];
+    }
+    cout&amp;lt;&amp;lt;endl;
+  }
+}
+
+void outji() {
+  cout&amp;lt;&amp;lt;top&amp;lt;&amp;lt;endl;
+  for(int i=0;i&amp;lt;mod;i++) {
+    if(ji[i]) {
+      for(int j=ji[i];;j=to[j]) {
+        cout&amp;lt;&amp;lt;me[j]&amp;lt;&amp;lt;&amp;quot;--&amp;gt;&amp;quot;;
+        if(to[j]==0) {
+          break;
+        }
+      }
+      cout&amp;lt;&amp;lt;ji[i]&amp;lt;&amp;lt;endl;
+    }
+  }
+}
+
+int copy(int &amp;amp;a,int b[5][5]) {
+  a=0;
+  for(int i=1;i&amp;lt;=3;i++) {
+    for(int j=1;j&amp;lt;=3;j++) {
+      a=a*10+b[i][j];
+    }
+  }
+  return a;
+}
+
+bool find(int x) {
+  for(int i=ji[x%mod];to[i]!=0;i=to[i]) {
+    if(me[i]==x) {
+      return true;
+    }
+  }
+  return false;
+}
+
+void in(int x) {
+  if(ji[x%mod]==0) {
+    top++;
+    ji[x%mod]=top;
+    me[top]=x;
+    return;
+  }
+  for(int i=ji[x%mod];;i=to[i]) {
+    if(to[i]==0) {
+      top++;
+      to[i]=top;
+      me[top]=x;
+      return;
+    }
+  }
+}
+
+zb push(int a[5][5],int ans) {
+  zb x;
+  for(int i=1;i&amp;lt;=3;i++) {
+    for(int j=1;j&amp;lt;=3;j++) {
+      x.a[i][j]=a[i][j];
+    }
+  }
+  x.ans=ans;
+  q.push(x);
+  return x;
+}
+
+int bfs(int a[5][5]) {
+  
+  zb k;
+  int h;
+  
+  push(a,0);
+  in(copy(h,a));
+  
+  while(!q.empty()) {
+    
+    k=q.front();
+    q.pop();
+    
+    copy(h,k.a);
+    if(h==12345678) {
+      return k.ans;
+    }
+
+    //cout&amp;lt;&amp;lt;k.ans&amp;lt;&amp;lt;endl;
+    //out(k.a);
+    
+    for(int x=1;x&amp;lt;=3;x++) {
+      for(int y=1;y&amp;lt;=3;y++) {
+        for(int i=0;i&amp;lt;2;i++) {
+          if(x+X[i]&amp;gt;3||y+Y[i]&amp;gt;3);
+          else {
+            swap(k.a[x][y],k.a[x+X[i]][y+Y[i]]);
+            copy(h,k.a);
+            if(!find(h)) {
+              in(h);
+              push(k.a,k.ans+1);
+            }
+            swap(k.a[x][y],k.a[x+X[i]][y+Y[i]]);
+          }
+        }
+        /*
+        if(find()) {
+          return;
+        }
+        for(int i=0;i&amp;lt;4;i++) {
+          if(x+X[i]&amp;lt;=0||y+Y[i]&amp;lt;=0||x+X[i]&amp;gt;3||y+Y[i]&amp;gt;3||vis[x+X[i]][y+Y[i]]);
+          else {
+            vis[x][y]=true;
+            dfs(x+X[i],y+Y[i]);
+            swap(a[x][y],a[x+X[i]][y+Y[i]]);
+            //cout&amp;lt;&amp;lt;&amp;quot;swap &amp;quot;&amp;lt;&amp;lt;a[x][y]&amp;lt;&amp;lt;&amp;quot; and &amp;quot;&amp;lt;&amp;lt;a[x+X[i]][y+Y[i]]&amp;lt;&amp;lt;endl;
+            dfs(x+X[i],y+Y[i],ansx+1);
+            swap(a[x][y],a[x+X[i]][y+Y[i]]);
+            vis[x][y]=false;
+          }
+        }
+        if(l==k) {
+          l=q.back();
+          ans++;
+        }
+        */
+      }
+    }
+    //outji();
+  }
+  return 0;
+}
+
+int main() {
+  
+  int x;
+  int a[5][5];
+  
+  for(int i=1;i&amp;lt;=3;i++) {
+    cin&amp;gt;&amp;gt;x;
+    for(int j=3;j&amp;gt;=1;j--) {
+      a[i][j]=x%10;
+      x/=10;
+    }
+  }
+  
+  int ans;
+  copy(ans,a);
+  if(ans==12345678) {
+    cout&amp;lt;&amp;lt;0&amp;lt;&amp;lt;endl;
+  } else {
+    cout&amp;lt;&amp;lt;bfs(a)&amp;lt;&amp;lt;endl;
+  }
+  
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517拼图游戏题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/dao-jiu-ti-jie/"" data-c="
+          &lt;h1 id=&#34;倒酒-第四课广搜-中级班517编程普及组&#34;&gt;倒酒-第四课：广搜-【中级班】517编程普及组&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://i.loli.net/2021/07/26/XIlbcxZomf79Bve.png&#34; alt=&#34;倒酒-第四课：广搜-【中级班】517编程普及组&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;思路：广搜&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std; 
+
+int a[3];
+int vis[160][160][160]; 
+
+struct jgt {
+  int a[3];
+  int ans;
+}; 
+queue&amp;lt;jgt&amp;gt;q;
+
+bool find(jgt f) { // 均分
+  if(f.a[0]==f.a[1]&amp;amp;&amp;amp;f.a[2]==0)
+    return true;
+  if(f.a[0]==f.a[2]&amp;amp;&amp;amp;f.a[1]==0)
+    return true;
+  if(f.a[1]==f.a[2]&amp;amp;&amp;amp;f.a[0]==0)
+    return true;
+  return false;
+} 
+
+jgt push(int a,int b,int c,int ans) { // 入队
+  jgt x;
+  vis[a][b][c]=true;
+  x.a[0]=a;
+  x.a[1]=b;
+  x.a[2]=c;
+  x.ans=ans;
+  q.push(x);
+  return x;
+}
+
+void copy(jgt &amp;amp;a,jgt b) { // 拷贝
+  for(int i=0;i&amp;lt;3;i++) {
+    a.a[i]=b.a[i];
+  }
+  a.ans=b.ans;
+}
+
+void bfs() {
+  jgt k,l;  // 定义
+  push(a[0],0,0,0); // 初始数据入队
+  while(!q.empty()) { // 队列不为空
+    k=q.front(); // 取出队首
+    q.pop(); // 删除队首
+    for(int i=0; i&amp;lt;3; i++) { // 枚举准备倒的杯
+      for(int j=0; j&amp;lt;3; j++) { // 枚举被倒的杯
+        if(i!=j) { // 不能倒给自己
+          if(find(k)) { // 如果当前已均分
+            cout&amp;lt;&amp;lt;k.ans&amp;lt;&amp;lt;endl; // 输出
+            return;// 结束函数
+          }
+          copy(l,k); // 拷贝k到l
+          int x=a[j]-l.a[j]; // x=原先被倒的杯里的酒-现在这个杯里的酒
+          if(l.a[i]&amp;gt;=x) { // 如果溢出
+            l.a[j]=a[j]; // 灌满被倒的杯
+            l.a[i]-=x; // 剩余的酒留在杯中
+          } else { // 否则
+            l.a[j]+=l.a[i]; // 全倒过去
+            l.a[i]=0; // 原来的杯清零
+          }
+          l.ans++; // 倒的次数++
+          if(vis[l.a[0]][l.a[1]][l.a[2]]==false) { // 当前状态没有被记录
+            vis[l.a[0]][l.a[1]][l.a[2]]=true; // 记录当前状态
+            q.push(l); // 记录入队
+          }
+        }
+      }
+    }
+  }
+  //没办法平均分
+  cout&amp;lt;&amp;lt;&amp;quot;NO&amp;quot;&amp;lt;&amp;lt;endl;
+}
+
+int main() {
+  for(int i=0;i&amp;lt;3;i++) {
+    cin&amp;gt;&amp;gt;a[i];
+  }
+  bfs();
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517倒酒题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/mi-gong/"" data-c="
+          &lt;h1 id=&#34;迷宫-第四课广搜-中级班517编程普及组&#34;&gt;迷宫-第四课：广搜-【中级班】517编程普及组&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://517coding.com/contest/problem?id=498&amp;amp;pid=1#problem-anchor&#34;&gt;迷宫-第四课：广搜-【中级班】517编程普及组 &lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;做法1-在队列中记录层的分界线&#34;&gt;做法1 - 在队列中记录层的分界线&lt;/h2&gt;
+&lt;h3 id=&#34;思路&#34;&gt;思路&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;记录当前层的最后一个节点，如果被访问到的节点==&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 说明这一层的所有节点都被访问到&lt;/p&gt;
+&lt;p&gt;也就说明了这一层的所有节点的子节点（&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;k+1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.77777em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;层的所有节点）都已入队列，此时&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;应更新为队尾元素&lt;/p&gt;
+&lt;h3 id=&#34;易错点&#34;&gt;易错点&lt;/h3&gt;
+&lt;p&gt;如果&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;出现多次应该在最后一次出现时更新&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;ru&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;u&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;即，在入栈的同时就标记被访问过（&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a_{i,j}=1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.716668em;vertical-align:-0.286108em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mpunct mtight&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;），不是访问到再标记！&lt;/p&gt;
+&lt;h3 id=&#34;代码&#34;&gt;代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int n,m;
+int a[1010][1010];
+int ans;
+int tx,ty;
+
+int X[4]={1,-1,0,0};
+int Y[4]={0,0,1,-1};
+
+struct zb {
+  int x;
+  int y;
+};
+queue&amp;lt;zb&amp;gt;b;
+
+bool operator==(const zb &amp;amp;a,const zb &amp;amp;b) {
+  if(a.x==b.x&amp;amp;&amp;amp;a.y==b.y) {
+    return true;
+  }
+  return false;
+}
+
+void outzb(zb b) {
+  cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;b.x&amp;lt;&amp;lt;&amp;quot; y=&amp;quot;&amp;lt;&amp;lt;b.y&amp;lt;&amp;lt;endl;
+  return;
+}
+
+void out(/*zb x*/) {
+  for(int i=1;i&amp;lt;=n;i++) {
+    for(int j=1;j&amp;lt;=m;j++) {
+      cout&amp;lt;&amp;lt;int(a[i][j]);
+    }
+    cout&amp;lt;&amp;lt;endl;
+  }
+  //cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;x.x&amp;lt;&amp;lt;&amp;quot; y=&amp;quot;&amp;lt;&amp;lt;x.y;
+  cout&amp;lt;&amp;lt;&amp;quot;ans=&amp;quot;&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;
+  cout&amp;lt;&amp;lt;endl;
+}
+
+bool bfs(int x,int y) {
+  zb l,k,h;
+  int xx,yy;
+  l.x=x;l.y=y;
+  b.push(l);
+  zb ru=l;
+  while(!b.empty()) {
+    k=b.front();
+    b.pop();
+    if(k.x==tx&amp;amp;&amp;amp;k.y==ty) {
+      return true;
+    }
+    //out(k);
+    for(int i=0;i&amp;lt;4;i++) {
+      h.x=xx=k.x+X[i];
+      h.y=yy=k.y+Y[i];
+      if(xx&amp;lt;=0||xx&amp;gt;n||yy&amp;lt;=0||yy&amp;gt;m||a[xx][yy]==1);
+      else {
+        b.push(h);
+        a[xx][yy]=1;
+      }
+    }
+    if(k==ru) {
+      ru=b.back();
+      ans++;
+    }
+    //out();
+  }
+  return false;
+}
+
+int main() {
+  char c;
+  int x,y;
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;
+  for(int i=1;i&amp;lt;=n;i++) {
+    for(int j=1;j&amp;lt;=m;j++) {
+      cin&amp;gt;&amp;gt;c;
+      if(c==&#39;S&#39;) {
+        x=i;
+        y=j;
+        a[i][j]=1;
+      } else if(c==&#39;T&#39;) {
+        tx=i;
+        ty=j;
+      } else if(c==&#39;#&#39;) {
+        a[i][j]=1;
+      }
+    }
+  }
+  if(bfs(x,y)) {
+    cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;
+  } else {
+    cout&amp;lt;&amp;lt;&amp;quot;-1&amp;quot;&amp;lt;&amp;lt;endl;
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;做法2-数组记录每个节点的层数&#34;&gt;做法2 - 数组记录每个节点的层数&lt;/h2&gt;
+&lt;h3 id=&#34;思路-2&#34;&gt;思路&lt;/h3&gt;
+&lt;p&gt;直接开数组 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a_{i,j}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.716668em;vertical-align:-0.286108em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mpunct mtight&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 来判断此时层数（墙记录 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;a_{i,j}=-1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.716668em;vertical-align:-0.286108em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.311664em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mpunct mtight&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.05724em;&#34;&gt;j&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.286108em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.72777em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; )&lt;/p&gt;
+&lt;h3 id=&#34;代码-2&#34;&gt;代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+int n,m;
+int a[1010][1010];
+int tx,ty;
+
+int X[4]={1,-1,0,0};
+int Y[4]={0,0,1,-1};
+
+struct zb {
+  int x;
+  int y;
+};
+queue&amp;lt;zb&amp;gt;b;
+
+bool operator==(const zb &amp;amp;a,const zb &amp;amp;b) {
+  if(a.x==b.x&amp;amp;&amp;amp;a.y==b.y) {
+    return true;
+  }
+  return false;
+}
+void outzb(zb b) {
+  cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;b.x&amp;lt;&amp;lt;&amp;quot; y=&amp;quot;&amp;lt;&amp;lt;b.y&amp;lt;&amp;lt;endl;
+  return;
+}
+
+void out(zb x) {
+  for(int i=1;i&amp;lt;=n;i++) {
+    for(int j=1;j&amp;lt;=m;j++) {
+      cout&amp;lt;&amp;lt;int(a[i][j]);
+    }
+    cout&amp;lt;&amp;lt;endl;
+  }
+  cout&amp;lt;&amp;lt;&amp;quot;x=&amp;quot;&amp;lt;&amp;lt;x.x&amp;lt;&amp;lt;&amp;quot; y=&amp;quot;&amp;lt;&amp;lt;x.y&amp;lt;&amp;lt;endl;
+  cout&amp;lt;&amp;lt;endl;
+}
+
+bool bfs(int x,int y) {
+  zb l,k,h;
+  int xx,yy;
+  l.x=x;l.y=y;
+  b.push(l);
+  while(!b.empty()) {
+    k=b.front(); b.pop(); // 取出队首
+    if(k.x==tx&amp;amp;&amp;amp;k.y==ty) { // 找到终点
+      return true; //返回
+    }
+    //out(k);
+    for(int i=0;i&amp;lt;4;i++) { // 枚举上下左右
+      h.x=xx=k.x+X[i];
+      h.y=yy=k.y+Y[i];
+      if(xx&amp;lt;=0||xx&amp;gt;n||yy&amp;lt;=0||yy&amp;gt;m||a[xx][yy]!=0);
+      else {
+        b.push(h);
+        a[h.x][h.y]=a[k.x][k.y]+1;
+      }
+    }
+    //outzb(ru);
+    //cout&amp;lt;&amp;lt;endl;
+  }
+  return false;
+}
+
+int main() {
+  cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m;
+  char c;
+  int x,y;
+  for(int i=1;i&amp;lt;=n;i++) {
+    for(int j=1;j&amp;lt;=m;j++) {
+      cin&amp;gt;&amp;gt;c;
+      if(c==&#39;S&#39;) {
+        x=i;
+        y=j;
+      } else if(c==&#39;T&#39;) {
+        tx=i;
+        ty=j;
+      } else if(c==&#39;#&#39;) {
+        a[i][j]=-1;
+      }
+    }
+  }
+  if(bfs(x,y)) {
+    cout&amp;lt;&amp;lt;a[tx][ty]&amp;lt;&amp;lt;endl;
+  } else {
+    cout&amp;lt;&amp;lt;&amp;quot;-1&amp;quot;&amp;lt;&amp;lt;endl;
+  }
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+">517迷宫题解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/liang-dan-yi-xing-su-cai-ji-lei/"" data-c="
+          &lt;h1 id=&#34;两弹一星元勋钱学森&#34;&gt;两弹一星元勋：钱学森&lt;/h1&gt;
+&lt;h2 id=&#34;两弹一星事迹&#34;&gt;两弹一星事迹&lt;/h2&gt;
+&lt;p&gt;1956年初，钱学森向中共中央、国务院提出《建立我国国防航空工业的意见书》。同时，钱学森组建中国第一个火箭、导弹研究所——国防部第五研究院并担任首任院长。他主持完成了“喷气和火箭技术的建立”规划，参与了近程导弹、中近程导弹和中国第一颗人造地球卫星的研制，直接领导了用中近程导弹运载原子弹“两弹结合”试验，参与制定了中国近程导弹运载原子弹“两弹结合”试验，参与制定了中国第一个星际航空的发展规划，发展建立了工程控制论和系统学等。在钱学森的努力带领下，1964年10月16日中国第一颗原子弹爆炸成功，1967年6月17日中国第一颗氢弹空爆试验成功，1970年4月24日中国第一颗人造卫星发射成功。&lt;/p&gt;
+&lt;h2 id=&#34;他人评价&#34;&gt;他人评价&lt;/h2&gt;
+&lt;p&gt;钱学森在20世纪40年代就已经成为航空航天领域内最为杰出的代表人物之一，成为二十世纪众多学科领域的科学群星中极少数的巨星之一；钱学森也是为新中国的成长做出无可估量贡献的老一辈科学家团体之中，影响最大、功勋最为卓著的杰出代表人物，是新中国爱国留学归国人员中最具代表性的国家建设者，是新中国历史上伟大的人民科学家。&lt;br&gt;
+钱学森一生默默治学，但无论在什么时代，什么地方，他所选择的，既是一个科学家的最高职责，也是一个炎黄子孙的最高使命。他一生的经历和成就，在中国的国家史、华人的民族史和人类的世界史上，同时留下了耀眼的光芒，照亮了来路。作为中国航天事业的先行人，他不仅是知识的宝藏、科学的旗帜，而且是民族的脊梁、全球华人的典范，他向世界展示了华人的风采。&lt;br&gt;
+毛泽东评价：美国人把钱学森当成5个师，在我看来，对我们说来钱学森比5个师的力量大多啦。&lt;br&gt;
+美国海军次长丹尼·金布尔评价：无论在哪里，钱学森都值五个师。&lt;br&gt;
+导师冯·卡门评价：　我们的朋友钱学森，是1945年我向美国空军科学顾问组推荐的专家之一。他是当时美国处于领导地位的第一流火箭专家，后来成了世界闻名的新闻人物。钱学森作为加州理工学院火箭小组的元老，曾在二次大战期间对美国火箭研究作出重大贡献。他是一个无可置疑的天才，他的工作大大促进了高速空气动力学和喷气推进科学的发展。他的这种天资是我不常遇到的。我发现他非常富有想象力，他具有天赋的数学才智。人们都这样说，似乎是我发现了钱学森，其实，是钱学森发现了我。&lt;br&gt;
+美国火箭专家克拉克评价：中共的归国学人当中，无人重要性能出钱学森其右。&lt;br&gt;
+美国麻省理工学院史蒂夫评价：钱学森在美国的成绩很好，但不足以令人折服。他对中华人民共和国的贡献才真正了不起。&lt;br&gt;
+合众国际社记者罗伯特·克莱伯评价：正是因为有了钱学森，中国才在1970年成功地发射第一颗人造卫星。由他负责研究的火箭，正使中国成为同苏联、美国一样能把核弹头发射到世界上任何一个地方的国家。&lt;br&gt;
+感动中国组委会授予钱学森的颁奖词：在他心里，国为重，家为轻，科学最重，名利最轻。五年归国路，十年两弹成。开创祖国航天，他是先行人，劈荆斩棘，把智慧锻造成阶梯，留给后来的攀登者。他是知识的宝藏，是科学的旗帜，是中华民族知识分子的典范。&lt;br&gt;
+感动中国推选委员阎肃，对钱学森这样评价：大千世界、浩瀚长空，全纳入赤子心胸。惊世两弹、冲霄一星，尽凝铸中华豪情，霜鬓不坠青云志。寿至期颐回首望去，只付默默一笑中。&lt;br&gt;
+感动中国推选委员杜玉波，对钱学森这样评价：辗转回国，钱学森展现了中国科学家的硬劲；力学、喷气推进、航天技术，钱学森展现了一位科学家在研究上的牛劲；东方红卫星、神舟飞船、嫦娥奔月，钱学森给中国航天事业打了足够的底劲。今天，这位中国航天之父所开拓的事业正阔步向前，干劲十足。&lt;br&gt;
+感动中国推选委员陈章良，对钱学森这样评价：他不仅以自己严谨和勤奋的科学态度在航天领域为人类的进步做出卓越的贡献，更以淡泊名利和率真的人生态度诠释了一个科学家的人格本质。&lt;/p&gt;
+">“两弹一星”素材积累</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/jian-dang-bai-nian-zhong-guo-yin-ji-su-cai-ji-lei/"" data-c="
+          &lt;h1 id=&#34;奋斗者号&#34;&gt;奋斗者号&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://pics0.baidu.com/feed/0823dd54564e9258c3ad627dac85405fcdbf4e92.jpeg?token=213d78a79f68450de5a37f46a0f3e429&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;“奋斗者”号28日胜利返航。自2020年10月10日起，“奋斗者”号赴马里亚纳海沟开展万米海试，成功完成13次下潜，8次突破万米。11月10日8时12分，“奋斗者”号创造10909米中国载人深潜新纪录，标志着我国在大深度载人深潜领域达到世界领先水平。&lt;/p&gt;
+&lt;h1 id=&#34;嫦娥5号&#34;&gt;嫦娥5号&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;http://fdfs.xmcdn.com/storages/5e7f-audiofreehighqps/81/EC/CMCoOSUD7FrbAAcukwCCBymq.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2020年11月24日，长征五号遥五运载火箭搭载嫦娥五号探测器成功发射升空并将其送入预定轨道。&lt;br&gt;
+2020年11月24日，嫦娥五号完成第一次轨道修正。&lt;br&gt;
+2020年11月25日，嫦娥五号完成第二次轨道修正。&lt;br&gt;
+2020年11月28日，嫦娥五号进入环月轨道飞行。&lt;br&gt;
+2020年11月29日，嫦娥五号从椭圆环月轨道变为近圆形环月轨道。&lt;br&gt;
+2020年11月30日，嫦娥五号合体分离。&lt;br&gt;
+2020年12月1日，嫦娥五号在月球正面预选着陆区着陆。&lt;br&gt;
+2020年12月2日，嫦娥五号着陆器和上升器组合体完成了月球钻取采样及封装。&lt;br&gt;
+2020年12月2日，嫦娥五号完成月面自动采样封装。&lt;br&gt;
+2020年12月3日，嫦娥五号上升器将携带样品的上升器送入到预定环月轨道。&lt;br&gt;
+2020年12月6日，嫦娥五号上升器与轨道器和返回器组合体交会对接，并将样品容器转移至返回器中。&lt;br&gt;
+2020年12月6日12时35分，嫦娥五号轨道器和返回器组合体与上升器分离，进入环月等待阶段，准备择机返回地球。&lt;br&gt;
+2020年12月8日，嫦娥五号上升器受控离轨降落在预定落点。&lt;br&gt;
+2020年12月12日，嫦娥五号轨道器和返回器组合体实施第一次月地转移入射。&lt;br&gt;
+2020年12月16日，嫦娥五号探测器顺利完成第二次月地转移轨道修正。&lt;br&gt;
+2020年12月17日凌晨，嫦娥五号返回器携带月球样品着陆地球。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;嫦娥五号成功落月的重大意义：标志着中国“探月工程”第三步拉开序幕。嫦娥五号任务是“探月工程”的第六次任务，也是中国航天迄今为止最复杂、难度最大的任务之一，将实现中国首次月球无人采样返回，助力深化月球成因和演化历史等科学研究。&lt;/p&gt;
+">“建党百年，中国印记”素材积累</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/chi-su-cai-ji-lei/"" data-c="
+          &lt;iframe src=&#34;/file/“吃”素材积累.pdf&#34; width=&#34;100%&#34; height=&#34;800px&#34;&gt;
+    您的浏览器不支持预览PDF &lt;a href=&#34;/file/“吃”素材积累.pdf&#34;&gt;【点此下载PDF】&lt;/a&gt;
+&lt;/iframe&gt;">“吃”素材积累</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/ben-lai-wo-ke-yi-su-cai-ji-lei/"" data-c="
+          &lt;h1 id=&#34;坚持&#34;&gt;坚持&lt;/h1&gt;
+&lt;h2 id=&#34;关于坚持的作文素材&#34;&gt;关于坚持的作文素材&lt;/h2&gt;
+&lt;h3 id=&#34;达芬奇&#34;&gt;达·芬奇&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;欧洲文艺复兴时期的著名画家达·芬奇，从小爱好绘画。父亲送他到当时意大利的名城佛罗伦萨，拜名画家佛罗基奥为师。老师要他从画蛋入手。他画了一个又一个，足足画了十多天。老师见他有些不耐烦了，便对他说：“不要以为画蛋容易，要知道，1000个蛋中从来没有两个是完全相同的；即使是同一个蛋，只要变换一下角度去看形状也就不同了，蛋的椭圆形轮廓就会有差异。所以，要在画纸上把它完美的表现出来，非得下番苦功不可。”从此，达·芬奇用心学习素描，经过长时期勤奋艰苦的艺术实践，终于创作出许多不朽的名画。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;司马迁&#34;&gt;司马迁&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;西汉司马迁少年时就涉猎群书，立志继承父业。正当他撰写的《史记》进展顺利的时候，“李陵事件”的牵联，使他遭受宫刑。面对这奇耻大辱，他不是叹息、沉沦，而是锐意进取，“幽而发愤”，他含冤蒙垢数十年，终于写出了“通古今之变，成一家之言”的《史记》，流芳后世。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;司马光&#34;&gt;司马光&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;司马光是个贪玩贪睡的孩子，为此他没少受先生的责罚和同伴的嘲笑，在先生的谆谆教诲下，他决心改掉贪睡的坏毛病，为了早早起床，他睡觉前喝了满满一肚子水，结果早上没有被憋醒，却尿了床，于是聪明的司马光用园木头作了一个警枕，早上一翻身，头滑落在床板上，自然惊醒，从此他天天早早地起床读书，坚持不懈，终于成为了一个学识渊博的，写出了《资治通鉴》的大文豪。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于坚持的名言警句&#34;&gt;关于坚持的名言警句&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;一个人只要强烈地坚持不懈地追求，他就能达到目的。——司汤达&lt;/li&gt;
+&lt;li&gt;下苦功，三个字，一个叫下，一个叫苦，一个叫功，一定要振作精神，下苦功。——毛泽东&lt;/li&gt;
+&lt;li&gt;只要持之以恒，知识丰富了，终能发现其奥秘。——杨振宁&lt;/li&gt;
+&lt;li&gt;伟大变为可笑只有一步，但再走一步，可笑又会变为伟大。——佩思&lt;/li&gt;
+&lt;li&gt;重复是学习之母。——狄慈根&lt;/li&gt;
+&lt;li&gt;点点滴滴的藏，集成了一大仓。——德国谚语&lt;/li&gt;
+&lt;li&gt;涓滴之水终可以磨损大石，不是由于它力量强大，而是由于昼夜不舍的滴坠。——贝多芬&lt;/li&gt;
+&lt;li&gt;读不在三更五鼓，功只怕一曝十寒。——郭沫若&lt;/li&gt;
+&lt;li&gt;为学犹掘井，井愈深土愈难出，若不快心到底，岂得见泉源乎?——张九功&lt;/li&gt;
+&lt;li&gt;为学须刚与恒，不刚则隋隳，不恒则退。——冯子咸&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;勇敢&#34;&gt;勇敢&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;勇气是什么？&lt;br&gt;
+勇气是在课堂上敢于对知识提出质疑；&lt;br&gt;
+勇气是敢于发出自己内心的声音；&lt;br&gt;
+勇气是敢于直面自己内心的懦弱，敢于说不！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于勇敢的作文素材&#34;&gt;关于勇敢的作文素材&lt;/h2&gt;
+&lt;h3 id=&#34;强大源于一颗勇敢的心&#34;&gt;强大源于一颗勇敢的心&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个人从小胆小，什么事也不敢做，同学和朋友都嘲笑他，为了让他鼓起勇气，父母让他参军了。可是在军校里他还是一样胆小，老师看不起他，同学们嘲笑他，经常出他的洋相。&lt;br&gt;
+　　一次他们在训练扔手雷（真手雷），一个同学拿了一个仿真的并告诉大家要让他出丑。开始训练了，那个同学“不小心”将仿真的扔到了同学中间，大叫小心，同学们都了解也就跟着演。&lt;br&gt;
+　　那个人也很惊慌，大家都想看他出丑，可没想到他扑向的手雷，将它压在身下，同学们震住了，半晌他脸通红，爬了起来。不敢看大家，同学们都给他鼓掌，他的一生从此改变了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;勇气不仅是语言更是行动&#34;&gt;勇气，不仅是语言，更是行动&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一次世界大战，一个不起眼的地区。&lt;br&gt;
+　　德军伏在自己战壕内，另一方则是美军，在他们之间是一条狭长的无人地带。一位受伤的年轻德国士兵试图爬过那无人地带。结果被带钩的铁丝缠住，发出痛苦的哀号，不住地呜咽着。&lt;br&gt;
+　　在枪炮声之间，附近的美军都听得到他的尖叫。一位美军士兵无法再忍受，爬出战壕，匍匐着向那德国士兵爬过去。其余的美军明白了他的意图后，便停止了射击，但德军仍炮火不辍，直到一位军官明白过来，才命令停火。无人地带顿时出现了一阵奇怪的沉寂。&lt;br&gt;
+　　年轻的美国士兵爬到德国士兵身边，帮他摆脱了铁钩的纠缠，扶起他向德军的战壕走去，交给迎接的人之后，转身准备离去。忽然，一只手搭上了他的肩膀。回过头来，原来是一位佩戴着铁十字荣誉勋章——德国最高勇气标志——德军军官，他从自己制服上扯下勋章，别在美军士兵胸前，让他走回自己的阵营。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于勇敢的名言警句&#34;&gt;关于勇敢的名言警句&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;没有不冒风险就能克服的风险。——皮布里吕斯让诺安&lt;/li&gt;
+&lt;li&gt;虽然危险并未临近，而迎头邀击比长久注视其前来的好，因为如果一个人注视过久，他是很有睡觉的可能的。——培根&lt;/li&gt;
+&lt;li&gt;软弱甚至比恶行更有害于德性。——拉罗什富科&lt;/li&gt;
+&lt;li&gt;人的勇气能承担一切重负；人的耐心能忍受绝大部分痛苦。——塞缪尔约翰逊&lt;/li&gt;
+&lt;li&gt;在不幸中所表现出来的勇气，通常总是使卑怯的心灵恼怒，而使高尚的心灵喜悦的。-卢梭&lt;/li&gt;
+&lt;li&gt;你要像一棵桷树，大风将树吹折，然而巨大的树干却永远挺直。——裴多菲&lt;/li&gt;
+&lt;li&gt;勇敢寓于灵魂之中，而不单凭一个强壮的躯体。——卡赞扎基&lt;/li&gt;
+&lt;li&gt;“拿出胆量来”那一吼声是一切成功之母。——雨果&lt;/li&gt;
+&lt;li&gt;冒险是历史富有生命力的元素，无论是对个人还是社会。——威谦博利多&lt;/li&gt;
+&lt;li&gt;在全人类中，凡是坚强、正直、勇敢、仁慈的人，都有是英雄！——贝多芬&lt;/li&gt;
+&lt;li&gt;谁恐惧，谁就要受折磨，并且已经受着他的恐惧的折磨。——蒙田&lt;/li&gt;
+&lt;li&gt;真的猛士，敢于直面惨淡的人生，敢于正视淋漓的鲜血。——鲁迅&lt;/li&gt;
+&lt;li&gt;勇气产生在斗争中，勇气是在每天对困难的顽强抵抗中养成的——奥斯特洛夫斯基&lt;/li&gt;
+&lt;li&gt;勇气是在磨炼中生长的——莎士比亚&lt;/li&gt;
+&lt;/ol&gt;
+">"本来我可以＿＿"素材积累</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/du-shu-zhuan-ti-zheng-li/"" data-c="
+          &lt;h1 id=&#34;名人读书的故事&#34;&gt;名人读书的故事&lt;/h1&gt;
+&lt;h2 id=&#34;黄侃误把墨汁当小菜&#34;&gt;黄侃误把墨汁当小菜&lt;/h2&gt;
+&lt;p&gt;1915年，著名学者黄侃在北大主讲国学。他住在北京白庙胡同大同公寓，终日潜心研究“国学”，有时吃饭也不出书房门，准备了馒头和辣椒、酱油等佐料，摆在书桌上，饿了便啃馒头，边吃边看书，吃吃停停。&lt;br&gt;
+看到妙处就大叫：“妙极了！”有一次，看书入迷，竟把馒头伸进了砚台、朱砂盒，啃了多时，涂成花脸，也未觉察，一位朋友来访，捧腹大笑，他还不知笑他什么。&lt;/p&gt;
+&lt;h2 id=&#34;高尔基救书&#34;&gt;高尔基救书&lt;/h2&gt;
+&lt;p&gt;世界文豪高尔基对书感情独深，爱书如命。有一次，他的房间失火了，他首先抱起的是书籍，其它的任何东西他都不思考。为了抢救书籍，他险些被烧死。他说：“书籍一面启示着我的智慧和心灵，一面帮忙我在一片烂泥塘里站起来，如果不是书籍的话，我就沉没在这片泥塘里，我就要被愚蠢和下流淹死。”&lt;/p&gt;
+&lt;h2 id=&#34;车胤囊萤映雪&#34;&gt;车胤囊萤映雪&lt;/h2&gt;
+&lt;p&gt;车胤，年幼时好学不倦，勤奋刻苦。他白天帮大人干活，夜晚便捧书苦读。但是由于家境贫寒，常常没钱买油灯，书也读不成了。&lt;br&gt;
+他为此十分苦恼。一个夏夜的晚上，车胤坐在院子里默默回忆着读过的书上的资料，忽然发现院子里有许多萤火虫一闪一闪地在空中飞舞。&lt;br&gt;
+他忽然心中一动，要是把这些萤火虫聚集在一齐，借它们的光不就能够读书吗？于是，他开始捉萤火虫，捉了十几只，把它们装在白纱布缝制的口袋里，挂在案头。从此，他每一天借着萤光苦苦地读书。&lt;/p&gt;
+&lt;h1 id=&#34;读书名言&#34;&gt;读书名言&lt;/h1&gt;
+&lt;h2 id=&#34;古人谈读书&#34;&gt;古人谈读书：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;读万卷书，行万里路——董其昌&lt;/li&gt;
+&lt;li&gt;业精于勤，荒于嬉；行成于思，毁于随——韩愈&lt;/li&gt;
+&lt;li&gt;学而不思则罔，思而不学则殆——孔子&lt;/li&gt;
+&lt;li&gt;知之者不如好之者，好之者不如乐之者——孔子&lt;/li&gt;
+&lt;li&gt;三人行，必有我师也。择其善者而从之，其不善者而改之——孔子&lt;/li&gt;
+&lt;li&gt;兴于《诗》，立于礼，成于乐——孔子&lt;/li&gt;
+&lt;li&gt;读书百遍，其义自见——《三国志》&lt;/li&gt;
+&lt;li&gt;读书破万卷，下笔如有神——杜甫&lt;/li&gt;
+&lt;li&gt;读书有三到，谓心到，眼到，口到——朱熹&lt;/li&gt;
+&lt;li&gt;立身以立学为先，立学以读书为本——欧阳修&lt;/li&gt;
+&lt;li&gt;敏而好学，不耻下问——孔子&lt;/li&gt;
+&lt;li&gt;玉不啄，不成器；人不学，不知仪——《三字经》&lt;/li&gt;
+&lt;li&gt;书卷多情似故人，晨昏忧乐每相亲——于谦&lt;/li&gt;
+&lt;li&gt;书犹药也，善读之可以医愚——刘向&lt;/li&gt;
+&lt;li&gt;少壮不努力，老大徒伤悲——《汉乐府。长歌行》&lt;/li&gt;
+&lt;li&gt;莫等闲，白了少年头，空悲切——岳飞&lt;/li&gt;
+&lt;li&gt;发奋识遍天下字，立志读尽人间书——苏轼&lt;/li&gt;
+&lt;li&gt;鸟欲高飞先振翅，人求上进先读书——李苦禅&lt;/li&gt;
+&lt;li&gt;立志宜思真品格，读书须尽苦功夫——阮元&lt;/li&gt;
+&lt;li&gt;非淡泊无以明志，非宁静无以致远——诸葛亮&lt;/li&gt;
+&lt;li&gt;勿以恶小而为之，勿以善小而不为——刘备&lt;/li&gt;
+&lt;li&gt;熟读唐诗三百首，不会作诗也会吟——孙洙《唐诗三百首序》&lt;/li&gt;
+&lt;li&gt;书到用时方恨少，事非经过不知难——陆游&lt;/li&gt;
+&lt;li&gt;问渠那得清如许，为有源头活水来——朱熹&lt;/li&gt;
+&lt;li&gt;旧书不厌百回读，熟读精思子自知——苏轼&lt;/li&gt;
+&lt;li&gt;书痴者文必工，艺痴者技必良——蒲松龄&lt;/li&gt;
+&lt;li&gt;奇文共欣赏，疑义相如析——陶渊明&lt;/li&gt;
+&lt;li&gt;读书之法，在循序而渐进，熟读而精思——朱熹&lt;/li&gt;
+&lt;li&gt;吾生也有涯，而知也无涯——庄子&lt;/li&gt;
+&lt;li&gt;非学无以广才，非志无以成学——诸葛亮&lt;/li&gt;
+&lt;li&gt;书犹药也，善读之可医愚。——刘向&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;外国人论读书&#34;&gt;外国人论读书&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;高尔基说：“书籍是人类进步的阶梯”&lt;/li&gt;
+&lt;li&gt;莎士比亚说：“书籍是全世界的营养品。生活中没有书籍，就好像没有阳光；智慧里没有书籍，就好像鸟儿没有翅膀。”&lt;/li&gt;
+&lt;li&gt;罗曼罗兰说“和书籍在一起，你永远不会叹气！”&lt;/li&gt;
+&lt;li&gt;高尔基说：“你读的书越多，你就越有力量。”&lt;/li&gt;
+&lt;li&gt;培根说：“人的天性如野生的花草,读书学习好比修剪. 移栽。”&lt;/li&gt;
+&lt;li&gt;高尔基说：“我扑在书籍上，就像饥饿的人扑在面包上一样”&lt;/li&gt;
+&lt;li&gt;托尔斯泰说：“理想的书籍就是智慧的钥匙。”&lt;/li&gt;
+&lt;li&gt;菲尔丁说：“不好的书像不好的朋友一样，可能会把你戕害。”&lt;/li&gt;
+&lt;li&gt;海伦凯乐：“一本新书像一艘船，带领我们从狭隘的地方，驰向无限广阔的生活的海洋。”&lt;/li&gt;
+&lt;li&gt;高尔基曾经说过“读一本书就好像与许多高尚的人谈话。”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;关于读书的诗句&#34;&gt;关于读书的诗句&lt;/h1&gt;
+&lt;h2 id=&#34;劝学&#34;&gt;《劝学》&lt;/h2&gt;
+&lt;p&gt;唐·颜真卿&lt;br&gt;
+三更灯火五更鸡，正是男儿读书时。&lt;br&gt;
+黑发不知勤学早，白首方悔读书迟。&lt;/p&gt;
+&lt;h2 id=&#34;白鹿洞诗&#34;&gt;《白鹿洞诗》&lt;/h2&gt;
+&lt;p&gt;唐·王贞白&lt;br&gt;
+读书不觉春已深，一寸光阴一寸金。&lt;br&gt;
+不是道人来引笑，周情孔思正追寻。&lt;/p&gt;
+&lt;h2 id=&#34;观书有感&#34;&gt;《观书有感》&lt;/h2&gt;
+&lt;p&gt;宋·朱熹&lt;br&gt;
+半亩方塘一鉴开，天光月影共徘徊。&lt;br&gt;
+问渠那得清如许，为有源头活水来。&lt;/p&gt;
+&lt;h2 id=&#34;读书有所见作&#34;&gt;《读书有所见作》&lt;/h2&gt;
+&lt;p&gt;清·萧抡谓&lt;br&gt;
+人心如良苗，得养乃兹长。&lt;br&gt;
+苗以泉水灌，心以理义养。&lt;br&gt;
+一日不读书，胸臆无佳想。&lt;br&gt;
+一月不读书，耳目失清爽。&lt;/p&gt;
+&lt;h2 id=&#34;读书&#34;&gt;《读书》&lt;/h2&gt;
+&lt;p&gt;清·法式善&lt;br&gt;
+读书如树木，不可求骤长。&lt;br&gt;
+植诸空山中，日来而月往。&lt;br&gt;
+露叶既畅茂，烟打渐苍莽。&lt;/p&gt;
+&lt;h2 id=&#34;读山海经&#34;&gt;《读山海经》&lt;/h2&gt;
+&lt;p&gt;宋·陶渊明&lt;br&gt;
+孟夏草木长，绕屋树扶疏。&lt;br&gt;
+众鸟欣有托，吾亦爱吾庐。&lt;br&gt;
+既耕亦已种，时还读我书。&lt;br&gt;
+穷巷隔深辙，颇回故人车。&lt;br&gt;
+欢言酌春酒，摘我园中蔬。&lt;br&gt;
+微雨从东来，好风与之俱。&lt;br&gt;
+泛览周王传，流观山海图。&lt;br&gt;
+俯仰终宇宙，不乐复何如!&lt;/p&gt;
+&lt;h2 id=&#34;宋安淳秀才失解西归&#34;&gt;《宋安淳秀才失解西归》&lt;/h2&gt;
+&lt;p&gt;宋·苏轼&lt;br&gt;
+旧书不厌百回读，熟读深思子自知。&lt;br&gt;
+他日名宦恐不免，今日栖迟那可追。&lt;/p&gt;
+&lt;h2 id=&#34;冬夜读书示子聿&#34;&gt;《冬夜读书示子聿》&lt;/h2&gt;
+&lt;p&gt;宋·陆游&lt;br&gt;
+古来学问无遗力，少壮功夫老始成。&lt;br&gt;
+纸上得来终觉浅，绝知此事要躬行。&lt;/p&gt;
+&lt;h2 id=&#34;书院&#34;&gt;《书院》&lt;/h2&gt;
+&lt;p&gt;宋·刘过&lt;br&gt;
+力学如力耕，勤惰尔自知。&lt;br&gt;
+但使书种多，会有岁稔时。&lt;/p&gt;
+&lt;h2 id=&#34;和董传留别&#34;&gt;《和董传留别》&lt;/h2&gt;
+&lt;p&gt;宋·苏轼&lt;br&gt;
+粗缯大布裹生涯，腹有诗书气自华。&lt;br&gt;
+厌伴老儒烹瓠叶，强随举子踏槐花。&lt;br&gt;
+囊空不办寻春马，眼乱行看择婿车。&lt;br&gt;
+得意犹堪夸世俗，诏黄新湿字如鸦。&lt;/p&gt;
+&lt;h2 id=&#34;冬夜读书示子聿-2&#34;&gt;《冬夜读书示子聿》&lt;/h2&gt;
+&lt;p&gt;唐·杜甫&lt;br&gt;
+古人学问无遗力，少壮工夫老始成。&lt;br&gt;
+纸上得来终觉浅，绝知此事要躬行。&lt;/p&gt;
+&lt;h2 id=&#34;贾生&#34;&gt;《贾生》&lt;/h2&gt;
+&lt;p&gt;唐·李商隐&lt;br&gt;
+宣室求贤访逐臣，贾生才调更无伦。&lt;br&gt;
+可怜夜半虚前席，不问苍生问鬼神!&lt;/p&gt;
+&lt;h1 id=&#34;说说&#34;&gt;说说&lt;/h1&gt;
+&lt;p&gt;书是我们的知心好友。当淋浴在灿烂的阳光中，膝上摊开一本书，闻着纸上散发着的油墨清香，旁边放上一杯水，听顽皮的风娃娃吹开书页的美妙声音，我的心里充满了快乐。在我孤独的时候，书陪伴着我，使我感到温暖；在我伤心时，书使我感到快乐，让我感觉世界是多么有趣。&lt;/p&gt;
+">“读书”专题整理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/wen-tian-xiang-ren-wu-zheng-li/"" data-c="
+          &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://vd2.bdstatic.com/mda-jmi6eqfyx3ybprj5/v1-cae/sc/mda-jmi6eqfyx3ybprj5.mp4?v_from_s=nj_haokan_4469&amp;amp;auth_key=1619244958-0-0-605ad624ad72279786d12838bc12bb2f&amp;amp;bcevod_channel=searchbox_feed&amp;amp;pd=1&amp;amp;pt=3&amp;amp;abtest=&#34;&gt;文天祥&lt;/a&gt;&lt;/strong&gt;（1236/6/6—1283/1/9/），初名云孙，字宋瑞，又字履善。自号浮休道人、文山。吉州庐陵（今江西省吉安市青原区富田镇）人，南宋末年&lt;strong&gt;政治家&lt;/strong&gt;、&lt;strong&gt;文学家&lt;/strong&gt;，&lt;strong&gt;抗元名臣&lt;/strong&gt;，&lt;strong&gt;民族英雄&lt;/strong&gt;，与陆秀夫、张世杰并称为“&lt;strong&gt;宋末三杰&lt;/strong&gt;”。&lt;/p&gt;
+&lt;h1 id=&#34;人物生平&#34;&gt;人物生平&lt;/h1&gt;
+&lt;h2 id=&#34;忠鲠不屈&#34;&gt;忠鲠不屈&lt;/h2&gt;
+&lt;p&gt;文云孙（后改名天祥），字天祥，生于南宋端平三年（1236年）。&lt;br&gt;
+据史料记载，他相貌堂堂，身材魁伟，皮肤白皙如玉，眉清目秀，观物炯炯有神。在孩提时，看见学宫中所祭祀的乡贤欧阳修、杨邦乂、胡铨的画像，谥号都有“忠”字，便为此高兴，羡慕不已，说道：“如果不成为其中的一员，就不是真正的男子汉。”&lt;/p&gt;
+&lt;p&gt;宝祐四年（1256年），二十岁的文云孙参加科举考试，在集英殿答对论策。当时宋理宗在位日久，倦怠政事，文云孙以“法天不息”为题议论策对，文章洋洋洒洒一万多字，没有草稿，一气呵成。理宗览后，亲自选拔他为进士第一。考官王应麟上奏说：“这个试卷以古代的事情作为借鉴，忠心肝胆好似铁石，我以为能得到这样的人才可喜可贺。”于是，成为状元的文云孙改名文天祥，改字为宋瑞（又字履善）。中举不久后，因父亲逝世，文天祥回家守丧。&lt;/p&gt;
+&lt;p&gt;开庆元年（1259年），蒙古军分兵三路，大举南侵，宦官董宋臣建议理宗迁都。朝臣无人敢非议，唯有时任宁海军节度判官的文天祥上书，请求斩杀董宋臣，以统一人心。因建议不被采纳，就自请免职回乡。后逐渐升官至刑部侍郎。此时董宋臣又升为都知，文天祥再次上书一一列举他的罪行，也未被回复。&lt;/p&gt;
+&lt;p&gt;在之后，文天祥出外知瑞州（今江西高安），改授提点江南西路刑狱，再升尚书左司郎官，多次遭台官议论而被罢职。后来，文天祥奉命掌理军器监兼权直学士院。宰臣贾似道称自己患病，请求致仕，用以要挟理宗，诏令没应允。文天祥起草制诰，文辞中多有讽刺之语。当时起草诰命的内制沿袭要呈文稿审查，文天祥没有写，贾似道不悦，指使台臣张志立弹劾文天祥，将其罢免。到此时，文天祥已经几次被斥责，于是援引北宋钱若水的例子致仕，当时他才三十七岁。&lt;/p&gt;
+&lt;p&gt;咸淳九年（1273年），文天祥被起用为提点荆湖南路刑狱，因此见到了原来的宰相江万里。江万里平素就对文天祥的志向、气节感到惊奇，同他谈到国事，神色忧伤地说：“我老了，观察天时人事应当有变化，我看到的人很多，担任治理国家的责任，不就是在你吗？望你努力。”&lt;/p&gt;
+&lt;h2 id=&#34;率军勤王&#34;&gt;率军勤王&lt;/h2&gt;
+&lt;p&gt;咸淳十年（1274年），文天祥被委知赣州（今江西赣州）。&lt;/p&gt;
+&lt;p&gt;德祐元年（1275年），长江上游告急，宋廷诏令天下兵马勤王。文天祥捧着诏书流涕哭泣，派陈继周率郡里的志士，同时联络溪峒蛮；派方兴召集吉州（今江西省吉安市）的士兵，各英雄豪杰群起响应，聚集兵众万人。宋廷得知此事，命文天祥以江南西路提刑安抚使的身份率军包围京师临安府。他的朋友制止他说：“现在元兵分三路南下进攻，攻破京畿，进迫内地，你以乌合之众万余人赴京入卫，这与驱赶群羊同猛虎相斗没有什么差别。”文天祥答道：“我也知道是这么回事。但国家养育臣民三百多年，一旦有危急，征集天下的兵丁，没有一人一骑入卫，我为此深感遗憾。所以不自量力，而以身殉国，希望天下忠臣义士将会有听说此事后而奋起的。依靠仁义取胜就可以自立，依靠人多就可以促成事业成功，如果按此而行，那么国家就有保障了。”&lt;/p&gt;
+&lt;p&gt;文天祥性格豁达豪爽，平生衣食丰厚，声伎满堂。到这时，痛心地自己贬损责罚自己，把家里的资产全部作为军费。每当与宾客、僚属谈到国家时事，就痛哭流涕，抚案说道：“以别人的快乐为快乐的人，也忧虑别人忧虑的事情，以别人的衣食为衣食来源的人，应为别人的事而至死不辞。”&lt;/p&gt;
+&lt;h2 id=&#34;苦战东南&#34;&gt;苦战东南&lt;/h2&gt;
+&lt;p&gt;德祐元年（1275年）八月，文天祥率兵到临安（今浙江杭州），担任平江府知府。当时因为丞相陈宜中没有返回朝廷，所以没有受到派遣。十月，陈宜中至，于是派遣去任职。朝议中刚刚擢升吕师孟为兵部尚书，封吕文德为和义郡王，想以此寻求和好。吕师孟更加傲慢骄横、放肆。&lt;/p&gt;
+&lt;p&gt;文天祥辞别宋恭帝赵㬎，之后上书说：“朝廷之内，具有姑息、求和意向的大臣很多，具有奋发之志、果断处事的人却很少。我请求处斩吕师孟作为战事祭祀，用以鼓舞将士们的士气。”又说：“我大宋吸取五代分裂割据的教训，削除藩镇，建立郡县城邑，虽然一时完全革除了尾大不掉的弊端，但国家因此渐趋削弱。所以敌军到一州就破一州，到一县就破一县，中原沦陷，悔恨、痛心哪里还来得及。”随后，他建议将天下为四镇，设置都督作为统帅，具体部署有：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;广南西路并入荆湖南路，建治于长沙；&lt;/li&gt;
+&lt;li&gt;广南东路并入江南西路，建治于隆兴（今江西南昌）；&lt;/li&gt;
+&lt;li&gt;福建路并入江南东路，建治于番阳（今江西鄱阳县）；&lt;/li&gt;
+&lt;li&gt;淮南西路并入淮南东路，建治于扬州。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;同时，他建议责令长沙兼领鄂州等处，隆兴兼领蕲州、黄州，番阳兼领江东，扬州兼领两淮，使他们辖区范围更广、力量更强，足以抵抗元军。之后各地约定日期，一齐奋起，使元军四散，疲于奔命，再伺机而动，便能击退元军。但当时朝议认为文天祥的议论过于疏阔，难以实行，故而未予采纳。&lt;/p&gt;
+&lt;p&gt;德祐元年（1275年）十月，文天祥抵达平江，元军已从金陵出发进入常州。文天祥派遣他的将帅朱华、尹玉、麻士龙与张全援助常州，行到虞桥，麻士龙战死，朱华率领广南军队，战于五牧，被打败，尹玉也被打败了，争相渡水，扒张全军中的渡船，张全的士兵斩断他们的手指，都淹死了，尹玉率领残兵五百人夜间发起战斗，到第二天早晨都战死了。张全不发一箭，逃跑退却了。元军攻入常州，占领了独松关。陈宜中、留梦炎召令文天祥，弃守平江，退守余杭。&lt;/p&gt;
+&lt;h2 id=&#34;义使元营&#34;&gt;义使元营&lt;/h2&gt;
+&lt;p&gt;德祐二年（1276年）正月，文天祥担任临安知府。不多久，宋朝投降，陈宜中、张世杰撤退，文天祥升任枢密使。不久，再升为右丞相兼枢密使，作为使臣到元军中议和，与元军主帅伯颜在皋亭山争论。伯颜发怒拘捕了他，同左丞相吴坚、右丞相贾余庆、知枢密院事谢堂、签枢密院事家铉翁、同签枢密院事刘祒，向北至镇江。文天祥与他的侍客杜浒等十二人，于夜间逃入真州。苗再成出来迎接他，高兴得流着眼泪说：“两淮的士兵足可以兴复宋朝，只是二制置使有些矛盾，不能同心协力。”文天祥问道：“这个计谋是从哪里来的呢？”苗再成回答说：“现在先约淮西兵赶赴建康，他们必然全力以防御我们淮西的士兵。指挥东面各将帅，以通州、泰州兵攻打湾头，以高邮、宝应、淮安兵攻打杨子桥，以扬州兵攻打瓜步，我率领水军直捣镇江，同一天大举出兵。湾头、杨子桥都是沿长江的脆弱之军，又日夜希望我们军队攻来，攻打他们，定会很快取胜。一齐从三个方向进攻瓜步，我自己率兵从长江水面中以较少的士兵佯攻，虽然有智慧的人也不能预料到这一点。瓜步攻下后，以东面的军队入攻京口，西面的士兵入攻金陵，威胁浙江的后退之路，那么元军的大帅就可以生擒了。”文天祥对此大加赞扬，随即写信送两个制置使，派遣使者四面联络。&lt;/p&gt;
+&lt;p&gt;文天祥没有到的时候，扬州有逃跑归来的士兵说：“朝廷秘密派遣一丞相进入真州劝说投降来了。”李庭芝信以为真，认为文天祥劝降来了。派苗再成迅速杀掉文天祥。苗再成不忍心杀他，欺哄文天祥到相城垒外，把制司的文书给他看，把他关在门外。好久以后，又派两批人分别去窥测证实天祥是否是来劝降的，如果是劝降的就杀了他。两批人分别与天祥谈话后，证实其忠义，都不忍心杀他，派士兵二十人沿路护送至扬州，四更鼓响时抵达城下，听等候开城门的人谈，制置司下令防备文天祥很严密，文天祥与随从听说后相互吐舌，于是向东入海道，遇元军，躲入四围土墙中得以免祸。然而，因为饥饿而走不动路，于是向樵夫们讨得了一些剩饭残羹。走至板桥，元军又来了，众人跑入竹林中隐伏，元军进入竹林搜索，抓住杜浒、金应带走了。虞候张庆眼睛被射中了一箭，身上两度挨箭，文天祥两次都未被发现，得以脱身。杜浒、金应拿出身上的金银送给元军，才被放回，雇募二个樵夫抬着坐在箩筐里的文天祥到高邮，泛海坐船至温州。&lt;/p&gt;
+&lt;h2 id=&#34;江西抗元&#34;&gt;江西抗元&lt;/h2&gt;
+&lt;p&gt;文天祥听说益王未立，于是上表劝请即帝位，以观文殿学士、侍读的官职召至福州（今福建福州），拜右丞相。不久与陈宜中等人议论意见不统一。德祐二年（1276年）七月，于是以同都督职出任江南西路，准备上任，召集士兵进入汀州（今福建长汀）。十月，派遣参谋赵时赏，咨议赵孟溁率领一支军队攻取宁都（今江西赣州宁都县），参赞吴浚率一支军队攻取雩都（今江西赣州于都县），刘洙、萧明哲、陈子敬都从江西起兵来与他会合。邹洬以招谕副使在宁都召聚兵众，元军攻打他们，邹洬兵败，同起事率兵的人刘钦、鞠华叔、颜师立、颜起岩都死了。武冈教授罗开礼，起兵收复了永丰县（今江西吉安永丰县），不久兵败被俘，死于狱中。文天祥听说罗开礼死了，穿起丧服，痛哭不已。&lt;/p&gt;
+&lt;p&gt;景炎二年（1277年）正月，元军攻入汀州，文天祥于是迁移漳州，请求入卫朝廷。赵时赏、赵孟溁也率兵归来，唯独吴浚的士兵没有到。不久，吴浚降元，来游说文天祥。文天祥派人缚起吴浚，把他吊死了。四月，进入梅州，都统王福、钱汉英专横跋扈，被处斩了。五月，迁出江南西路，进入会昌。六月，进入兴国县。七月，遣参谋张汴、监军赵时赏、赵孟溁荣等率大军进逼赣城，邹洬率领赣州各县的军队攻取永丰，他的副官黎贵达率领吉州各县的士兵攻取泰和。吉州八县克复了一半，仅剩赣州没有攻下。临洪各郡，都送钱劳军。潭州赵璠、张虎、张唐、熊桂、刘斗元、吴希奭、陈子全、王梦应在邵州、永州等地起兵，克复数县，抚州何时等人起兵响应文天祥。分宁、武宁、建昌三县豪杰，都派人到军中接受调遣参战。&lt;/p&gt;
+&lt;p&gt;元军江南西路宣慰使李恒派遣士兵入援赣州，而自己率兵在兴国进攻文天祥的据点。文天祥没有预料到李恒的兵突然攻至兴国，于是率兵撤退，靠近永丰的邹洬。邹洬的军队已在他的前面溃败，李恒于是穷追文天祥至方石岭。巩信坚守拒战，身中数箭，死了。到达空坑，士兵都被打败溃散，文天祥的妻妾子女都被抓住。赵时赏坐在轿子中，后面的元军讯问他是谁，赵时赏说“我姓文”，众兵以为是文天祥，活捉了他返回军营，文天祥因此得以逃脱。&lt;/p&gt;
+&lt;p&gt;彭震龙、张汴等死于军中，缪朝宗自己上吊死了。吴文炳、林栋、刘洙都被抓住带回隆兴。赵时赏怒骂不屈服，有的多次被抓来的，往往很快放掉，说：“小小的签厅官，抓来有什么用呢？”因此得以逃脱的人很多。到行刑的时候，刘洙多次辩解，赵时赏呵斥他说：“死了算了，何必这样呢？”于是林栋、吴文炳、萧敬夫、萧焘夫都不能免难。&lt;/p&gt;
+&lt;h2 id=&#34;战败被俘&#34;&gt;战败被俘&lt;/h2&gt;
+&lt;p&gt;文天祥召集残兵奔赴循州，驻扎于南岭。黎贵达暗中阴谋投降，被抓住杀了。景炎三年（1278年）三月，文天祥进驻丽江浦。六月，入船澳。益王已死，卫王继承王位。文天祥上表自责，请求入朝，没有获准。八月，加封文天祥少保、信国公。军中瘟疫又流行，损失士卒数百人。文天祥的母亲和他唯一的儿子都病死了。&lt;/p&gt;
+&lt;p&gt;十一月，进驻潮阳县。潮州盗贼陈懿、刘兴多次叛附无常，为潮阳人一大祸害。文天祥赶走了陈懿，抓住刘兴，杀了他。十二月，赶赴南岭，邹洬、刘子俊又从江西起兵而来，再次攻伐陈懿的党羽，陈懿于是暗中勾结张弘范，帮助、引导元军逼攻潮阳。文天祥正在五坡岭吃饭，张弘范的军队突然出现，众士兵随从措手不及，都埋头躲在荒草中。文天祥匆忙逃走，被元军千户王惟义抓住。文天祥吞食龙脑，没有死。僚属、士卒大多被抓获杀害。&lt;/p&gt;
+&lt;p&gt;文天祥被押至潮阳，见张弘范时，不肯行跪拜之礼，张弘范以客礼接见，同文天祥一起入厓山，要他写信招降张世杰。文天祥说：“我不能保卫父母，还教别人叛离父母，可以吗？”因多次强迫索要书信，文天祥最后创作了《过零丁洋》&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;辛苦遭逢起一经，干戈寥落四周星。&lt;br&gt;
+山河破碎风飘絮，身世浮沉雨打萍。&lt;br&gt;
+惶恐滩头说惶恐，零丁洋里叹零丁。&lt;br&gt;
+人生自古谁无死？留取丹心照汗青。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://t12.baidu.com/it/u=1714350206,1680454257&amp;amp;fm=173&amp;amp;app=25&amp;amp;f=JPEG?w=450&amp;amp;h=259&amp;amp;s=FCB82ED65734519E8EA6BC780300D079&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;张弘范看后，笑着将其收藏。厓山海战后，宋朝彻底灭亡，元军置宴犒军，张弘范说：“丞相的忠心孝义都尽到了，若能改变心意，像侍奉宋朝那样侍奉大元皇上，不失宰相之位。”文天祥含泪说：“国家沦亡却不能补救，作为臣子，死有余罪，怎敢怀有二心苟且偷生呢？”张弘范感其仁义，派人护送文天祥到京师。&lt;/p&gt;
+&lt;h2 id=&#34;从容殉国&#34;&gt;从容殉国&lt;/h2&gt;
+&lt;p&gt;文天祥在路上，八天没有吃饭，仍然没死，才又吃饭。到达燕京，馆舍侍员殷勤、陈设奢豪，文天祥没有入睡，坐等天亮。于是移送兵马司，令士卒监守。当时元世祖忽必烈多次搜求有才能的南宋官员，降臣王积翁说：“南宋人中没有谁比得上文天祥的。”忽必烈于是派王积翁去传达圣旨，文天祥说：“国家亡了，我只能以死报国。倘若因为宽赦，能以道士回归故乡，他日以世俗之外的身份作为顾问，还可以。假如立即给以高官，不仅亡国的大夫不可以此求生存，而且把自己平生的全部抱负抛弃，那么任用我有什么用呢？”王积翁想与宋官谢昌元等十人一起请释放文天祥为道士，留梦炎不同意，说：“文天祥放出后，又在江南号召抗元，置我十人于何地？”此事于是作罢。文天祥在燕京共三年，忽必烈知道文天祥始终不屈，同宰相议论放了他，遇上有人以文天祥起兵江南西路的事为借口，结果没有被释放。&lt;/p&gt;
+&lt;p&gt;至元十九年（1282年），福建有一僧人说土星冒犯帝坐星，怀疑有变乱。不久，中山有一狂人自称“宋主”，有兵千人，想救出文天祥。京城也有未署名的书信，说某日火烧蓑城苇，率领两侧翼的士兵作乱，丞相就没有忧虑了。当时元左丞相阿合马为“盗”刺杀，元廷于是撤除城苇，迁瀛国公及宋宗室到开平，并怀疑信上说的丞相就是文天祥。之后，忽必烈召见文天祥，对他说：“你有什么愿望？”文天祥回答：“天祥深受宋朝的恩德，身为宰相，哪能侍奉二姓，愿赐我一死就满足了。”然而忽必烈还不忍心，急忙挥手要他退去。有人建议答应文天祥的要求，忽必烈同意，不一会儿又下诏加以阻止，但文天祥已经遇害。&lt;/p&gt;
+&lt;p&gt;临刑时，文天祥尤为从容不迫，对狱中吏卒说：“我的事完成了。”在向南方跪拜后，他从容就义，终年四十七岁。几天后，文天祥的妻子欧阳氏收拾他的尸体，发现他的面色如同生者一般。后又在文天祥的衣服中发现他所作的绝命诗&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;孔曰成仁，孟曰取义，&lt;br&gt;
+唯其义尽，所以仁至。&lt;br&gt;
+读圣贤书，所学何事？&lt;br&gt;
+而今而后，庶几无愧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;明初，明廷在京师顺天府设祠祭祀文天祥，岁时遣官致祭。至明代宗景泰七年（1456年），经巡抚江西的右佥都御史韩雍、华盖殿大学士陈循等奏请，按照《谥法》中“临患不忘国曰‘忠’，秉德遵业曰‘烈’”的含义，代宗赐文天祥谥号为“忠烈”。&lt;/p&gt;
+&lt;h2 id=&#34;ta作品&#34;&gt;TA作品&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《己卯十月一日至燕越五日罹狴犴有感而赋》&lt;br&gt;
+直弦不似曲如钩，自古圣贤多被囚。&lt;br&gt;
+命有死时名不死，身无忧处道还忧。&lt;br&gt;
+可怜杜宇空流血，惟愿严颜便斫头。&lt;br&gt;
+结束长编犹在此，灶间婢子见人羞。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《己卯十月一日至燕越五日罹狴犴有感而赋》&lt;br&gt;
+落落南冠自结缨，桁杨卧起影纵横。&lt;br&gt;
+坐移白石知何世，梦断青灯问几更。&lt;br&gt;
+国破家亡双泪暗，天荒地老一身轻。&lt;br&gt;
+黄粱得失俱成幻，五十年前元未生。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《己卯十月一日至燕越五日罹狴犴有感而赋》&lt;br&gt;
+心期耿耿浮云上，身事悠悠落日西。&lt;br&gt;
+千古兴亡何限错，百年生死本来齐。&lt;br&gt;
+沙边莫待哀黄鹄，雪里何须问牧羝。&lt;br&gt;
+此处曾埋双宝剑，虹光夜指楚天低。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《己卯十月一日至燕越五日罹狴犴有感而赋》&lt;br&gt;
+寥阳殿上步黄金，一落颠崖地狱深。&lt;br&gt;
+苏武窖中偏喜卧，刘琨囚里不妨吟。&lt;br&gt;
+生前已见夜叉面，死去只因菩萨心。&lt;br&gt;
+万里风沙知己尽，谁人会得广陵音。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;结&#34;&gt;结&lt;/h1&gt;
+&lt;p&gt;文天祥，千古名臣，他的一生是壮丽的，“人固有一死，或重于泰山，或轻于鸿毛”，毫无疑问，文天祥的死重于山，文天祥的忠义大于天，也许在历史的发展中，文公的行为无异于螳臂当车、自不量力，但是，后人无不为他这种“不识时务”而感动，也许，这就是精神的力量，是民族气节的力量，有些事，真的应该明知不可为而为之。&lt;/p&gt;
+&lt;p&gt;剑心犹在，横绝地维屹天柱；浩气永存，光照日月贯长虹。文公千古！&lt;/p&gt;
+">文天祥人物整理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/luo-tuo-xiang-zi/"" data-c="
+          &lt;p&gt;《骆驼祥子》讲述的是旧中国北平城里一个人力车夫祥子的悲剧故事。祥子来自农村，他老实善良、健壮、坚忍。来到北平后，选择拉车谋生。他最大的梦想就是拥有一辆自己的车。但是他的希望一次又一次的破灭，他与命运的抗争最终以失败告终。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h1 id=&#34;美句摘录&#34;&gt;美句摘录&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;1、 最伟大的牺牲是忍辱，最伟大的忍辱是反抗。
+2、 他们自己可是不会跑，因为腿脚被钱赘的太沉重。
+3、 那时候，他满心都是希望；现在，一肚子都是忧虑。
+4、 为金钱而工作的，怕遇到更多的金钱，忠诚不立在金钱上。
+5、 爱与不爱，穷人得在金钱上决定，&amp;quot;情种&amp;quot;只生在大富之家。
+6、 夜还很黑，空中有些湿冷的雾气，心中更觉得渺茫。
+7、 经验是生活的肥料，有什么样的经验便变成什么样的人，在沙漠里养不出牡丹来。
+8、 那辆车是他的一切挣扎与困苦的总结果与报酬，像身经百战的武士的一颗徽章。
+9、 钱会把人引进恶劣的社会中去，把高尚的理想撇开，而甘心走入地狱中去。
+10、希望使他快活，恐惧使他惊惶，他想睡，但睡不着，四肢像散了似的，在一些干草上放着。什么响动也没有，只有天上的星伴着自己的心跳.。
+11、雨下给富人，也下给穷人；下给义人，也下给不义的人。其实雨并不公道，因为落在一个没有公道的世界上。
+12、懒人的思想不能和人格并立，一切可以换作金钱的都早晚必被卖出去。
+13、苦人的懒是努力而落了空的自然结果，苦人的耍刺儿含着一些公理。
+14、在没有公道的世界里，穷人仗着狠心维持个人的自由，那很小很小的一点自由。
+15、明天只是今天的继续，明天承继着今天的委屈。
+10、自己的努力与克己既然失败，大家的行为一定是有道理的。
+&lt;/code&gt;&lt;/pre&gt;
+">骆驼祥子</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/dao-fa/"" data-c="
+          &lt;h2 id=&#34;中学序曲&#34;&gt;中学序曲&lt;/h2&gt;
+&lt;h3 id=&#34;中学时代的意义&#34;&gt;中学时代的意义&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;我们站在一个新的起点上&lt;/li&gt;
+&lt;li&gt;中学时代是我们人生发展的新阶段&lt;/li&gt;
+&lt;li&gt;中学时代见证着一个人从少年到青年的生命进阶&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;中学时代的成长表现&#34;&gt;中学时代的成长表现&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;意味着新的机会和可能，也意味着新的目标和挑战&lt;/li&gt;
+&lt;li&gt;激发着我们的潜能，激励我们不断实现自我超越&lt;/li&gt;
+&lt;li&gt;改变别人心目中不完美的形象，重新塑造一个自我&lt;/li&gt;
+&lt;li&gt;珍视当下，把握机遇，为美好的明天付出不懈的努力&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;少年有梦&#34;&gt;少年有梦&lt;/h2&gt;
+&lt;h3 id=&#34;梦想的作用意义&#34;&gt;梦想的作用/意义&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;激发我们生命的热情和勇气，让生活更有色彩&lt;/li&gt;
+&lt;li&gt;使我们不断进步和发展&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;树立梦想应该注意什么少年梦想的特点&#34;&gt;树立梦想应该注意什么?/少年梦想的特点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;是人类天真无邪，美丽可爱的愿望&lt;/li&gt;
+&lt;li&gt;与人生目标紧密相连&lt;/li&gt;
+&lt;li&gt;与时代脉搏紧密相连，与中国梦密不可分&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何实现梦想&#34;&gt;如何实现梦想?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;不应止于心动，更要付诸行动&lt;/li&gt;
+&lt;li&gt;努力，是梦想与现实之间的桥梁&lt;/li&gt;
+&lt;li&gt;努力需要立志，需要坚持，需要有方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;学习伴成长&#34;&gt;学习伴成长&lt;/h2&gt;
+&lt;h3 id=&#34;如何理解中学时代的成长礼物&#34;&gt;如何理解中学时代的成长礼物&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;知识的获取&lt;/li&gt;
+&lt;li&gt;能力的培养&lt;/li&gt;
+&lt;li&gt;如何做人&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何正确认识学习学习的特点&#34;&gt;如何正确认识学习?/学习的特点&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;学习不仅仅局限在学校，生活中的一切都可以是学习&lt;/li&gt;
+&lt;li&gt;学习需要自觉、主动的态度&lt;/li&gt;
+&lt;li&gt;学习伴随我们成长&lt;/li&gt;
+&lt;li&gt;学习没有终点，我们终生都要学习&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何理解终身学习长大成人之后还需要学习吗&#34;&gt;如何理解终身学习?/长大成人之后还需要学习吗?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;即使离开了学校，也要不断地学习，不断地充实自己&lt;/li&gt;
+&lt;li&gt;学习不仅让我们能够生存，而且让我们能够拥有更充实的生活&lt;/li&gt;
+&lt;li&gt;学习点亮我们心中的明灯，激发前进的动力&lt;/li&gt;
+&lt;li&gt;分享生命经验，为幸福生活奠基&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;享受学习&#34;&gt;享受学习&lt;/h2&gt;
+&lt;h3 id=&#34;如何看待学习是苦乐交织的&#34;&gt;如何看待学习是苦乐交织的?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;学习是多方面的，学习是一个过程，我们并不是每时每刻都能从中感到快乐&lt;/li&gt;
+&lt;li&gt;学习中有快乐，对某方面的知识有强烈兴趣时、自己解决某个问题时、学习中找到志趣相投的同伴时、发现自己的潜能时......我们都可以体会到学习带来的快乐&lt;/li&gt;
+&lt;li&gt;学习中也有辛苦，需要集中注意力，耗费精力，遇到困难和阻挠时需要调节不良情绪等，这些都需要我们凭借坚强的意志作出努力&lt;/li&gt;
+&lt;li&gt;当我们经历了学习的辛苦，收获学习的成果时，那种发自内心的愉悦让我们体验到学习的美好，它是学习过程带给我们的美妙享受&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何学会学习&#34;&gt;如何学会学习&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;发现并保持对学习的兴趣&lt;/li&gt;
+&lt;li&gt;掌握科学的学习方法&lt;/li&gt;
+&lt;li&gt;运用不同的学习方式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;认识自己&#34;&gt;认识自己&lt;/h2&gt;
+&lt;h3 id=&#34;正确认识自己的意义&#34;&gt;正确认识自己的意义?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;正确认识自己，可以促进自我发展&lt;/li&gt;
+&lt;li&gt;正确认识自己，可以促进与他人的交往&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;怎样认识自己认识自己的3个途径&#34;&gt;怎样认识自己?/认识自己的3个途径&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;我们可以从生理、心理、社会等方面来认识自己&lt;/li&gt;
+&lt;li&gt;我们可以通过自我评价来认识自己&lt;/li&gt;
+&lt;li&gt;他人评价是我们认识自己的一面镜子&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;他人评价的意义如何正确对待他人评价&#34;&gt;他人评价的意义+如何正确对待他人评价&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;他人评价有助于我们形成对自己更为客观，完整，清晰的认识&lt;/li&gt;
+&lt;li&gt;我们要重视他人的态度与评价，但也要客观冷静分析，既不能盲从也不能忽视&lt;/li&gt;
+&lt;li&gt;用理性的心态面对他人评价是走向成熟的表现&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;做更好的自己&#34;&gt;做更好的自己&lt;/h2&gt;
+&lt;h3 id=&#34;为什么要接纳自己&#34;&gt;为什么要接纳自己?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;如同世界上没有两片完全相同的树叶一样，世界上也没有完全相同的两个人&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何悦纳自己-接纳欣赏&#34;&gt;如何悦纳自己? (接纳+欣赏)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;接纳自己需要接纳自己的全部，寄接纳自己的优点，也接纳自己的不完美&lt;/li&gt;
+&lt;li&gt;接纳自己需要乐观的心态，更需要勇气和智慧&lt;/li&gt;
+&lt;li&gt;学会欣赏自己，欣赏自己的独特，欣赏自己的优点，欣赏自己的努力，欣赏自己为他人的奉献&lt;/li&gt;
+&lt;li&gt;欣赏自己，不是骄傲自大，也不是目中无人，而是成长的道路上面对压力与挫折的自我鼓励与自我奋进&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何做更好的自己&#34;&gt;如何做更好的自己?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;扬长避短&lt;/li&gt;
+&lt;li&gt;主动改正缺点&lt;/li&gt;
+&lt;li&gt;不断激发自己的潜能&lt;/li&gt;
+&lt;li&gt;为他人、为社会带来福祉&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;友谊&#34;&gt;友谊&lt;/h2&gt;
+&lt;h3 id=&#34;友谊的力量朋友的影响&#34;&gt;友谊的力量(朋友的影响)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;朋友对一个人的影响很大。我们在言谈举止，兴趣爱好，甚至性格等都或多或少的受到朋友的影响&lt;/li&gt;
+&lt;li&gt;朋友见证了我们一起走过的成长历程，我们需要真诚友善的朋友&lt;/li&gt;
+&lt;li&gt;朋友丰富了我们的生活经验，友谊让我们更深刻的体悟生命的美好&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;友谊的特质&#34;&gt;友谊的特质&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;友谊是一种亲密的关系&lt;/li&gt;
+&lt;li&gt;友谊是平等的，双向的&lt;/li&gt;
+&lt;li&gt;友谊是一种心灵的相遇&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;友谊的澄清&#34;&gt;友谊的澄清&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;友谊不是一成不变的&lt;/li&gt;
+&lt;li&gt;竞争并不必然伤害友谊，关键是我们对待竞争的态度&lt;/li&gt;
+&lt;li&gt;友谊不能没有原则，不能不加分辨地为朋友做任何事，当朋友误入歧途时，要给予规劝&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何建立友谊&#34;&gt;如何建立友谊?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;建立友谊，需要开放自己&lt;/li&gt;
+&lt;li&gt;建立友谊，需要持续的行动&lt;/li&gt;
+&lt;li&gt;建立友谊，需要合适的方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何呵护友谊&#34;&gt;如何呵护友谊?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;呵护友谊，需要用心去关怀对方&lt;/li&gt;
+&lt;li&gt;呵护友谊，需要学会正确处理冲突&lt;/li&gt;
+&lt;li&gt;呵护友谊，需要学会正确对待交友中带来的伤害&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;网上交友应该注意什么&#34;&gt;网上交友应该注意什么?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;学会理性辨别，慎重选择&lt;/li&gt;
+&lt;li&gt;我们要有一定的自我保护意识&lt;/li&gt;
+&lt;li&gt;将网上的朋友转化为现实中的朋友，需要慎重&lt;/li&gt;
+&lt;li&gt;学会正确对待交友中带来的伤害&lt;/li&gt;
+&lt;li&gt;我们要遵守法律、法规&lt;/li&gt;
+&lt;li&gt;你们要学会在现实中与同伴交往&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;师生关系&#34;&gt;师生关系&lt;/h2&gt;
+&lt;h3 id=&#34;教师的职业特征&#34;&gt;教师的职业特征&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;传道授业解惑&lt;/li&gt;
+&lt;li&gt;传承文明&lt;/li&gt;
+&lt;li&gt;老师是我们学习的指导者，和成长的引路人&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;新时代四有好教师要求&#34;&gt;新时代“四有”好教师要求&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;有理想信念&lt;/li&gt;
+&lt;li&gt;有道德情操&lt;/li&gt;
+&lt;li&gt;有扎实学识&lt;/li&gt;
+&lt;li&gt;有仁爱之心&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何和风格不同的老师相处&#34;&gt;如何和风格不同的老师相处?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;承认老师的差别&lt;/li&gt;
+&lt;li&gt;发现不同风格老师的优点&lt;/li&gt;
+&lt;li&gt;了解老师教育行为的目的&lt;/li&gt;
+&lt;li&gt;主动交往&lt;/li&gt;
+&lt;li&gt;尊重，承认，接纳老师&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;教学相长的要求怎么做&#34;&gt;教学相长的要求(怎么做)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;主动参与，勤学好问的态度有助于我们与老师的相互交流&lt;/li&gt;
+&lt;li&gt;真诚、恰当地向老师表达自己的观点和见解&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何正确对待老师的表扬和批评&#34;&gt;如何正确对待老师的表扬和批评&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;学会正确对待老师的表扬和批评&lt;/li&gt;
+&lt;li&gt;老师的表扬意味着肯定，鼓励和期待，激励我们更好的学习和发展&lt;/li&gt;
+&lt;li&gt;老师的批评意味着关心，提醒和劝解，可以帮助我们反省自己，改进不足&lt;/li&gt;
+&lt;li&gt;对待老师的批评，我们要把注意力放在老师批评的内容和用意上，理解老师的良苦用心&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;良好的师生关系是怎样建立良好的师生关系&#34;&gt;良好的师生关系是?/怎样建立良好的师生关系?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;师生彼此尊重，相互关心&lt;/li&gt;
+&lt;li&gt;我们可以和老师成为朋友&lt;/li&gt;
+&lt;li&gt;我们也应该主动关心老师，理解老师&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;亲子关系&#34;&gt;亲子关系&lt;/h2&gt;
+&lt;h3 id=&#34;家有什么重要作用&#34;&gt;家有什么重要作用?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;家庭是由婚姻关系，血缘关系或收养关系结合成的亲属生活组织&lt;/li&gt;
+&lt;li&gt;家是我们身心的寄居之所&lt;/li&gt;
+&lt;li&gt;家是我们心灵的港湾&lt;/li&gt;
+&lt;li&gt;家是代代传承，血脉相连的生活共同体是甜蜜，温暖，轻松的避风港&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;为什么孝亲敬长&#34;&gt;为什么孝亲敬长?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在中国的家庭文化中，&amp;quot;孝&amp;quot;是重要的精神内涵&lt;/li&gt;
+&lt;li&gt;孝亲敬长是中华民族的传统美德，也是每个中国公民的法定义务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;怎么样孝亲敬长&#34;&gt;怎么样孝亲敬长?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;尽孝在当下，我们要用行动来表达孝敬之心&lt;/li&gt;
+&lt;li&gt;尊重，倾听，感恩&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;亲子冲突的原因&#34;&gt;亲子冲突的原因&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;独立意识的增强&lt;/li&gt;
+&lt;li&gt;逆反心理&lt;/li&gt;
+&lt;li&gt;代沟的存在&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;怎样应对亲子冲突&#34;&gt;怎样应对亲子冲突&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;爱是需要呵护的，爱在沟通中加深，我们要选择不伤害父母感情和不影响亲子关系的做法&lt;/li&gt;
+&lt;li&gt;试着去接纳父母的做法，理解父母行为中蕴含的爱，我可以尝试让父母了解我们的变化和需要&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何创建和谐家庭&#34;&gt;如何创建和谐家庭&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;家庭成员之间相互信任，体谅和包容&lt;/li&gt;
+&lt;li&gt;积极参加家务劳动，增强家庭责任意识&lt;/li&gt;
+&lt;li&gt;以良好的心态面对家庭发展中的问题&lt;/li&gt;
+&lt;li&gt;有效的交流和沟通&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;生命的思考&#34;&gt;生命的思考&lt;/h2&gt;
+&lt;h3 id=&#34;生命的特点&#34;&gt;生命的特点?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;生命来之不易&lt;/li&gt;
+&lt;li&gt;生命是独特的&lt;/li&gt;
+&lt;li&gt;生命是不可逆的&lt;/li&gt;
+&lt;li&gt;生命也是短暂的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;怎样面对死亡怎样对待生命&#34;&gt;怎样面对死亡?/怎样对待生命?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;我们每个人都无法抗拒生命发展的自然规律，死亡是人生不可避免的归宿，它让我们感激生命的获得&lt;/li&gt;
+&lt;li&gt;我们要从容面对生命的不可预知，更加热爱生命，热爱生活，把有限的生命投入到无限的奋斗和奉献之中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何理解生命的接续&#34;&gt;如何理解“生命的接续”?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;个人生命虽然短暂，但正是一代又一代的个体生命实现了人类生命的接续&lt;/li&gt;
+&lt;li&gt;人类生命不断发展，人类的精神文明也不断积累和丰富，我们要在精神上不断继承和创造人类的文明成果&lt;/li&gt;
+&lt;li&gt;生命的接续使得每个人的生命不仅仅是&amp;quot;我&amp;quot;的生命，还是&amp;quot;我们&amp;quot;的生命，在人类生命的接续中，我们总能为自己的生命找到一个位置，担当一份使命&lt;/li&gt;
+&lt;li&gt;我们要更好的认识和面对自己的生命&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;敬畏生命生命至上的认识&#34;&gt;敬畏生命(生命至上)的认识&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;生命是脆弱的，艰难的；生命是坚强的，有力量的；生命是崇高的，神圣的&lt;/li&gt;
+&lt;li&gt;当我们对生命怀有敬畏之心时，我们就会珍视它，生命价值高于一切&lt;/li&gt;
+&lt;li&gt;我们也必须承认别人的生命同样重要，与我们的生命休戚与共，自觉珍爱、尊重自己和他人生命&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何敬畏生命休戚与共&#34;&gt;如何敬畏生命(休戚与共)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;我们每个人都需要与他人共同生活&lt;/li&gt;
+&lt;li&gt;不漠视他人的生命，谨慎地对待生命关系、处理生命问题，才会尊重、关注、关怀和善待身边的每一个人&lt;/li&gt;
+&lt;li&gt;我们对生命的敬畏并不是谁的命令，而是内心的自愿选择&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何守护生命身体精神&#34;&gt;如何守护生命?(身体+精神)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;关心身体的状况，养成健康的生活方式&lt;/li&gt;
+&lt;li&gt;关注自己的内心，爱惜自己的身体&lt;/li&gt;
+&lt;li&gt;掌握一些基本的自救自护方法&lt;/li&gt;
+&lt;li&gt;精神风貌反映着我们的生命状态，守护生命需要关注并养护我们的精神&lt;/li&gt;
+&lt;li&gt;我们的精神发育，需要物质的支持，但不完全是物质条件和外部环境的制约，守住真善美，弘扬民族文化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;面对挫折的正确态度&#34;&gt;面对挫折的正确态度&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;挫折是我们生命成长的一部分&lt;/li&gt;
+&lt;li&gt;我们需要及时调整自己，正确对待挫折&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;面对挫折如何发掘生命的力量&#34;&gt;面对挫折,如何发掘生命的力量&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;我们需要发现发掘自己的生命力量&lt;/li&gt;
+&lt;li&gt;我们每个人的生命都蕴含一定的承受力，自我调节和自我修复能力&lt;/li&gt;
+&lt;li&gt;培养自己面对困难的勇气和坚强的意志&lt;/li&gt;
+&lt;li&gt;发掘自身的力量并不排斥借助外力&lt;/li&gt;
+&lt;li&gt;掌握增强生命韧性的方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;怎样的一生是值得个人他人社会&#34;&gt;怎样的一生是值得?(个人+他人+社会)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;为了让生命有意义，活出自己的人生，实现自我价值&lt;/li&gt;
+&lt;li&gt;当别人需要帮助时付出自己的爱心，不论大小，自愿承担责任&lt;/li&gt;
+&lt;li&gt;能够将个人理想与国家发展，民族复兴和人类命运结合起来&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;为什么要探索生命的意义&#34;&gt;为什么要探索生命的意义&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;探索生命意义是人类人生命的源动力之一&lt;/li&gt;
+&lt;li&gt;生命意义是独特的，生命意义是具体的&lt;/li&gt;
+&lt;li&gt;生命的意义需要自己发现和创造&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何活出生命的精彩充盈关切平凡中伟太&#34;&gt;如何活出生命的精彩?(充盈+关切+平凡中伟太)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;彼此关切，拒绝冷漠&lt;/li&gt;
+&lt;li&gt;关注自身的发展并关切他人的生命，善待他人，用真诚、热情营造一个互信、友善、和谐的社会&lt;/li&gt;
+&lt;li&gt;伟大在于创造和贡献，创造出不平凡的社会价值&lt;/li&gt;
+&lt;li&gt;为家庭的美好和社会的发展贡献自己的力量，书写自己的生命价值&lt;/li&gt;
+&lt;li&gt;当我们将个体生命和国家的甚至人类的命运联系在一起时，生命便会从平凡中闪耀出伟大&lt;/li&gt;
+&lt;/ol&gt;
+">可爱你的【道法】七上</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/lie-ren-bi-ji/"" data-c="
+          &lt;h2 id=&#34;创作背景&#34;&gt;创作背景&lt;/h2&gt;
+&lt;p&gt;《猎人笔记》是19世纪40年代末50年代初问世的。这时正是俄国解放运动从贵族革命向资产阶级民主主义革命过渡的时期，是俄国社会生活处在大转变的历史时期。这一时期，俄国专制制度腐朽的本质更加暴露出来了，农奴制度的危机更加加深了。&lt;/p&gt;
+&lt;p&gt;从20年代起，俄国的农奴制度就进入了危机阶段，并且，这种危机在不断地加深着。资本主义在俄国逐渐地发展起来了。它猛烈地冲击着农奴制度，使农奴制度的经济逐渐解体了。应该说，农奴制经济的解体，是农奴制危机的根本原因。&lt;/p&gt;
+&lt;p&gt;同时，农民反对农奴制度的斗争也在不断地加强着。据统计，从1826年到1850年，农民骚动达到了576次。此外，这时平民知识分子的革命家，正在逐渐代替着贵族革命家，参加革命运动的进步力量扩大了。屠格涅夫正是在俄国解放运动的深刻影响下创作了《猎人笔记》。&lt;/p&gt;
+&lt;h2 id=&#34;作品主题&#34;&gt;作品主题&lt;/h2&gt;
+&lt;p&gt;《猎人笔记》是一部借猎人出猎的见闻揭露沙皇专制制度下广大农奴遭受农奴主残酷奴役、处于水深火热生活中的纪实作品，它用活生生的事例向读者展示了俄国农奴制下广大农奴的悲惨生活。&lt;/p&gt;
+&lt;p&gt;《猎人笔记》的可贵之处不仅在于暴露农奴制的黑暗与残酷，而且歌颂了劳动人民的优秀品德。作者没有以地主老爷的态度居高临下地看待农民，像以往许多作家那样把农民描写成愚昧无知、缺乏崇高品德、处于畜生一般状态、只是一些应当受到怜悯的对象。&lt;/p&gt;
+&lt;p&gt;作者在本书中往往以朋友的身份出现，和农民一起打猎，平等地谈论农民的生活，通过敏锐的洞察力发现、描写这些普通劳动人民的许多优秀品质，表现出他深厚的人道主义和民主思想。&lt;/p&gt;
+&lt;p&gt;作者把他的感情倾在这些普通劳动人民身上，他没有任何贵族的架子，而和这些普通的农村劳动者打成一片，这在贵族出身的作家中是极为难能可贵的。&lt;/p&gt;
+&lt;p&gt;作品不仅写出了农民快乐的生存方式，而且描写了这些普通人身上的美好性情。那就是善良、正直、乐观。人的使命也是人的生命屑性的表现，善良、热情、正直、乐观等等都是符合生命的内在要求，而人们在大众生活表现了这样美好的人性，也体现生命的伦理价值观。&lt;/p&gt;
+&lt;p&gt;所以，这也是衡量生命的一个重要的价值尺度。小说写了众多的普通农民，他们在接人待物所表现出的善良、热情的天性，在对生命认知方面的乐观，利他的心态都折射出美好的生命之光。&lt;/p&gt;
+&lt;p&gt;屠格涅夫在这部短篇小说集中，主要是从生命的角度来写人物的活动及大自然优美的景物空间。每一个空间都有一个明确的生命要素，如植物的鲜活，动物的晃动，农民的善良、乐观，地主的衰败等等，这些要素是相互关联的，这一连串的空间也就构成了展示生命本体的一个完整的艺术世界。&lt;/p&gt;
+&lt;p&gt;而且，从对大自然的书写到对人物的生动刻画。其空间转换也是有层次而又富有节奏的。另外，作者在艺术手法上也是富有变化的。&lt;/p&gt;
+&lt;p&gt;他从正反两个方面来写，写农民及自然的美景是从正面着手，处处展现出鲜活、灵动、快乐的生命意识，追求一种宰相的生存模式，以此来体现人类生命的内在本质要求，而写乡村地主则是从反面写出了地主身上衰败的生命特征，揭示了其没落的生命意义。&lt;/p&gt;
+&lt;h2 id=&#34;章节大意&#34;&gt;章节大意&lt;/h2&gt;
+&lt;h3 id=&#34;霍里和卡利内奇&#34;&gt;《霍里和卡利内奇》&lt;/h3&gt;
+&lt;p&gt;“我”以猎人的身份访问瑞兹德林县，在旷野里结识了小地主鲍卢台金。我们先步行到了霍里的家，他的小儿子驾车送我们回鲍卢台金家过夜。第二天，“我”一个人出外打猎，傍晚时来到霍里家并在这住下。三天后，鲍卢台金派人来接“我”。次日，“我”离开了鲍卢台金先生家。&lt;/p&gt;
+&lt;h3 id=&#34;叶尔莫莱和磨坊老板娘&#34;&gt;《叶尔莫莱和磨坊老板娘》&lt;/h3&gt;
+&lt;p&gt;“我”带着雇佣的猎人叶尔摩莱，傍晚日落前在树林里“守猎”。为了第二天黎明日出前“守猎”，我们想在附近一个磨房里过夜。磨房主安排我们住在距离磨房很近的小棚里。磨房主还让他的妻子出来招待我们。&lt;/p&gt;
+&lt;h3 id=&#34;莓泉&#34;&gt;《莓泉》&lt;/h3&gt;
+&lt;p&gt;在初秋八月的一天，“我”带着猎犬来到伊斯塔河畔打猎。在“草莓甘泉”喝水时，见到了“我”早就认识的那两个农民：斯交布什卡和米哈伊洛·萨魏里甫。从后者口里，读者知道那个曾经风光，后来逐渐败落的伯爵的故事。&lt;/p&gt;
+&lt;h3 id=&#34;县里的医生&#34;&gt;《县里的医生》&lt;/h3&gt;
+&lt;p&gt;除了第一段，全文都是这位“县医”的自述：他对“我”讲述他本人在给一个小地主家的姑娘治病过程中亲身经历的一段终生难忘的恋爱故事。&lt;/p&gt;
+&lt;h3 id=&#34;我的邻居拉季洛夫&#34;&gt;《我的邻居拉季洛夫》&lt;/h3&gt;
+&lt;p&gt;主人公是小地主拉其洛夫。他至多五十来岁，年富力强，为人慷慨，待人和善。他参过军，见多识广，谈吐自由，性情内向。他曾结过婚，但妻子因难产病故。现在他带着妻子的妹妹私奔。&lt;/p&gt;
+&lt;h3 id=&#34;独院地主奥夫夏尼科夫&#34;&gt;《独院地主奥夫夏尼科夫》&lt;/h3&gt;
+&lt;p&gt;主人公是富农奥夫谢尼科夫。从他口里，读者知道各种不同的地主贵族，其中包括“我”的外公和外婆。此外，小说还写到富农奥夫谢尼科夫的亲侄子米加。&lt;/p&gt;
+&lt;h3 id=&#34;利戈夫村&#34;&gt;《利戈夫村》&lt;/h3&gt;
+&lt;p&gt;“我”和猎人叶尔摩莱到距离李郭甫村十里的芦苇荡里撑船打野鸭遇险的故事。在此过程中，我们遇到猎人符拉基米尔和渔夫舒乔克。“我们”四人坐着舒乔克的船在芦苇荡打猎的。&lt;/p&gt;
+&lt;h3 id=&#34;别任草地&#34;&gt;《别任草地》&lt;/h3&gt;
+&lt;p&gt;“我”因为贪恋打猎晚归，回家途中迷了路，后来只好跟五个小孩儿在河湾大草地的篝火旁边过夜，“我”假装睡着了，听到了孩子们关于家神、美人鱼的迷信和神话，以及当地发生过的一些传说的谈话。&lt;/p&gt;
+&lt;h3 id=&#34;美丽的梅恰河畔的卡西扬&#34;&gt;《美丽的梅恰河畔的卡西扬》&lt;/h3&gt;
+&lt;p&gt;“我”打猎归来，在路上碰到出殡的队伍，为了避开这“不祥之兆”，车夫赶马向前，结果车轴坏了。在侏儒卡西杨的陪同下到伐木场买车轴和打鸟，从“我”和他的交谈中了解到卡西杨的身世和为人。在返回新村前见到了疑似老人私生女的安娜。最后回到家里，天已大黑。&lt;/p&gt;
+&lt;h3 id=&#34;总管&#34;&gt;《总管》&lt;/h3&gt;
+&lt;p&gt;主人公是年轻的地主阿尔卡奇·巴夫莱契·别诺契金，此人是个表面和善、开明，内心冷酷、守旧的人物。他的管家聪明能干，地主老爷喜欢他，纵容他在庄园当家做主、发号施令、欺辱百姓。&lt;/p&gt;
+&lt;h3 id=&#34;办事处&#34;&gt;《办事处》&lt;/h3&gt;
+&lt;p&gt;一个绵绵细雨的秋天，“我”打猎归来，经一个看守窝棚的老人指点，来到安尼耶沃村洛司涅科娃夫人的田庄管理处躲雨，被管理处的主要负责人安排在隔壁的房间里睡觉、休息。“我”后来透过间壁的空隙看见和听见办事处发生的一切。&lt;/p&gt;
+&lt;h3 id=&#34;孤狼&#34;&gt;《孤狼》&lt;/h3&gt;
+&lt;p&gt;傍晚我打猎归来时，天气突变，狂风暴雨，拉车的母马陷在泥泞中就看林人皮留克帮“我”走出困境，把“我”拉到他家。天晴后，皮留克准备送“我”回家时擒获一个偷砍树木的农民，经我的帮助，皮留克放了那个农民。然后他送“我”出了树林，分手告别。&lt;/p&gt;
+&lt;h3 id=&#34;两地主&#34;&gt;《两地主》&lt;/h3&gt;
+&lt;p&gt;本片主人公与第五篇的地主拉其洛夫他们的出身和经历不同。一个是退伍的将军，一个是土生土长的地主。这是他们两人的共性，虽然各有自己的特点。本片描写了将军的其人其事；而对这个土老爷，则主要用“我”的一次访问记实以揭露他的外表热情温和、内心冷酷残忍的伪君子言行。&lt;/p&gt;
+&lt;h3 id=&#34;列别江&#34;&gt;《列别江》&lt;/h3&gt;
+&lt;p&gt;“我”在列别姜打猎后，下榻于当地的一个旅馆。回旅馆吃完午饭去马贩子家买马，但由于公爵的到来而没有成交。最后“我”在另外一家买了一匹，但“到家”后发现自己上当受骗：原来这是一匹瘸腿的病马。&lt;/p&gt;
+&lt;h3 id=&#34;塔吉雅娜鲍里索夫娜和她的侄儿&#34;&gt;《塔吉雅娜·鲍里索夫娜和她的侄儿》&lt;/h3&gt;
+&lt;p&gt;本篇写达吉雅娜·鲍里莎夫娜的为人，以及她收养与培养侄儿的情况。但这位侄儿学画没有成功，白花了她的钱和心血。&lt;/p&gt;
+&lt;h3 id=&#34;死&#34;&gt;《死》&lt;/h3&gt;
+&lt;p&gt;作者先后写了五个俄罗斯人的死，他们的死因和临死时的心态，以及周围人的反应，以及“我”的思索和感慨。&lt;/p&gt;
+&lt;h3 id=&#34;歌手&#34;&gt;《歌手》&lt;/h3&gt;
+&lt;p&gt;描写了两个歌手在郭洛托夫卡村一个孤零零的酒店赛歌的具体过程；但小说主人公除了这两个歌手——小包工和土耳其人亚什卡，酒店老板尼古拉·伊万雷莫尔等等他们是听众，也是裁判。&lt;/p&gt;
+&lt;h3 id=&#34;彼得彼得罗维奇卡拉塔耶夫&#34;&gt;《彼得·彼得罗维奇·卡拉塔耶夫》&lt;/h3&gt;
+&lt;p&gt;卡拉塔也夫爱上了一个女地主的丫鬟，想为她赎身，但遭到女地主的拒绝，并将丫鬟遣送走。后来，卡拉塔也夫驾车把玛特辽娜带回到自己家，从此两人过着甜蜜的生活。他们在一次驾车外出的路上正面碰上了女地主。事情败露，女地主状告他们，纠缠不休。最后玛特辽娜决定自首，此后缈无音讯。卡拉塔也夫负债累累，变卖家产，远走莫斯科谋事。他决心不回家乡，而是“要死在莫斯科”。&lt;/p&gt;
+&lt;h3 id=&#34;幽会&#34;&gt;《幽会》&lt;/h3&gt;
+&lt;p&gt;写一对青年情侣离别前最后一次“幽会”的情景。男方“是一个阔少爷宠爱的仆从。”女方是一个“苦命、可怜的孤儿”。看来二人之间已经有了一段爱情关系，但男方的感情不深，在离别前表现冷漠，而女方的感情真挚热烈。&lt;/p&gt;
+&lt;h3 id=&#34;希格雷县的哈姆莱特&#34;&gt;《希格雷县的哈姆莱特》&lt;/h3&gt;
+&lt;p&gt;一次打猎的旅行中，“我”得到邻村一个小地主的邀请，去他家赴宴。那天晚上，“我”和他睡一间房，两人都睡不着。于是就开始交谈，他对我敞开心怀，打开了话匣，讲了自己悲剧性的经历。&lt;/p&gt;
+&lt;h3 id=&#34;切尔托普哈诺夫和涅多皮尤斯金&#34;&gt;《切尔托普哈诺夫和涅多皮尤斯金》&lt;/h3&gt;
+&lt;p&gt;猎人叶尔摩莱陪“我”打猎回来，在路上先后遇到了切尔托布哈诺夫和涅多皮尤斯金， “我”对他们做了一些调查之后，亲自登门拜访切尔托布哈诺夫，并参加了他们的家庭歌舞晚会，“很晚我才离开无梦村”。&lt;/p&gt;
+&lt;h3 id=&#34;切尔托普哈诺夫的末路&#34;&gt;《切尔托普哈诺夫的末路》&lt;/h3&gt;
+&lt;p&gt;本篇写主人公切尔托布哈诺夫的末路，写他经历的三次不幸：心爱的情妇玛莎的出走；至友涅多皮尤斯金的去世；比爱人和至友更珍贵的宝马玛列克-阿泰力被盗。就是这三次不幸酿成切尔托布哈诺夫的人生悲剧。&lt;/p&gt;
+&lt;h3 id=&#34;枯萎了的女人&#34;&gt;《枯萎了的女人》&lt;/h3&gt;
+&lt;p&gt;露克丽雅从前是个漂亮活泼的女仆，如今她长期瘫痪在床，骨瘦如柴，村里人给起外号叫 “活木乃伊”，但她仍然是一个聪明善良、温柔文静、虔诚的基督信徒。小说主要写她病中的思想和感情。&lt;/p&gt;
+&lt;h3 id=&#34;车轱辘响&#34;&gt;《车轱辘响》&lt;/h3&gt;
+&lt;p&gt;小说从飞洛费这个人物的“傻”写到他一路驾车过程中表现的机智和聪明；从半路遇匪的危险场面写到化险为夷，转危为安。刻画两个人物的同时也反映当时俄国的社会治安状况。&lt;/p&gt;
+&lt;h3 id=&#34;树林和草原&#34;&gt;《树林和草原》&lt;/h3&gt;
+&lt;p&gt;全篇写的是猎人喜欢的树林和草原在春夏秋冬四季的自然风光。本篇可以看成这些写景片断的归纳和总结。诗情画意，美不胜收。&lt;/p&gt;
+&lt;h2 id=&#34;人物形象&#34;&gt;人物形象&lt;/h2&gt;
+&lt;p&gt;屠格涅夫细致地描写生活在贫寒的社会最底层的农奴所遭遇的种种苦难，用心去感受俄罗斯大地上那些枯破灰暗的白桦树下、那些浑浊的潭水中，那荒凉而贫瘠的原野里，低矮潮湿的房屋中那些细碎而深切的情绪和灵魂。他一方面或正面、或侧面的写那些农奴主、地主们之间自私自利，骄横冷酷的性格。&lt;/p&gt;
+&lt;p&gt;但他也用同样低沉而忧郁的笔调写着医生和地主女儿之间因为死亡而带来的爱情悲剧（《县里的医生》），写生活和理想格格不入，找不到理想的归属，找不到心灵平静，同时不愿同流合污的落魄地主形象，写逐步毁灭自己的正直、暴躁、刚烈的世袭贵族切尔托普哈诺夫《切尔托普哈诺夫和涅多皮尤斯金》和《切尔托普哈诺夫的末路》这些人的悲剧。&lt;/p&gt;
+&lt;h3 id=&#34;霍里-霍里和卡利内奇&#34;&gt;霍里 ——《霍里和卡利内奇》&lt;/h3&gt;
+&lt;p&gt;为人&lt;strong&gt;精明&lt;/strong&gt;、&lt;strong&gt;务实&lt;/strong&gt;，有&lt;strong&gt;进取心和自信&lt;/strong&gt;，他凭自己的&lt;strong&gt;勤劳和才智&lt;/strong&gt;，为自己创建了较为独立富裕的生活。他&lt;strong&gt;思想开放，求知欲强&lt;/strong&gt;，对国外的社会民生都感兴趣。他使人想起了彼得大帝，他也体现出俄罗斯人的精神特征：“&lt;strong&gt;相信自己的力量和刚强&lt;/strong&gt;”，“&lt;strong&gt;勇敢地面对未来&lt;/strong&gt;”。&lt;/p&gt;
+&lt;p&gt;评价：聪慧能干、有精明的头脑、是个实用主义的人物&lt;/p&gt;
+&lt;h3 id=&#34;卡里内奇-霍里和卡利内奇&#34;&gt;卡里内奇 ——《霍里和卡利内奇》&lt;/h3&gt;
+&lt;p&gt;这是个颇具&lt;strong&gt;天赋和丰富内心世界&lt;/strong&gt;的农民。他不像霍里那样务实，不善于安排个人生活。他是个&lt;strong&gt;理想派、浪漫派&lt;/strong&gt;一类的人，&lt;strong&gt;热情而好幻想&lt;/strong&gt;，&lt;strong&gt;爱好大自然&lt;/strong&gt;。他有多种特长：养蜂、治病、念咒语、识天时，又能弹会唱，还识得字。&lt;/p&gt;
+&lt;p&gt;评价：为人忠诚、心里非常的善良，有自由主义，也非常的浪漫&lt;/p&gt;
+&lt;h3 id=&#34;几个小霍里-霍里和卡利内奇&#34;&gt;几个小霍里 ——《霍里和卡利内奇》&lt;/h3&gt;
+&lt;p&gt;他们看起来是那样&lt;strong&gt;健康、开朗、富于幽默感&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这些小霍里将比老霍里更强，他们&lt;strong&gt;更有能力去开拓自己的未来&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;卡西扬-美丽的梅恰河畔的卡西扬&#34;&gt;卡西扬 ——《美丽的梅恰河畔的卡西扬》&lt;/h3&gt;
+&lt;p&gt;他身体矮小瘦弱，不善于干活，可他&lt;strong&gt;充满着生命的活力&lt;/strong&gt;。他在大自然的怀抱中显得那么&lt;strong&gt;灵活、自在、惬意&lt;/strong&gt;，他能与各种鸟儿对歌、争鸣，能利用野草为人治病。他&lt;strong&gt;头脑聪明，善于思考&lt;/strong&gt;，平常沉默寡言，但一旦打开话匣子，便滔滔不绝，活像个哲学家，说出一套套绝非一般农民所能说得出的哲理。他爱大自然中的一切生灵，认为一切飞禽走兽都有权享受自己的生命，有权活尽自己的天年。射猎它们是罪过的。他认为人类有自己吃喝的东西，那就是上帝所恩赐的粮食和水，还有祖宗传下来的家禽家畜。&lt;/p&gt;
+&lt;p&gt;他自己却喜欢去捕捉夜莺，但他不是为了杀害它、食用它，而是让它为人们开心快乐。他说鱼是可以捕食的，因为鱼的血“是冷的，不是活的”。他认为做人“&lt;strong&gt;必须正直，这是最要紧的&lt;/strong&gt;”。他感到“&lt;strong&gt;人间无公道&lt;/strong&gt;”，他打算去“寻找真理”！&lt;/p&gt;
+&lt;p&gt;作者赞叹农民的&lt;strong&gt;纯真和善良&lt;/strong&gt;，赞叹他们的&lt;strong&gt;道德力量&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;雅可夫-歌手&#34;&gt;雅可夫 ——《歌手》&lt;/h3&gt;
+&lt;p&gt;直接地赞美山沟里的农民歌手雅可夫的&lt;strong&gt;艺术天赋&lt;/strong&gt;，同时也间接地赞美歌手身边那群农人的&lt;strong&gt;音乐鉴赏力&lt;/strong&gt;。作家借猎人之口说，这位农民的歌声“&lt;strong&gt;蕴有真挚深沉的情感、青春的气息、力量、甜美&lt;/strong&gt;，以及一种&lt;strong&gt;淡淡的哀愁&lt;/strong&gt;”，说那歌声里跳跃着“&lt;strong&gt;一颗俄罗斯正义的炽热灵魂&lt;/strong&gt;”，它紧紧地“&lt;strong&gt;抓住人们的心，直接扣动俄罗斯人的心弦&lt;/strong&gt;”。&lt;/p&gt;
+&lt;p&gt;接着作家描写了在场听众的反应作为印证。你看，猎人的心弦被“扣动”了，“涌上了热泪”，酒馆老板娘禁不住“发出低沉的、压抑的哭声”，老成持重的老板感动得“垂下了头”，眨巴眼压制着内心的激动而“扭过头去”，笨瓜“深深动情了，笨相地张着嘴巴，呆呆地站着”，穿破长袍的庄稼人“在角落里低声抽泣”，那沉着冷静的“怪老爷”也“涌出大颗的泪珠”，连雅可夫的竞赛对手包工头都听得“发愣”了。&lt;/p&gt;
+&lt;p&gt;作家似乎在告诉人们：&lt;strong&gt;在俄罗斯农民中不仅有艺术天才，更有广大的能够欣赏艺术美的群众&lt;/strong&gt;。可是作家又在后面描写了一幅令人“很不愉快的”画面，表现了这群农人醉酒后使人懊丧的丑态。这无疑是要发人深思：&lt;strong&gt;农奴制下的现实生活无情地扭曲了这些具有才华和美好心灵的农人，他们理应有一种文明的、适合于他们美好心灵的生活&lt;/strong&gt;！&lt;/p&gt;
+&lt;h3 id=&#34;马特列娜-彼彼卡拉塔叶夫&#34;&gt;马特列娜 ——《彼·彼·卡拉塔叶夫》&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;聪明美丽的渴求爱情&lt;/strong&gt;和&lt;strong&gt;自由&lt;/strong&gt;而又&lt;strong&gt;勇于作自我牺牲&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;阿库丽娜-幽会&#34;&gt;阿库丽娜 ——《幽会》&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;纯真、温柔而又痴情&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;卢克丽娅-枯萎了的女人&#34;&gt;卢克丽娅 ——《枯萎了的女人》&lt;/h3&gt;
+&lt;p&gt;卢克丽娅原先是一个&lt;strong&gt;能歌善舞、笑声朗朗的美丽姑娘&lt;/strong&gt;，曾是众多小伙子爱慕的对象。可是她后来不幸地从高台阶上重重摔了下来，由于没有得到适当的治疗而瘫痪，枯萎了，成了一具“活尸首”，虽然她外形的美丧失了，可是她那&lt;strong&gt;心灵的美反显得更为动人&lt;/strong&gt;：她是那样&lt;strong&gt;坚强地&lt;/strong&gt;忍受着病痛的折磨，她竟能&lt;strong&gt;以女英雄贞德的精神鼓舞自己&lt;/strong&gt;。在长期的僵卧状态中仍表现出她&lt;strong&gt;对生命、对大自然的热爱&lt;/strong&gt;；她&lt;strong&gt;不去抱怨个人的不幸&lt;/strong&gt;，很&lt;strong&gt;能体谅别人&lt;/strong&gt;，还&lt;strong&gt;惦记着农民兄弟的贫苦&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;五个天真稚气的农家孩子-别任草地&#34;&gt;五个天真稚气的农家孩子 ——《别任草地》&lt;/h3&gt;
+&lt;p&gt;作家把他们置于暮色笼罩下的草地的背景里，似乎是有意烘托他们的&lt;strong&gt;纯真和可爱&lt;/strong&gt;。然而他们毕竟是些穷孩子，小小年纪便分担着生活的担子，显然他们是没有机会上学，接受科学的教育的，他们受到的是民间的神话传说的熏陶。他们讲的传说故事里都带有恐怖凄凉的色彩，这&lt;strong&gt;反映了现实生活的苦痛已在孩子们心灵上留下了阴影&lt;/strong&gt;，作家对他们倾注了&lt;strong&gt;深深的同情&lt;/strong&gt;。&lt;/p&gt;
+">猎人笔记</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://test19124.github.io/post/guan-yu-zhe-ge-bo-ke/"" data-c="
+          &lt;p&gt;QwQ , 这是test19124的小博客&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://img.paulzzh.tech/touhou/random&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">关于这个博客</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
     </div>
   </div>
-</footer>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
 
-  
-  
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
 
-</body>
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+
+
+
 
 </html>
